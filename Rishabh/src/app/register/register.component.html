@@ -1,0 +1,199 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+  
+  <div class="container" >
+<header>Register Form</header>
+<div class="progress-bar">
+  <div class="step">
+    <p>
+Name</p>
+<div class="bullet">
+      <span>1</span>
+    </div>
+<div class="check fas fa-check">
+</div>
+</div>
+<div class="step">
+    <p>
+Address</p>
+<div class="bullet">
+      <span>2</span>
+    </div>
+<div class="check fas fa-check">
+</div>
+</div>
+<div class="step">
+    <p>
+Occupation</p>
+<div class="bullet">
+      <span>3</span>
+    </div>
+<div class="check fas fa-check">
+</div>
+</div>
+</div>
+<div class="form-outer">
+  <form action="#">
+    <div class="page slide-page">
+      <div class="title">Basic Info </div>
+      <div class="field">
+        <div class="label">FirstName</div><br>
+          <input type="text" placeholder="Enter First name" class="form-control" id="fname" required ngModel name="fname" #name="ngModel">
+      </div>
+      <div class="field">
+        <div class="label">MiddleName</div>
+        <input type="text" placeholder="Enter Middletname" name="mname" id="mname" ngModel #name="ngModel"><br>
+
+    </div>
+    <div class="field">
+      <div class="label">LastName</div>
+      <input type="text" placeholder="Enter Lastname" name="lname" id="lname" required ngModel #name="ngModel">
+
+    </div>
+    <div class="field">
+      <div class="label">Gender</div>
+      <select>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="field">
+      <div class="label">Father's Name</div>
+    <input type="text" placeholder="Enter Father's name" name="fathername" id="fathername" required ngModel><br>
+</div>
+
+<div class="field">
+<div class="label">Mobile No</div>
+<input type="tel" placeholder="Enter Mobile Number" id="mobile" name="mobile" maxlength="10" minlength="10" required ngModel> <br>
+</div>
+
+<div class="field">
+  <div class="label">Aadhar NUmber</div>
+<input type="tel" placeholder="Enter Aadhar Number" id="Aadhar" name="Aadhar" maxlength="12" minlength="12" required ngModel> <br>
+</div>
+
+<div class="field">
+  <div class="label">Email Address</div>
+<input type="email" placeholder="Enter Email Address" name="email" id="email" required ngModel><br>
+</div>
+
+<div class="field">
+  <div class="label">Date Of Birth:</div>
+<input type="date" id="Dob" name="Dob"><br>
+</div>    
+<div class="field">
+     <button class="firstNext next">Next</button>
+    </div>
+    </div>
+
+    <div class="page">
+      <div class="title">Address Info</div>
+      <h3>Residential Address:</h3>
+      <div class="field">
+        <div class="label">a) Address Line 1</div>
+        <input type="text" placeholder="Enter Address" name="Addrress1" id="Addrress1" required ngModel><br>
+
+        </div>
+
+        <div class="field">
+          <div class="label">b) Address Line 2</div>
+          <input type="text" placeholder="Enter Address" name="Addrress2" id="Addrress2" required ngModel><br>
+  
+          </div>
+
+          <div class="field">
+            <div class="label">c)Landmark</div>
+              <input type="text" placeholder="Enter Landmark" name="Landmark" id="Landmark" ngModel><br>
+    
+            </div>
+
+            <div class="field">
+              <div class="label">d)State</div>
+                <input type="text" placeholder="Enter State" name="state" id="state" required ngModel><br>
+              </div>
+
+              <div class="field">
+                <div class="label">e)City</div>
+                  <input type="text" placeholder="Enter City" name="city" id="city" required ngModel><br>
+                 </div>
+     
+
+      <input type="checkbox" id="adrs" name="adrs" ngModel value="A1"><br>
+      <label for="adrs"> Permanent Address and Mailing Address same</label><br>
+
+        <div class="field">
+          <div class="label">a) Address Line 1</div>
+          <input type="text" placeholder="Enter Address" name="Addrress1" id="Addrress1" required ngModel><br>
+  
+          </div>
+  
+          <div class="field">
+            <div class="label">b) Address Line 2</div>
+            <input type="text" placeholder="Enter Address" name="Addrress2" id="Addrress2" required ngModel><br>
+    
+            </div>
+  
+            <div class="field">
+              <div class="label">c)Landmark</div>
+                <input type="text" placeholder="Enter Landmark" name="Landmark" id="Landmark" ngModel><br>
+      
+              </div>
+  
+              <div class="field">
+                <div class="label">d)State</div>
+                  <input type="text" placeholder="Enter State" name="state" id="state" required ngModel><br>
+                </div>
+  
+                <div class="field">
+                  <div class="label">e)City</div>
+                    <input type="text" placeholder="Enter City" name="city" id="city" required ngModel><br>
+                  </div>
+        
+                  <div class="field btns">
+                    <button class="prev-1 prev"> Previous</button>
+                    <button class="next-1 next"> Next</button>
+                   </div>
+                </div>
+
+
+                <div class="page">
+                  <div class="title">Occupation Info</div>
+
+                  <div class="field">
+                    <div class="label">Occupation Type</div>
+                      <input type="text" name="type" id="type" required ngModel><br>
+                    </div>
+
+                    <div class="field">
+                      <div class="label">Source of income</div>
+                        <input type="text" name="income" id="income" required ngModel><br>
+                      </div>
+
+                      <div class="field">
+                        <div class="label">Gross Annual salary</div>
+                          <input type="text" name="salary" id="saalry" required ngModel><br>
+                        </div>
+
+                        <div class="field btns">
+                          <button class="prev-2 prev"> Previous</button>
+                          <button class="submit">Submit</button>
+                         </div>
+                </div>
+
+
+  </form>
+
+</div>
+</div>
+
+</body>
+</html>
