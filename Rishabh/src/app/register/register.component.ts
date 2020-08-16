@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-register',
   templateUrl: `./register.component.html`,
-  styleUrls: ['../main1.css']
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
 
@@ -11,5 +11,6 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

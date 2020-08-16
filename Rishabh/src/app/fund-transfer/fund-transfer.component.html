@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Fund Transfer</title>
+</head>
+<body>
+<h2>Fund Transfer [IMPS/NEFT/RTGS]</h2>
+<div class="container">
+<p>Select Account from which you want to transfer</p>
+
+<table  align ="center" cellpadding = "7" >
+    <tr>
+     <td>Account No.</td>
+     <td>Account Type</td>
+     <td>Balance</td>   
+    </tr>
+    <tr>
+        <td id="i1"><input type="radio" name="accountNo"> &nbsp; 1023568969646</td>
+        <td id="i3">Savings Account</td>
+        <td id="i4">500000</td>
+    </tr>
+</table>
+<br/><br/>
+
+
+<label>
+Selected Account No :  
+</label>           
+<br/>
+<br/>
+<span class="transfertype">Transfer Type*</span>&nbsp;
+        <select name="details" id="">
+            <option value="all">Select</option>
+            <option value="IMPS">IMPS</option>
+            <option  value="NEFT">NEFT</option>
+            <option value="RTGS">RTGS</option>
+          </select>
+
+          <br/> 
+          <br/>
+<label> Amount*</label> 
+<label><input type="text" name="amount"></label>
+<br/><br/>
+
+<a href=" ">Click Here to add new Benificiary</a>
+
+<p>Select the Beneficiary Account</p>
+
+<table  align ="center" cellpadding = "7" >
+    <tr>
+     <td>Account No.</td>
+     <td>Beneficiary Name</td>
+     <td>Beneficiary Account Type</td>
+     <td>Bank</td>   
+    </tr>
+    <tr>
+        <td id="i1"><input type="radio" name="beneficiary"> &nbsp; 1645637828</td>
+        <td id="i3">Ayush</td>
+        <td id="i4">Current</td>
+        <td id="i4">ISB</td>
+    </tr>
+    <tr>
+        <td id="i1"><input type="radio" name="beneficiary"> &nbsp; 1234567890</td>
+        <td id="i3">Srijan</td>
+        <td id="i4">Savings</td>
+        <td id="i4">ISB</td>
+    </tr>
+</table>
+
+<input type="checkbox" id="termsandcondition" name="termsandcondition" value="accept">
+<label for="termsandcondition"> I accept the terms and condition</label><br>
+
+<button class="button go">Go</button> &nbsp;
+<button class="button cancel">Cancel</button>
+</div>
+</body>
+</html>

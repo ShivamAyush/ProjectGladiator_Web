@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.__FunctionSlide();
       this.Repeat();
-    }, 5000);
+    }, 2000);
   }
 
   __FunctionSlide() {
