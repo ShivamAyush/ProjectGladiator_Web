@@ -1,0 +1,30 @@
+<div class="card1">
+    <h2 style="text-align:left;">Admin Login !!</h2>
+    <form #AdminloginForm='ngForm' style="float: left;">
+
+        <div class="container" style="text-align:center; border:2px solid black;
+    width: 350px; padding-left: 20px;">
+           <div class="field">
+           <label for="uname"><b>UserId</b></label><br>
+            <input type="text" style="margin-left: 5px;" placeholder="Enter Username" id="uname" required ngModel><br>
+           </div>
+           
+            <label for="psw"><b>Password</b></label><br>
+            <input class="pswrd" type="password" placeholder="Enter Password" id="psw" required ngModel><span class="show">SHOW</span><br>
+            <div class="field">
+            <button type="submit" [disabled]="!AdminloginForm.valid">Login</button><br><br>
+            <label>
+                <input type="checkbox" checked="checked" id="remember" required ngModel> <b>Remember me</b>
+            </label>
+        </div><br>
+            <div class="container" style="background-color:#f1f1f1;height:50px;width:80%">
+                <button type="reset" class="cancelbtn">Reset</button>
+                <span class="psw">Forgot <a [routerLink]="['/forgetpasswordLink']">password?</a></span>
+                <span class="psw">Forgot <a [routerLink]="['/forgetUserIdLink']">User Id?</a></span>
+
+
+            </div>
+        </div>
+    </form>
+
+</div>

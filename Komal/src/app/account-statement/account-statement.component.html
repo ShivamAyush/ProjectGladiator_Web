@@ -1,0 +1,62 @@
+<div class="container">
+    <span class="title">Account Statement</span>
+    <div class="container-1">
+        <table>
+            <tr>
+                <th>Account No./Nick Name</th>
+                <th>Name</th>
+                <th>Account Type</th>
+                <th>Balance</th>
+            </tr>
+            <!--Will Use NgFor here-->
+            <tr>
+                <td id="i1"><input type="radio" name="accountNo"> &nbsp; 1023568969646</td>
+                <td id="i2">Rishabh kumar</td>
+                <td id="i3">Savings Account</td>
+                <td id="i4">100000</td>
+            </tr>
+            <tr style="background-color: #c9e0f2;">
+            <th>Selected Account Number</th>
+            <th>Rishabh Kumar</th>
+            <th>1023568969646</th>
+            <th>100000</th>
+            </tr>
+        </table>
+
+    </div>
+    <div class="container-2">
+        <br>
+        <span class="title">Select options for the statement period</span>
+        <div class="container-3">
+            <table class="table2">
+                <tr>
+                    <td>Start Date</td>
+                    <td><input type="date" name="startDate"></td>
+                </tr>
+                <tr>
+                    <td>End Date</td>
+                    <td><input type="date" name="endDate"></td>
+                </tr>
+            </table>
+        </div>
+        <span class="title">Select appropriate options to view,print or download the statement</span>
+    <div class="container-4">
+        <div class="container-5">
+        <span class="txt"><input type="radio" name="view"> View </span> &nbsp;
+        <span class="txt"><input type="radio" name="xlsv"> Download in MS Excel format</span>&nbsp;
+        <span class="txt"><input type="radio" name="pdf"> Download in PDF format </span> </div><br>
+        <span class="title">Number of Records Per Page</span>&nbsp;
+        <select name="details" id="">
+            <option value="all">All</option>
+            <option value="6">6 Months</option>
+            <option  value="1">1 Month</option>
+            <option value="15">15 Days</option>
+          </select>
+          <br><br>
+          <button class="button go">Go</button> &nbsp;
+          <button class="button cancel">Cancel</button>
+    </div>
+
+
+    </div>
+</div>
