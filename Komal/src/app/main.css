@@ -15,7 +15,7 @@
     padding: 10px;
     text-align: center;
     background: white;
-    width: 80%;
+    width: 100%;
     margin: auto;
     
   }
@@ -23,12 +23,11 @@
   /* Style the top navigation bar */
   .topnav {
     overflow: hidden;
-    background-color:burlywood;
-    width: 80%;
+    background-color:#218ac2;
+    width: 100%;
     margin: auto;
     height: 60px;
   }
-  
   .topnav ul {
     list-style-type: none;
   }
@@ -40,37 +39,51 @@
     padding: 8px;
     text-decoration: none;  /*it will remove hyperlink(underline)*/
     letter-spacing: 1px;
-
-    height: 70px;
-    
     height: 50px;
   }
 
+ 
   .topnav a:hover{
-font-size: x-large;
-color:black;
-  }
+    font-size: x-large;
+    color:black;
+      }
   
-  /* .dropdown{
+   .dropdown,.dropdown1{
 float: left;
-overflow:visible;
-} */
+/* overflow:hidden; */
+} 
 
 
 /* style for the dropdownlist in navbar*/
 .dropdown-content{
-  display:none;
-  position: absolute;
-  background-color: burlywood;
+  display: none;
+  position:absolute;
+  background-color: #79c4ed;
   min-width: 50x;
-  box-shadow: 0px 8px 16px 0px;
-
-  z-index: -auto;
-  margin: 40px;
-  z-index: 4;
+  box-shadow: 20px 8px 16px 0px;
+  z-index: auto; 
+  
 }
 .dropdown:hover .dropdown-content{
-  display:list-item;
+  display: list-item;
+
+  
+}
+.dropdown-content li:hover,.dropdown-content1 li:hover{
+  background-color:#218ac2;
+
+}
+
+.dropdown-content1{
+  display: none;
+  position:fixed;
+  background-color: #79c4ed;
+  min-width: 50x;
+  box-shadow: 20px 8px 16px 0px;
+  /* z-index: auto; */
+}
+.dropdown1:hover .dropdown-content1{
+  display: list-item;
 }
 
   /* Clear floats after the columns */
@@ -81,15 +94,15 @@ overflow:visible;
   }
   
    .main {   
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
   
   /* Add a card effect for articles */
   .card {
     background-color: white;
-    /* padding: 20px; */
-    margin-top: 0px; 
+    padding: 20px;
+    margin-top: 20px;
   overflow:hidden;
   margin: auto;
   background-image: url('src\assets\img.png');
@@ -100,11 +113,12 @@ overflow:visible;
   
   }
   
-   img {
+  img {
     width: auto;
     max-width: 165px;
     height: auto;
   }
+  
   
   /* Full-width inputs */
   input[type=text], input[type=password], input[type=email], input[type=tel]{
@@ -115,6 +129,8 @@ overflow:visible;
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius:10px;
+
+      /* width: 100%; */
   }
   /* Add padding to containers */
   .container {
@@ -123,11 +139,16 @@ overflow:visible;
     margin: auto;
     height: auto;
     border-radius:10px;
+
+    /* width: 320px; */
     
   }
-  .container a{
+  /* .container a{
     cursor: pointer;
-  }
+  } */
+
+
+
   /* Set a style for all buttons */
   button {
     background-color:black;
@@ -138,6 +159,8 @@ overflow:visible;
   border:thin;
   cursor: pointer;
     width: 80%;
+    /* width: 100%; */
+    
   }
    /* Add a hover effect for buttons */
   button:hover {
@@ -235,7 +258,7 @@ button.otp{
     text-align: center;
     background:black;
     margin-top: 20px;
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
   #banklogo
@@ -313,4 +336,47 @@ img {vertical-align: middle;}
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
+}
+/* footer social media icons*/
+.fa {
+  padding: 15px;
+  font-size: 15px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 10px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+
+.fa-google {
+background: #dd4b39;
+color: white;
+}
+
+.fa-linkedin {
+background: #007bb5;
+color: white;
+}
+
+.fa-youtube {
+background: #bb0000;
+color: white;
+}
+.social
+{
+  display: block;
 }

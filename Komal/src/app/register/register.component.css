@@ -101,7 +101,7 @@ body{
   background:darkgrey;
 }
 .main1 {   
-    width: 80%;
+    width: 100%;
     margin: auto;
     background-image: url('src\assets\img.png');
     background-position: center;

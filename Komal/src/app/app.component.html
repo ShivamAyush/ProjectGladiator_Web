@@ -3,39 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   
     <div class="header">
      <span id="banklogo"><img src="/assets/banklogofir.png" alt="bank logo" width="180px" height="150px"></span> 
-    <span><h1 style="color: #15136b;align-items: center;">Welcome to our Bank</h1></span> 
+    <span><h1 style="color: #15136b;align-items: unset;">.</h1></span> 
   </div>
   <div class="topnav">
       <ul>
-          <li><a [routerLink]="['/homeLink']">Home</a></li>
+          <li><a [routerLink]="['/homeLink']"><i class="material-icons">home</i>Home</a></li>
           <div class="dropdown">
-            <a href="">Register</a>
+            <a href=""><i class="material-icons"> how_to_reg</i> Register</a>
             <div class="dropdown-content">
           <li><a [routerLink]="['/registerLink']">Register for Account</a></li>
+          
           <li><a [routerLink]="['/internetBankingLink']">Internet Banking</a></li>
-          </div>
-          </div>
-          <div class="dropdown">
-            <a href="">Login</a>
-            <div class="dropdown-content">
-              <li><a [routerLink]="['/loginLink']">Customer Login</a></li>          
+          </div> 
+          </div>         
+          <div class="dropdown1">
+            <a href=""><i class="material-icons">login</i>Login</a>
+            <div class="dropdown-content1">
+              <li><a [routerLink]="['/loginLink']">Customer Login</a></li>
               <li><a [routerLink]="['/AdminLoginLink']">Admin Login</a></li>
           </div>
           </div>
-          
-          <a [routerLink]="['/complaintLink']">Customer Service</a>     
+          <li><a><span class="material-icons">contacts</span>Contact us</a></li>
+          <li><a [routerLink]="['/complaintLink']"><span class="material-icons">help_center</span>Customer Service</a> </li>  
          </ul>
   </div>
   <div class="row">
     <div class="main">
        
-    <marquee style=" background-color: #ffe9b5; overflow: hidden; text-overflow: clip; z-index: 4;">Hope you all are good! In this covid-19 pandemic you can easily avail all the banking facilities from home.</marquee>
- 
+    <marquee style=" background-color: #79c4ed; overflow: hidden; text-overflow: clip; z-index: 4;">Hope you all are good! In this covid-19 pandemic you can easily avail all the banking facilities from home.</marquee>
+
   </div>
   </div>
         
@@ -43,7 +46,14 @@
       <router-outlet></router-outlet>
     </div>
     <div class="footer">
-      <p style="color: white;"> © 2020 e Banking Application</p>
+      <div class="social">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+      </div><br>
+      <p style="color: white;"> ©2020 developed & Managed by ISB Bank</p>
     </div> 
 
 </body>
