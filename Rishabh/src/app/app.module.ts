@@ -17,6 +17,11 @@ import { AccountStatementComponent } from './account-statement/account-statement
 import { AccountLockedComponent } from './account-locked/account-locked.component';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { AdminDashBoardComponent } from './admin-dash-board/admin-dash-board.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { ComplaintComponent } from './complaint/complaint.component';
+import { ComplaintStatusComponent } from './complaint-status/complaint-status.component';
+import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { AdminDashBoardComponent } from './admin-dash-board/admin-dash-board.com
     AccountStatementComponent,
     AccountLockedComponent,
     UserDashboardComponent,
-    AdminDashBoardComponent
+    AdminDashBoardComponent,
+    AdminLoginComponent,
+    ChangePasswordComponent,
+    ComplaintComponent,
+    ComplaintStatusComponent,
+    FundTransferComponent,
   ],
   imports: [
     BrowserModule,

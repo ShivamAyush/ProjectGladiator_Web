@@ -15,7 +15,7 @@
     padding: 10px;
     text-align: center;
     background: white;
-    width: 80%;
+    width: 100%;
     margin: auto;
     
   }
@@ -23,8 +23,8 @@
   /* Style the top navigation bar */
   .topnav {
     overflow: hidden;
-    background-color:burlywood;
-    width: 80%;
+    background-color:#218ac2;
+    width: 100%;
     margin: auto;
     height: 60px;
   }
@@ -57,7 +57,7 @@ overflow:visible;
 .dropdown-content{
   display: none;
   position: absolute;
-  background-color: burlywood;
+  background-color: #79c4ed;
   min-width: 50x;
   box-shadow: 0px 8px 16px 0px;
   z-index: 4;
@@ -74,7 +74,7 @@ overflow:visible;
   }
   
    .main {   
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
   
@@ -105,7 +105,7 @@ overflow:visible;
   
   /* Full-width inputs */
   input[type=text], input[type=password], input[type=email], input[type=tel]{
-    width: 80%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -129,7 +129,7 @@ overflow:visible;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 80%;
+    width: 100%;
   }
    /* Add a hover effect for buttons */
   button:hover {
@@ -177,7 +177,7 @@ overflow:visible;
     text-align: center;
     background:black;
     margin-top: 20px;
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
   #banklogo

@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Customer Complaint Status</title>
+<style>
+
+h2{
+ font-family: Sans-serif; 
+ font-size: 24px;     
+ font-style: normal; 
+ font-weight: bold; 
+ background-color:#116dc2;
+ color: white;
+ text-align: center; 
+ 
+}
+table th,td{
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+ color:#000000; 
+ font-size: 14px; 
+ font-style:normal;
+ font-weight:bold;
+ border-collapse:collapse; 
+ border: 1px gray;
+ border-style:solid;
+ border-spacing: 0px;
+  }
+
+
+img{
+    float:inline-end;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-style:solid;
+    border-width: 1px;
+    height:50px;
+    width:200px; 
+}
+
+
+button{
+ width: 20%;
+ padding: 8px 10px;
+ margin: 10px 10px;
+ box-sizing: border-box;
+ background-color:navy;
+ border-radius: 8px;
+ color: white;
+ float:center;
+ display: block;
+}
+
+.inputform{
+      border-radius:5px;
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+   }
+
+input[type=submit], input[type=reset]{
+background: #11c3ff linear-gradient(to bottom, transparent, #009bcf);
+border: 1px solid white;
+ width: 10%;
+ padding: 8px 10px;
+ margin: 10px 10px;
+ box-sizing:content-box;
+ background-color: blue;
+ border-radius: 8px;
+ color: white;
+ float:center;
+ margin:0px auto;
+ display:block;
+}
+
+input[type=text], input[type=number]{
+ width: 50%;
+ padding: 6px 12px;
+ margin: 5px 0;
+ box-sizing:border-box;
+}
+</style>
+
+</head>
+
+<body>
+<h2>Customer Complaint Status</h2>
+
+<table  align ="center" cellpadding = "5" >
+
+
+    <!--------------------- Customer Complaint Number ------------------------------------------>
+    <tr>
+    <td>Complaint Number*</td>
+    <td>
+        <input type="text" class = "inputform" name="ComplaintNumber" maxlength="10"/>
+    </td>
+    </tr>
+    <tr>
+        <td>Mobile Number*</td>
+        <td>
+            <input type="text" class = "inputform" name="MobileNumber" maxlength="10"/>
+        </td>
+        </tr>
+    <!------------------------- Captcha ---------------------------------->
+<tr>
+    <td>Captcha*  <img src="/assets/459CT.png" alt="  " ></td>
+    <td><input type="text" name="Captcha" class = "inputform"/></td>
+    </tr>
+       
+       
+    </table>
+    <br/>
+    <input class="swd-button" type="submit" value="Submit"  >
+
+</body>
+</html>
