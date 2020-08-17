@@ -1,0 +1,29 @@
+<body>
+    <section>
+        <div>
+            <h1>Add Beneficiary Table</h1>
+        
+        </div>
+           
+        
+        <div>
+            <table>
+                <tbody *ngFor="let item of row; let i = index">
+                <tr>
+                    <td>{{item.name}} </td>
+                    <td>{{item.accountNumber}}</td>            
+                    <td> <button class="del" (click)="deleteRow(i)"><i class="fa fa-trash"><span>Delete</span></i></button></td>
+                 </tr>   
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <button class="add" (click)='show()'><span>+Add New Contact</span></button>
+                <div *ngIf="isShow">
+                    <input placeholder="Enter the name" [(ngModel)]='addName' required><br>
+                    <input placeholder="Enter the Account number" [(ngModel)]='addAccountNumber' required><br>
+                    <button class="add" (click)='addTable()'> <span>Done</span></button>
+                </div>
+         </div>
+    </section>
+</body>

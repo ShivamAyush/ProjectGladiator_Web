@@ -21,6 +21,8 @@ import { FundTransferComponent } from "./fund-transfer/fund-transfer.component";
 import { PreLoginComponent } from "./pre-login/pre-login.component";
 import { UserDashboardComponent } from "./user-dashboard/user-dashboard.component";
 import { UserProfileComponent } from "./user-profile/user-profile.component";
+import { VisitorStatusComponent } from "./visitor-status/visitor-status.component";
+import { AddBeneficiaryComponent } from "./add-beneficiary/add-beneficiary.component";
 
 
 const routes: Routes = [
@@ -89,6 +91,12 @@ path:'forgetUserIdLink' , component:ForgetUserIdComponent
 },
 {
   path:'userProfile',component:UserProfileComponent
+},
+{
+  path:'visitorStatusLink',component:VisitorStatusComponent
+},
+{
+  path:'BenificiaryLink',component:AddBeneficiaryComponent
 }
 ];
 @NgModule({

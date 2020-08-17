@@ -27,6 +27,8 @@ import { PreLoginComponent } from "./pre-login/pre-login.component";
 import { UserDashboardComponent } from "./user-dashboard/user-dashboard.component";
 import { UserProfileComponent } from "./user-profile/user-profile.component";
 import { AccountStatementComponent } from './account-statement/account-statement.component';
+import { VisitorStatusComponent } from "./visitor-status/visitor-status.component";
+import { AddBeneficiaryComponent } from "./add-beneficiary/add-beneficiary.component";
 
 
 
@@ -53,7 +55,10 @@ import { AccountStatementComponent } from './account-statement/account-statement
     UserDashboardComponent,
     AccountLockedComponent,
     ComplaintComponent,
-    AdminDashBoardComponent
+    AdminDashBoardComponent,
+    AddBeneficiaryComponent,
+    VisitorStatusComponent
+
   ],
   imports: [
     BrowserModule,

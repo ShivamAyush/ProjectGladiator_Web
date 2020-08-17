@@ -1,0 +1,40 @@
+
+<div class="visitor">
+<h1>Status Check</h1>
+<table class="status" align="center">
+
+    <tbody *ngFor="let s of showStatus">
+        <tr>
+            <th>
+                <span>Service Reference No:</span>
+            </th>
+            <td>
+                <span>{{s.serialReferenceNumber}}</span>
+             </td>   
+        </tr>
+
+        <tr>
+            <th>
+                <span>Status:</span>
+            </th>
+            <td>
+                <span>{{s.status}}</span>
+             </td>   
+        </tr>
+
+        <tr>
+            <th>
+                <span>Verification Status:</span>
+            </th>
+            <td>
+                <span>{{s.verified}}</span>
+             </td>   
+        </tr>
+     </tbody>
+     
+     </table>
+
+    </div>
+        <!-- serialReferenceNumber:number;
+  status:string;
+  verified:string; -->
