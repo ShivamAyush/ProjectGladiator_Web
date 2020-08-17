@@ -109,17 +109,6 @@ body{
   background-size: cover;
 
   }
-/*   
-.card {
-  overflow:hidden;
-  margin: auto;
-  background-image: url('src\assets\img.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:100%;
-  width: 200%;
-} */
 
 .container{
   /* width: 400px;
@@ -135,7 +124,6 @@ body{
     height: auto;
     border:2px solid black;
   border-radius: 10px;
-
 }
 .container header{
   font-size: 30px;

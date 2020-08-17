@@ -11,6 +11,17 @@ import { AccountStatementComponent } from './account-statement/account-statement
 import {  ForgetUserIdComponent} from "./ForgetUserId";
 import { ChangePasswordComponent } from "./change-password/change-password.component";
 import { AdminLoginComponent } from "./admin-login/admin-login.component";
+import {AccountTypeComponent  } from "./account-Type/account-type.component";
+import { AccountSummaryComponent } from "./account-summary/account-summary.component";
+import { AccountLockedComponent } from "./account-locked/account-locked.component";
+import { AdminDashBoardComponent } from "./admin-dash-board/admin-dash-board.component";
+import { ComplaintComponent } from "./complaint/complaint.component";
+import { ComplaintStatusComponent } from "./complaint-status/complaint-status.component";
+import { FundTransferComponent } from "./fund-transfer/fund-transfer.component";
+import { PreLoginComponent } from "./pre-login/pre-login.component";
+import { UserDashboardComponent } from "./user-dashboard/user-dashboard.component";
+import { UserProfileComponent } from "./user-profile/user-profile.component";
+
 
 const routes: Routes = [
   {
@@ -48,8 +59,37 @@ path:'forgetUserIdLink' , component:ForgetUserIdComponent
 },
 {
   path:"AdminLoginLink" ,component:AdminLoginComponent
+},
+{
+  path:'AccountTypeLink',component:AccountTypeComponent
+},
+{
+  path:'AccountSummaryLink',component:AccountSummaryComponent
+},
+{
+  path:'AccountLockLink',component:AccountLockedComponent
+},
+{
+  path:'AdminDashBoardLink',component:AdminDashBoardComponent
+},
+{
+  path:'complaintLink',component:ComplaintComponent
+},
+{
+  path:'complainStatusLink',component:ComplaintStatusComponent
+},
+{
+  path:'fundTransferLink',component:FundTransferComponent
+},
+{
+  path:'preLoginLink',component:PreLoginComponent
+},
+{
+  path:'userDashBoardLink',component:UserDashboardComponent
+},
+{
+  path:'userProfile',component:UserProfileComponent
 }
-
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   constructor() { }
+  
 
   ngOnInit(): void {
  
@@ -19,9 +20,9 @@ const nextBtnSec = document.querySelector(".next-1");
 
 const prevBtnThird = document.querySelector(".prev-2");
 const submitBtn = document.querySelector(".submit");
-const progressText = [...document.querySelectorAll(".step p")];
-const progressCheck = [...document.querySelectorAll(".step .check")];
-const bullet = [...document.querySelectorAll(".step .bullet")];
+const progressText = (<HTMLScriptElement[]><any>document.querySelectorAll(".step p"));
+const progressCheck =(<HTMLScriptElement[]><any>document.querySelectorAll(".step .check"));
+const bullet =(<HTMLScriptElement[]><any>document.querySelectorAll(".step .bullet"));
 let max = 3;
 let current = 1;
 
@@ -31,7 +32,7 @@ let current = 1;
 
 
 firstNextBtn.addEventListener("click", function(){
-  slidePage.style.marginLeft = "-25%"; 
+  this.slidePage.style.marginLeft = "-25%"; //slidePage.style.marginLeft = "-25%"; 
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
@@ -39,7 +40,7 @@ firstNextBtn.addEventListener("click", function(){
 }); 
 
 nextBtnSec.addEventListener("click", function(){
-  slidePage.style.marginLeft = "-50%"; 
+  this.slidePage.style.marginLeft = "-50%"; //slidePage.style.marginLeft = "-50%"; 
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
@@ -47,7 +48,7 @@ nextBtnSec.addEventListener("click", function(){
 }); 
 
 prevBtnSec.addEventListener("click", function(){
-  slidePage.style.marginLeft = "-25%";
+  this.slidePage.style.marginLeft = "0%";//slidePage.style.marginLeft = "0%";
   bullet[current - 2].classList.remove("active");
   progressCheck[current - 2].classList.remove("active");
   progressText[current - 2].classList.remove("active");
@@ -55,7 +56,7 @@ prevBtnSec.addEventListener("click", function(){
 
 }); 
 prevBtnThird.addEventListener("click", function(){
-  slidePage.style.marginLeft = "-25%"; 
+  this.slidePage.style.marginLeft = "-25%"; //slidePage.style.marginLeft = "-25%"; 
   bullet[current - 2].classList.remove("active");
   progressCheck[current - 2].classList.remove("active");
   progressText[current - 2].classList.remove("active");
@@ -80,19 +81,63 @@ function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < 2; i++) {
-    slides[i].style.display = "none";  
+  for (i = 0; i < 3; i++) {
+    this.slides[i].style.display = "none";  
+    //slides[i].style.display = "none"; 
   }
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  this.slides[slideIndex-1].style.display = "block";  
+  //slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 showSlides();
   }
+  
+  
+  State= [ "Andhra Pradesh",
+ "Arunachal Pradesh",
+ "Assam",
+ "Bihar",
+ "Chhattisgarh",
+ "Goa",
+ "Gujarat",
+ "Haryana",
+ "Himachal Pradesh",
+ "Jammu and Kashmir",
+ "Jharkhand",
+ "Karnataka",
+ "Kerala",
+ "Madhya Pradesh",
+ "Maharashtra",
+ "Manipur",
+ "Meghalaya",
+ "Mizoram",
+ "Nagaland",
+ "Odisha",
+ "Punjab",
+ "Rajasthan",
+ "Sikkim",
+ "Tamil Nadu",
+ "Telangana",
+ "Tripura",
+ "Uttarakhand",
+ "Uttar Pradesh",
+ "West Bengal",
+ "Andaman and Nicobar Islands",
+ "Chandigarh",
+ "Dadra and Nagar Haveli",
+ "Daman and Diu",
+ "Delhi",
+ "Lakshadweep",
+ "Puducherry"]
+
+ Occupation=["Bussiness","Service","Self","Management","Education instruction"]
+
+
 
 }

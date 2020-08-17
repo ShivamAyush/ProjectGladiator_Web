@@ -23,7 +23,7 @@
                         <label for="psw"><b>Password</b></label><br>
                         <input class="pswrd" type="password" placeholder="Enter Password" id="psw" required ngModel><span class="show">SHOW</span><br>
 
-                        <button type="submit" [disabled]="!loginForm.valid">Login</button><br>
+                        <button type="submit" [disabled]="!loginForm.valid"><a [routerLink]="['/userDashBoardLink']">Login</a></button><br>
                         <label>
                             <input type="checkbox" checked="checked" id="remember" required ngModel> Remember me
                         </label>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <ul>
+                <li><a class="active" [routerLink]="['/userProfile']"> <i class="material-icons">account_circle</i><br>My Accounts & Profile</a></li>
+                <li><a href="#about"><i class="material-icons">account_balance</i><br>Account Balance</a></li>
+                <li><a href="#contact"><i class="material-icons">import_export</i><br>Transactions</a></li>
+                <li><a [routerLink]="['/fundTransferLink']"><i class="material-icons">call_made</i><br>Funds Transfer</a></li>
+                <li><a [routerLink]="['/sessionTimeout']">LogOut</a></li>
+
+                <li style="float:right; font-size:24px; color:white; font-weight: bolder;padding: 30px;">Dashboard</li>
+              </ul>
+              <div class="container-username">
+                  <span class="getDateTime">{{getDatetime}}</span><span class="userName">Hi, {{userName}}</span>
+              </div>
+        </div>
+        <div class="mid-body">
+            <div class="left_section">
+                <div class="head_of_left_section">
+                  <p style="margin-left: 10px;">Quick Links &nbsp;></p>
+                </div>
+            <div class="mid_of_left_section">
+                <ul class="h-ul">
+                    <li class="h-li"><a class="active" [routerLink]="['/AccountSummaryLink']">Account Summary</a></li>
+                    <li class="h-li"><a [routerLink]="['/accountStatement']">Account Statement</a></li>
+                    <li class="h-li"><a [routerLink]="['/changePasswordLink']">Login Password Change</a></li>
+                    <li class="h-li"><a [routerLink]="['/userProfile']">Profile</a></li>
+                    <li class="h-li"><a [routerLink]="['/fundTransferLink']">Funds Transfer</a></li>
+                    <li class="h-li"><a [routerLink]="['/complaintLink']">Customer Service</a></li>
+                  </ul>
+                </div>
+                <div class="bottom_of_left_section">
+                    
+                </div>
+            </div>
+            <div class="right_section">
+                <div class="head_of_right_section">
+                    You are in: {{path}}
+                </div>
+                <div class="mid_of_right_section">
+                    <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

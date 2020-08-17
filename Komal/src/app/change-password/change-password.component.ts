@@ -27,56 +27,109 @@ export class ChangePasswordComponent implements OnInit {
     show4.addEventListener('click',active3);
 
     function active(){
-        if(input1.type === "password"){
-            input1.type="text";
-            show1.style.color="#1DA1F2";
-            show1.textContent= "HIDE";
+        if( this.input1.type === "password"){
+            this.input1.type="text";
+            this.show1.style.color="#1DA1F2";
+            this.show1.textContent= "HIDE";
         }
         else{
-            input1.type="password";
-            show1.textContent= "SHOW";
-            show1.style.color="#111";
+            this.input1.type="password";
+            this.show1.textContent= "SHOW";
+            this.show1.style.color="#111";
         }
     }
     
     function active1(){
-        if(input2.type === "password"){
-            input2.type="text";
-            show2.style.color="#1DA1F2";
-            show2.textContent= "HIDE";
+        if(  this.input2.type === "password"){
+            this.input2.type="text";
+            this.show2.style.color="#1DA1F2";
+            this.show2.textContent= "HIDE";
         }
         else{
-            input2.type="password";
-            show2.textContent= "SHOW";
-            show2.style.color="#111";
+            this.input2.type="password";
+            this.show2.textContent= "SHOW";
+            this.show2.style.color="#111";
         }
     }
 
     
     function active2(){
-        if(input3.type === "password"){
-            input3.type="text";
-            show3.style.color="#1DA1F2";
-            show3.textContent= "HIDE";
+        if(  this.input3.type === "password"){
+            this.input3.type="text";
+            this.show3.style.color="#1DA1F2";
+            this.show3.textContent= "HIDE";
         }
         else{
-            input3.type="password";
-            show3.textContent= "SHOW";
-            show3.style.color="#111";
+            this.input3.type="password";
+            this. show3.textContent= "SHOW";
+            this.show3.style.color="#111";
         }
     }
    
     function active3(){
-        if(input4.type === "password"){
-            input4.type="text";
-            show4.style.color="#1DA1F2";
-            show4.textContent= "HIDE";
+        if(  this.input4.type === "password"){
+            this.input4.type="text";
+            this.show4.style.color="#1DA1F2";
+            this.show4.textContent= "HIDE";
         }
         else{
-            input4.type="password";
-            show4.textContent= "SHOW";
-            show4.style.color="#111";
+            this.input4.type="password";
+            this.show4.textContent= "SHOW";
+            this.show4.style.color="#111";
         }
+
+
+    // function active(){
+    //     if(input1.type === "password"){
+    //         input1.type="text";
+    //         show1.style.color="#1DA1F2";
+    //         show1.textContent= "HIDE";
+    //     }
+    //     else{
+    //         input1.type="password";
+    //         show1.textContent= "SHOW";
+    //         show1.style.color="#111";
+    //     }
+    // }
+    
+    // function active1(){
+    //     if( input2.type === "password"){
+    //         input2.type="text";
+    //         show2.style.color="#1DA1F2";
+    //         show2.textContent= "HIDE";
+    //     }
+    //     else{
+    //         input2.type="password";
+    //         show2.textContent= "SHOW";
+    //         show2.style.color="#111";
+    //     }
+    // }
+
+    
+    // function active2(){
+    //     if( input3.type === "password"){
+    //         input3.type="text";
+    //         show3.style.color="#1DA1F2";
+    //         show3.textContent= "HIDE";
+    //     }
+    //     else{
+    //        input3.type="password";
+    //         show3.textContent= "SHOW";
+    //         show3.style.color="#111";
+    //     }
+    // }
+   
+    // function active3(){
+    //     if( input4.type === "password"){
+    //         input4.type="text";
+    //         show4.style.color="#1DA1F2";
+    //         show4.textContent= "HIDE";
+    //     }
+    //     else{
+    //         input4.type="password";
+    //         show4.textContent= "SHOW";
+    //         show4.style.color="#111";
+    //     }
     }
   }
 

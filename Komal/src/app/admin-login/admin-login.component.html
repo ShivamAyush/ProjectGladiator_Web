@@ -12,7 +12,7 @@
             <label for="psw"><b>Password</b></label><br>
             <input class="pswrd" type="password" placeholder="Enter Password" id="psw" required ngModel><span class="show">SHOW</span><br>
             <div class="field">
-            <button type="submit" [disabled]="!AdminloginForm.valid">Login</button><br><br>
+            <button type="submit" [disabled]="!AdminloginForm.valid"><a [routerLink]="['/AdminDashBoardLink']">Login</a></button><br><br>
             <label>
                 <input type="checkbox" checked="checked" id="remember" required ngModel> <b>Remember me</b>
             </label>
