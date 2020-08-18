@@ -16,11 +16,18 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { ComplaintComponent } from './complaint/complaint.component';
 import { ComplaintStatusComponent } from './complaint-status/complaint-status.component';
 import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
+import { VisitorStatusComponent } from './visitor-status/visitor-status.component';
+import { PreLoginComponent } from './pre-login/pre-login.component';
+import { AccountSummaryComponent } from './account-summary/account-summary.component';
+import { AccountTypeComponent } from './account-type/account-type.component';
+import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routes: Routes = [
-  {
-    path:'',component:HomeComponent
-  },
+{
+  path:'',component:HomeComponent
+},
 {
   path:'homeLink',component:HomeComponent
 },
@@ -31,7 +38,7 @@ const routes: Routes = [
   path: 'registerLink',component:RegisterComponent
 },
 {
-path:'forgetpasswordLink',component:ForgetPasswordComponent
+path:'forgetPasswordLink',component:ForgetPasswordComponent
 },
 {
   path:'setPaaswordLink',component:SetPasswordComponent
@@ -68,6 +75,27 @@ path:'forgetpasswordLink',component:ForgetPasswordComponent
 },
 {
   path:'fundTransfer',component:FundTransferComponent
+},
+{
+  path:'visitorStatusLink',component:VisitorStatusComponent
+},
+{
+  path:'preLogin',component:PreLoginComponent
+},
+{
+  path:'accountSummary',component:AccountSummaryComponent
+},
+{
+  path:'accountType',component:AccountTypeComponent
+},
+{
+  path:'addBeneficiary',component:AddBeneficiaryComponent
+},
+{
+  path:'userProfile',component:UserProfileComponent
+},
+{
+  path:'contactUs',component:ContactUsComponent
 }
 ];
 @NgModule({

@@ -14,13 +14,13 @@ template:`
 
       <div class="container" style="text-align:center;border:2px solid black;
       border-radius: 10px;">
-          <label for="newpassword"><b>Login Password</b></label>
-          <input type="text" id="newpassword" required ngModel><br>
+      <label for="psw"><b>Login Password</b></label><br>
+      <input class="pswrd" type="password" placeholder="Enter Password" id="psw" required ngModel><span class="show">SHOW</span><br>
 
-          <label for="newpassword1"><b>Confirm Password</b></label>
-          <input type="tel" id="newpassword1" required ngModel><br><br>
+      <label for="psw"><b>Confirm Password</b></label><br>
+      <input class="pswrd1" type="password" placeholder="Re-enter password" id="psw" required ngModel><span class="view">SHOW</span><br>
 
-          <div class="container" style="background-color:#f1f1f1;height:60px;width:80%">
+          <div class="container" style="background-color:#f1f1f1;height:60px;width:80%;margin-left:3px;">
           <button type="reset" class="cancelbtn">Reset</button>
           <button type="submit" class="proceed1" >Submit</button>
           <button class="proceed1" >
@@ -44,6 +44,40 @@ export class SetPasswordComponent implements OnInit {
     constructor() { }
   
     ngOnInit(): void {
+      var input:HTMLInputElement=document.querySelector('.pswrd');
+  var show:HTMLInputElement=document.querySelector('.show');
+  show.addEventListener('click',active);
+  function active(){
+
+    if(input.type === "password"){
+      input.type="text";
+      show.style.color="#1DA1F2";
+      show.textContent= "HIDE";
+  }
+  else{
+    input.type="password";
+    show.textContent= "SHOW";
+    show.style.color="#111";
+  }
+  }
+  var input1:HTMLInputElement=document.querySelector('.pswrd1');
+  var show1:HTMLInputElement=document.querySelector('.view');
+  show1.addEventListener('click',active1);
+  function active1(){
+    if(input1.type === "password"){
+      input1.type="text";
+      show1.style.color="#1DA1F2";
+      show1.textContent= "HIDE";
     }
+    else{
+      input1.type="password";
+      show1.textContent= "SHOW";
+      show1.style.color="#111";
+    }
+
+      
+  }
   
   }
+    }
+  

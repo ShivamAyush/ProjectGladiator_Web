@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
-  <div class="row">
+  <div class="row" >
   <div class="main">
-      <div class="card">
+      <div class="card" >
          <h2 style="text-align:right;"> Register for internet banking</h2>
           
-         <form #regForm='ngForm' style="float:right;">
+         <form #regForm='ngForm' style="float:right; border:2px solid black;">
          <div class="container" >
            <label for="Account"><b>Account Number</b></label><br>
            <input type="tel" placeholder="Enter Account Number" name="Account" id="Account" required ngModel><br>

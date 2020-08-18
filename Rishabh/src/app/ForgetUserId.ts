@@ -1,24 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector:'app-forgetpassword',
+    selector:'app-forgetUserId',
     template:`
     
     <div class="row">
   <div class="main">
       <div class="card" style="height: 540px;">
-      <h3 style="text-align:right;margin-right:23px;">Forgot password? Enter the details</h3>
+      <h3 style="text-align:right;">Forgot User Id? Enter the details</h3>
 
-    <form #forgotPasswordForm='ngForm' style="float:right;">
+    <form #forgotUserIdForm='ngForm' style="float:right;">
 
         <div class="container"style="text-align:center;border:2px solid black;
         border-radius: 10px;">
-            <label for="uid"><b>Enter UserId</b></label><br>
-            <input type="text" id="uid"  placeholder="enter user ID" required ngModel><br>
+            <label for="uid"><b>Enter Account Number</b></label><br>
+            <input type="text" id="uid" placeholder="enter account number" required ngModel><br>
+
 
             <button class="otp">send OTP</button><br>
             <label for="otp"><b>Enter Otp</b></label><br>
-            <input type="tel" id="otp"  placeholder="enter Otp" required ngModel><br><br>
+            <input type="tel" id="otp" placeholder="enter Otp" required ngModel><br><br>
             
             <div class="container" style="background-color:#f1f1f1;height:60px;width:80%">
             <button type="reset" class="cancelbtn">Reset</button>
@@ -43,7 +44,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 
-export class ForgetPasswordComponent implements OnInit {
+export class ForgetUserIdComponent implements OnInit {
 
     constructor() { }
   

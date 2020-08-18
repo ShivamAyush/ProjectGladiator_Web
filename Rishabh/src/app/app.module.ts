@@ -22,6 +22,13 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { ComplaintComponent } from './complaint/complaint.component';
 import { ComplaintStatusComponent } from './complaint-status/complaint-status.component';
 import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
+import { VisitorStatusComponent } from './visitor-status/visitor-status.component';
+import { PreLoginComponent } from './pre-login/pre-login.component';
+import { AccountSummaryComponent } from './account-summary/account-summary.component';
+import { AccountTypeComponent } from './account-type/account-type.component';
+import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +49,13 @@ import { FundTransferComponent } from './fund-transfer/fund-transfer.component';
     ComplaintComponent,
     ComplaintStatusComponent,
     FundTransferComponent,
+    VisitorStatusComponent,
+    PreLoginComponent,
+    AccountSummaryComponent,
+    AccountTypeComponent,
+    AddBeneficiaryComponent,
+    UserProfileComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
