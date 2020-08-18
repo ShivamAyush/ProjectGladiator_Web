@@ -13,13 +13,15 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
  
  
-const slidePage = document.querySelector(".slidepage"); 
-const firstNextBtn=document.querySelector(".nextBtn")
-const prevBtnSec = document.querySelector(".prev-1");
-const nextBtnSec = document.querySelector(".next-1");
+const slidePage:HTMLInputElement= document.querySelector(".slidepage"); 
+const firstNextBtn:HTMLInputElement=document.querySelector(".nextBtn")
+const prevBtnSec:HTMLInputElement= document.querySelector(".prev-1");
+const nextBtnSec:HTMLInputElement= document.querySelector(".next-1");
 
-const prevBtnThird = document.querySelector(".prev-2");
-const submitBtn = document.querySelector(".submit");
+const prevBtnThird:HTMLInputElement= document.querySelector(".prev-2");
+const submitBtn:HTMLInputElement= document.querySelector(".submit");
+
+
 const progressText = (<HTMLScriptElement[]><any>document.querySelectorAll(".step p"));
 const progressCheck =(<HTMLScriptElement[]><any>document.querySelectorAll(".step .check"));
 const bullet =(<HTMLScriptElement[]><any>document.querySelectorAll(".step .bullet"));
@@ -32,7 +34,7 @@ let current = 1;
 
 
 firstNextBtn.addEventListener("click", function(){
-  this.slidePage.style.marginLeft = "-25%"; //slidePage.style.marginLeft = "-25%"; 
+  slidePage.style.marginLeft = "-25%";
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
@@ -40,7 +42,7 @@ firstNextBtn.addEventListener("click", function(){
 }); 
 
 nextBtnSec.addEventListener("click", function(){
-  this.slidePage.style.marginLeft = "-50%"; //slidePage.style.marginLeft = "-50%"; 
+  slidePage.style.marginLeft = "-50%"; 
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
@@ -48,7 +50,7 @@ nextBtnSec.addEventListener("click", function(){
 }); 
 
 prevBtnSec.addEventListener("click", function(){
-  this.slidePage.style.marginLeft = "0%";//slidePage.style.marginLeft = "0%";
+ slidePage.style.marginLeft = "0%";
   bullet[current - 2].classList.remove("active");
   progressCheck[current - 2].classList.remove("active");
   progressText[current - 2].classList.remove("active");
@@ -56,7 +58,7 @@ prevBtnSec.addEventListener("click", function(){
 
 }); 
 prevBtnThird.addEventListener("click", function(){
-  this.slidePage.style.marginLeft = "-25%"; //slidePage.style.marginLeft = "-25%"; 
+  slidePage.style.marginLeft = "-25%"; 
   bullet[current - 2].classList.remove("active");
   progressCheck[current - 2].classList.remove("active");
   progressText[current - 2].classList.remove("active");
@@ -79,19 +81,22 @@ submitBtn.addEventListener("click", function(){
 
 function showSlides() {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+
+
+
+  var slides=<HTMLElement[]><any>document.getElementsByClassName("mySlides");
+  var dots = <HTMLElement[]><any>document.getElementsByClassName("dot");
+  
+  
   for (i = 0; i < 3; i++) {
-    this.slides[i].style.display = "none";  
-    //slides[i].style.display = "none"; 
+    slides[i].style.display = "none";  
   }
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  this.slides[slideIndex-1].style.display = "block";  
-  //slides[slideIndex-1].style.display = "block";
+  slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 4000); // Change image every 2 seconds
 }

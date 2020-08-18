@@ -1,10 +1,23 @@
+
+.benificiary{
+    background-color: #a6d3f7;
+    margin: auto;
+    width: 78%;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding: 15px;
+    border: inset;
+    text-align: center;
+}
+
 h1{
     margin-bottom: 40px;
     color: black;
     font-size: 240%;
     word-spacing: 4px;
     letter-spacing: 1px;
-    font-weight: 100;
+    font-weight: bold;
     text-transform: uppercase;
     
 }
@@ -15,6 +28,8 @@ table{
     margin-top: 5px;
     width: 40%;
     margin-bottom: 40px;
+    margin-left: 350px;
+    border-radius: 10px;
 
 }
 
@@ -39,12 +54,14 @@ td{
 .del{
     font-weight: 700;
     border-radius: 200px;
+    padding: 10px;
 }
 
 .del:hover{
     background-color: red;
     color: white;
     transition: 5sec;
+    font-size: large;
 }
 
 .add{
@@ -52,6 +69,7 @@ td{
     margin-left:0px ;
     justify-content: center;
     border-radius: 200px ;
+    padding: 20px;
     background-color:rgba(207, 204, 204, 0.404) ;
 }
 
@@ -62,8 +80,10 @@ input{
 }
 
 .add:hover{
-    background-color: grey;
+    background-color:blue;
     transition: ease-in;
+    font-size: large;
+    color:white
 }
 
 .add span{

@@ -44,63 +44,40 @@ export class SetPasswordComponent implements OnInit {
     constructor() { }
   
     ngOnInit(): void {
-      var input=document.querySelector('.pswrd');
-  var show=document.querySelector('.show');
+      var input:HTMLInputElement=document.querySelector('.pswrd');
+  var show:HTMLInputElement=document.querySelector('.show');
   show.addEventListener('click',active);
   function active(){
 
-    if(this.input.type=== "password"){
-      this.input.type="text";
-      this.show. style.color="#1DA1F2";
-      this.show.textContent= "HIDE";
-    }
-    else{
-      this.input.type="password";
-      this.show.textContent= "SHOW";
-      this.show.style.color="#111";
-    }
+    if(input.type === "password"){
+      input.type="text";
+      show.style.color="#1DA1F2";
+      show.textContent= "HIDE";
   }
-  var input1=document.querySelector('.pswrd1');
-  var show1=document.querySelector('.view');
+  else{
+    input.type="password";
+    show.textContent= "SHOW";
+    show.style.color="#111";
+  }
+  }
+  var input1:HTMLInputElement=document.querySelector('.pswrd1');
+  var show1:HTMLInputElement=document.querySelector('.view');
   show1.addEventListener('click',active1);
   function active1(){
-      if(this.input1.type === "password"){
-        this.input1.type="text";
-        this.show1.style.color="#1DA1F2";
-        this.show1.textContent= "HIDE";
-      }
-      else{
-        this.input1.type="password";
-        this.show1.textContent= "SHOW";
-        this.show1.style.color="#111";
-      }
+    if(input1.type === "password"){
+      input1.type="text";
+      show1.style.color="#1DA1F2";
+      show1.textContent= "HIDE";
+    }
+    else{
+      input1.type="password";
+      show1.textContent= "SHOW";
+      show1.style.color="#111";
+    }
 
-  //     if(input.type === "password"){
-  //         input.type="text";
-  //         show.style.color="#1DA1F2";
-  //         show.textContent= "HIDE";
-  //     }
-  //     else{
-  //       input.type="password";
-  //       show.textContent= "SHOW";
-  //       show.style.color="#111";
-  //     }
-  // }
-  // var input1=document.querySelector('.pswrd1');
-  // var show1=document.querySelector('.view');
-  // show1.addEventListener('click',active1);
-  // function active1(){
-  //     if(input1.type === "password"){
-  //       input1.type="text";
-  //       show1.style.color="#1DA1F2";
-  //       show1.textContent= "HIDE";
-  //     }
-  //     else{
-  //       input1.type="password";
-  //       show1.textContent= "SHOW";
-  //       show1.style.color="#111";
-  //     }
+      
+  }
+  
   }
     }
   
-  }
