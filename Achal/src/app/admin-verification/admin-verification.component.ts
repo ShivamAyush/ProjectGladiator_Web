@@ -12,10 +12,10 @@ export class AdminVerificationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  d1=new Verification("John","8447711059");
-  d2=new Verification("Marc","9941920645");
-  d3=new Verification("Jill","9999444420");
-  d4=new Verification("Pepe","9945530581");
+  d1=new Verification("John","8447711059","12542","456","abc@xyx","savings","1500","Service");
+  d2=new Verification("Marc","9941920645","12542","4753","refc@xyx","savings","1500","Service");
+  d3=new Verification("Jill","9999444420","12542","95145","acdgb@xyx","current","1500","Business");
+  d4=new Verification("Pepe","9945530581","12542","478855","abcaas@xyx","corporate","1500","Self");
   row:Verification[] = [this.d1,this.d2,this.d3,this.d4];
 
  
@@ -33,10 +33,21 @@ export class AdminVerificationComponent implements OnInit {
 export class Verification{
   name:string;
   serialReferenceNumber:number;
-
-  constructor(name,serialReferenceNumber ){
+  aadharNumber:number;
+  mobileNumber:number;
+  email:string;
+  accountType:string;
+  annualIncome:number;
+  occupation:string;
+  constructor(name,serialReferenceNumber,aadharNumber,mobileNumber,email,accountType,annualIncome,occupation){
       this.name=name;
       this.serialReferenceNumber=serialReferenceNumber;
-  }
+      this.aadharNumber=aadharNumber;
+      this.mobileNumber=mobileNumber;
+      this.email=email;
+      this.accountType=accountType;
+      this.annualIncome=annualIncome;
+      this.occupation=occupation;
+    }
 
 }
