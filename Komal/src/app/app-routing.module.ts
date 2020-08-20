@@ -23,7 +23,10 @@ import { UserDashboardComponent } from "./user-dashboard/user-dashboard.componen
 import { UserProfileComponent } from "./user-profile/user-profile.component";
 import { VisitorStatusComponent } from "./visitor-status/visitor-status.component";
 import { AddBeneficiaryComponent } from "./add-beneficiary/add-beneficiary.component";
-
+import {AccountBalanceComponent } from "./account-balance/account-balance.component";
+import { TransactionsComponent } from "./transactions/transactions.component";
+import {  ContactUsComponent} from "./contact-us/contact-us.component";
+import { AdminVerificationComponent } from "./admin-verification/admin-verification.component";
 
 const routes: Routes = [
   {
@@ -97,6 +100,18 @@ path:'forgetUserIdLink' , component:ForgetUserIdComponent
 },
 {
   path:'BenificiaryLink',component:AddBeneficiaryComponent
+},
+{
+  path:'AccountBalanceLink',component:AccountBalanceComponent
+},
+{
+  path:'TransactionLink',component:TransactionsComponent
+},
+{
+  path:'contactUsLink',component:ContactUsComponent
+},
+{
+  path:'adminVerification',component:AdminVerificationComponent
 }
 ];
 @NgModule({

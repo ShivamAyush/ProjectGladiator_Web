@@ -19,12 +19,18 @@
             </table>
         </div>
         <div>
-            <button class="add" (click)='show()'><span>+Add New Contact</span></button>
+            <button class="add" (click)='show()'> <span>+Add New Contact</span></button>
                 <div *ngIf="isShow">
-                    <input placeholder="Enter the name" [(ngModel)]='addName' required><br>
-                    <input placeholder="Enter the Account number" [(ngModel)]='addAccountNumber' required><br>
-                    <button class="add" (click)='addTable()'> <span>Done</span></button>
+                    <form #addForm='ngForm'>
+                    <input type="text" placeholder="Enter the name" [(ngModel)]='addName' required><br>
+                    <input type="number" placeholder="Enter the Account number" [(ngModel)]='addAccountNumber' required><br>
+                    <button class="add" (click)='addTable()' [disabled]="!addForm.valid"> <span>Done</span></button>
+                </form>                 
+
+
                 </div>
+          
+  </div>
          </div>
-        </div>
+    
 </body>

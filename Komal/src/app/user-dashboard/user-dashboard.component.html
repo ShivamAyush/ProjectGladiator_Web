@@ -11,12 +11,12 @@
         <div>
             <ul>
                 <li><a class="active" [routerLink]="['/userProfile']"> <i class="material-icons">account_circle</i><br>My Accounts & Profile</a></li>
-                <li><a href="#about"><i class="material-icons">account_balance</i><br>Account Balance</a></li>
-                <li><a href="#contact"><i class="material-icons">import_export</i><br>Transactions</a></li>
+                <li><a [routerLink]="['/AccountBalanceLink']" ><i class="material-icons">account_balance</i><br>Account Balance</a></li>
+                <li><a [routerLink]="['/TransactionLink']"><i class="material-icons">import_export</i><br>Transactions</a></li>
                 <li><a [routerLink]="['/fundTransferLink']"><i class="material-icons">call_made</i><br>Funds Transfer</a></li>
-                <li><a [routerLink]="['/BenificiaryLink']" ><i class="material-icons">person_add</i><br>Add Benefishery</a></li>
+                <li><a [routerLink]="['/BenificiaryLink']" ><i class="material-icons">person_add</i><br>Add Beneficiary</a></li>
 
-                <li><a [routerLink]="['/sessionTimeout']"><i class="material-icons">power_settings_new</i><br>LogOut</a></li>
+                <li><a [routerLink]="['/loginLink']"><i class="material-icons">power_settings_new</i><br>LogOut</a></li>
 
                 <li style="float:right; font-size:24px; color:white; font-weight: bolder;padding: 30px;">Dashboard</li>
               </ul>

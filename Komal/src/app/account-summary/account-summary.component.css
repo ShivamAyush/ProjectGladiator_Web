@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: OpenSans-Regular;
-    src: url('src/assets/OpenSans-Regular.ttf'); 
+    src: url('/assets/OpenSans-Regular.ttf'); 
   }
   
   
@@ -22,6 +22,7 @@
   body, html {
       height: 100%;
       font-family: sans-serif;
+      background-color:#4773ba;
   }
   
   /* ------------------------------------ */
@@ -105,12 +106,6 @@
   .container-table100 {
     width: 100%;
     min-height: 100vh;
-    background: #c850c0;
-    background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
-    background: -o-linear-gradient(45deg, #4158d0, #c850c0);
-    background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
-    background: linear-gradient(45deg, #4158d0, #c850c0);
-  
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;

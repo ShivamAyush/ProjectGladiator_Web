@@ -29,6 +29,9 @@ import { UserProfileComponent } from "./user-profile/user-profile.component";
 import { AccountStatementComponent } from './account-statement/account-statement.component';
 import { VisitorStatusComponent } from "./visitor-status/visitor-status.component";
 import { AddBeneficiaryComponent } from "./add-beneficiary/add-beneficiary.component";
+import { AccountBalanceComponent } from './account-balance/account-balance.component';
+import { TransactionsComponent } from './transactions/transactions.component';
+import {  ContactUsComponent} from "./contact-us/contact-us.component";
 
 
 
@@ -57,7 +60,10 @@ import { AddBeneficiaryComponent } from "./add-beneficiary/add-beneficiary.compo
     ComplaintComponent,
     AdminDashBoardComponent,
     AddBeneficiaryComponent,
-    VisitorStatusComponent
+    VisitorStatusComponent,
+    AccountBalanceComponent,
+    TransactionsComponent,
+    ContactUsComponent
 
   ],
   imports: [

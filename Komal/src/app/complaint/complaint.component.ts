@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ComplaintComponent implements OnInit {
 
   constructor() { }
+  images = ["/assets/459CT.png", "/assets/RBSKW.png", "/assets/W93BX.png"]
 
+  imagePath=this.images[Math.floor(Math.random() * this.images.length)];
   ngOnInit(): void {
+  
   }
 
 }
