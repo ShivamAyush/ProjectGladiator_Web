@@ -19,6 +19,12 @@
       box-sizing: border-box;
   }
   
+  body, html {
+      height: 100%;
+      font-family: sans-serif;
+      background-color: #a6d3f7;
+  }
+  
   /* ------------------------------------ */
   a {
       margin: 0px;
@@ -49,7 +55,7 @@
   
   /* ------------------------------------ */
   input {
-      display: block;
+    display: block;
       outline: none;
       border: none !important;
   }
@@ -78,14 +84,28 @@
       border: none !important;
   }
   
+  
+  
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ Utiliti ]*/
+  
+  
+  
+  
+  
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ Table ]*/
+  
   .limiter {
     width: 80%;
     margin: 0 auto;
   }
   
   .container-table100 {
-    width: 80%;
-    min-height: 50vh;
+    width: 100%;
+    min-height: 100vh;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -98,7 +118,7 @@
   }
   
   .wrap-table100 {
-    width: 900px;
+    width: 1170px;
   }
   
   table {
@@ -119,7 +139,7 @@
   }
   table thead tr {
     height: 60px;
-    background: #36304a;
+    background-color:#218ac2;
   }
   table tbody tr {
     height: 50px;

@@ -1,0 +1,43 @@
+<body>
+    <div class="admin">
+       
+        <div>
+            <h1>Admin Verification Portal</h1>
+        
+        </div>
+           
+        
+        <div>
+            <table>
+                <thead>
+                    <th><span>Name</span></th>
+                    <th><span>Reference No.</span></th>
+                    <th><span>Aadhar No.</span></th>
+                    <th><span>Mobile No.</span></th>
+                    <th><span>Email</span></th>
+                    <th><span>Account Type</span></th>
+                    <th><span>Gross Income</span></th>
+                    <th><span>Occupation</span></th>
+                    <th><span>Actions</span></th>
+                </thead>    
+                <tbody *ngFor="let item of row; let i = index">
+                <tr>
+                    <td>{{item.name}} </td>
+                    <td>{{item.serialReferenceNumber}}</td>            
+                    <td>{{item.aadharNumber}}</td>
+                    <td>{{item.mobileNumber}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.accountType}}</td>
+                    <td>{{item.annualIncome}}</td>
+                    <td>{{item.occupation}}</td>
+                    <td> <button class="accept"><span>Accept</span></button> </td>
+                    <td> <button class="rej" (click)="deleteRow(i)"><i class="fa fa-trash"><span>Reject</span></i></button></td>
+                   
+                 </tr>   
+                </tbody>
+            </table>
+        </div>
+        
+        </div>
+</body>
+

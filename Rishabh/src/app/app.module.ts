@@ -29,6 +29,12 @@ import { AccountTypeComponent } from './account-type/account-type.component';
 import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HeaderNavComponent } from './header-nav/header-nav.component';
+import { UserNavBarComponent } from './user-nav-bar/user-nav-bar.component';
+import { HeaderAppComponent } from './header-app/header-app.component';
+import { AccountBalanceComponent } from './account-balance/account-balance.component';
+import { AdminVerificationComponent } from './admin-verification/admin-verification.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +62,12 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     AddBeneficiaryComponent,
     UserProfileComponent,
     ContactUsComponent,
+    HeaderNavComponent,
+    UserNavBarComponent,
+    HeaderAppComponent,
+    AccountBalanceComponent,
+    AdminVerificationComponent,
+    TransactionsComponent,
   ],
   imports: [
     BrowserModule,

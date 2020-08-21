@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Session Expired</title>
-  <link rel="icon" href="/assets/session_expiredicon.ico" type="image/x-icon">
-</head>
-<body>
-  <div style="background-color:#4294db;width:90%;text-align:center;padding:70px;justify-content: center;align-items: center;margin: auto;margin-right:30px"> 
+<app-header-nav></app-header-nav>
+<div style="background-color:#4294db;width:90%;text-align:center;padding:70px;justify-content: center;align-items: center;margin: auto;margin-right:30px"> 
     <div style="background-color:white;width:50%;text-align:center;border-radius:20px;padding:2px;margin:10px auto"> 
       <img src="/assets/session_logo.png" alt="img" width="150px" height="150px">
       <h3 style="font-size:2vw;">Your session has expired</h3> 
@@ -16,6 +7,4 @@
       <p style="font-size:1vw;">Error: Status Code (440)</p> 
       <button class=" button login_again" [routerLink]="['/loginLink']">Login Again!</button><br>
     </div> 
-  </div> 
-</body>
-</html>
+</div> 

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector:'app-forgetpassword',
     template:`
-    
+    <app-header-nav></app-header-nav>
     <div class="row">
   <div class="main">
       <div class="card" style="height: 540px;">

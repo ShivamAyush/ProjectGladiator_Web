@@ -1,4 +1,10 @@
-
+/* Header/Blog Title */
+.header {
+  background: white;
+  width: 100%;
+  margin: auto;
+  
+}
 .mid-body
 {
   margin: auto;

@@ -1,0 +1,48 @@
+
+<div class="balance">
+    <h1>Account Balance</h1>
+    <table class="status" align="center">
+    
+        <tbody *ngFor="let a of accountBalance">
+            <tr>
+                <th>
+                    <span>Name:</span>
+                </th>
+                <td>
+                    <span>{{a.Name}}</span>
+                 </td>   
+            </tr>
+    
+            <tr>
+                <th>
+                    <span>Account Number:</span>
+                </th>
+                <td>
+                    <span>{{a.Account_Number}}</span>
+                 </td>   
+            </tr>
+    
+            <tr>
+                <th>
+                    <span>Account Type:</span>
+                </th>
+                <td>
+                    <span>{{a.Account_Type}}</span>
+                 </td>   
+            </tr>
+            <tr>
+                <th>
+                    <span>Account Balance:</span>
+                </th>
+                <td>
+                    <span>{{a.Account_Balance}}</span>
+                 </td>   
+            </tr>
+         </tbody>
+         
+         </table>
+    
+        </div>
+            <!-- serialReferenceNumber:number;
+      status:string;
+      verified:string; -->

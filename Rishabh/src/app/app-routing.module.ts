@@ -23,6 +23,10 @@ import { AccountTypeComponent } from './account-type/account-type.component';
 import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AccountBalance, AccountBalanceComponent } from './account-balance/account-balance.component';
+import { componentFactoryName } from '@angular/compiler';
+import { AdminVerificationComponent } from './admin-verification/admin-verification.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 const routes: Routes = [
 {
@@ -50,22 +54,10 @@ path:'forgetPasswordLink',component:ForgetPasswordComponent
   path:'sessionTimeout',component:SessionExpiredComponent
 },
 {
-  path:'accountStatement',component:AccountStatementComponent
-},
-{
   path:'accountLocked',component:AccountLockedComponent
 },
 {
-  path:'userDashboard',component:UserDashboardComponent
-},
-{
-  path:'adminPortal',component:AdminDashBoardComponent
-},
-{
   path:'adminLogin',component:AdminLoginComponent
-},
-{
-  path:'changePassword',component:ChangePasswordComponent
 },
 {
   path:'CMS',component:ComplaintComponent
@@ -74,30 +66,56 @@ path:'forgetPasswordLink',component:ForgetPasswordComponent
   path:'complaintStatus',component:ComplaintStatusComponent
 },
 {
-  path:'fundTransfer',component:FundTransferComponent
-},
-{
   path:'visitorStatusLink',component:VisitorStatusComponent
 },
 {
   path:'preLogin',component:PreLoginComponent
 },
 {
-  path:'accountSummary',component:AccountSummaryComponent
-},
-{
   path:'accountType',component:AccountTypeComponent
 },
 {
-  path:'addBeneficiary',component:AddBeneficiaryComponent
-},
-{
-  path:'userProfile',component:UserProfileComponent
-},
-{
   path:'contactUs',component:ContactUsComponent
+},
+{
+  path:'userDashboard',component:UserDashboardComponent,
+  children:[
+    {
+      path: 'accountSummary', component:AccountSummaryComponent
+    },
+    {
+      path: 'accountStatement',component:AccountStatementComponent
+    },
+    {
+      path:'userProfile',component:UserProfileComponent
+    },
+    {
+      path:'fundTransfer',component:FundTransferComponent
+    },
+    {
+      path:'addBeneficiary',component:AddBeneficiaryComponent
+    },
+    {
+      path:'changePassword',component:ChangePasswordComponent
+    },
+    {
+      path:'accountBalance',component:AccountBalanceComponent
+    },
+    {
+      path:'transactions',component:TransactionsComponent
+    }
+  ]
+},
+{
+  path:'adminPortal',component:AdminDashBoardComponent,
+  children:[
+    {
+      path:'adminVerification',component:AdminVerificationComponent
+    }
+  ]
 }
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

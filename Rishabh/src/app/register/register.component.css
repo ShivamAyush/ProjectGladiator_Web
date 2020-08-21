@@ -80,7 +80,14 @@ form .page  .btns button.next{
     width: 100%;
 } */
 
-
+.header {
+  padding: 10px;
+  text-align: center;
+  background: white;
+  width: 100%;
+  margin: auto;
+  
+}
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
