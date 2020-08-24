@@ -7,7 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from "@angular/common/http";
-import { MyApiServise } from "./myapi.service";
 import {FormsModule} from  "@angular/forms";
 import { ForgetPasswordComponent } from "./ForgetPassword";
 import { SetPasswordComponent} from "./setPaasword";
@@ -75,7 +74,7 @@ import { TransactionsComponent } from './transactions/transactions.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [MyApiServise],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
