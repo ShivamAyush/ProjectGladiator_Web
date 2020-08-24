@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { VisitorRegister } from "./visitor-register";
+import { VisitorServiceService } from "../visitor-service.service";
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-register',
@@ -7,8 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
-  
+  visitor = new VisitorRegister();
+  genderId:number;
+  genderName:string;
+
+  constructor(private VisitorService:VisitorServiceService) { }  
+
+  onSubmit()
+  {
+    console.log(this.visitor.aadharNo);
+    console.log(this.visitor.phoneNumber);
+    console.log(this.visitor.localAddress);
+    console.log(this.visitor.permanentCity);
+    console.log(this.visitor.sourceOfIncome);
+    this.VisitorService.addVisitor(this.visitor).subscribe(data=>{
+      alert(JSON.stringify(data));
+    })
+  }
 
   ngOnInit(): void {
  

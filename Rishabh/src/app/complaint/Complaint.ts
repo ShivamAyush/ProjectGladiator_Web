@@ -1,6 +1,6 @@
 export class Complaint
 {
-    complaintNo:number;
+
     customerType:string;
     accountNumber:number;
     nameComplaint:string;

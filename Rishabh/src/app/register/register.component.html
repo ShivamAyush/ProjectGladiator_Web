@@ -34,45 +34,43 @@
       </div>
     </div>
     <div class="form-outer">
-      <form #regForm='ngForm'>
+      <form #regForm='ngForm' (ngSubmit)='onSubmit()'>
         <div class="page slidepage">
           <div class="title">Basic Info </div>
           <div class="field">
             <span>
-              <input type="text" placeholder="Enter First name" class="form-control" id="fname" required ngModel
-                name="fname" #name="ngModel">
+              <input type="text" placeholder="Enter First name" id="fname" required [(ngModel)]='visitor.firstName' name="fname" minlength="3">
+              
             </span>
             <span>
-              <input type="text" placeholder="Enter Middle name" name="mname" id="mname" ngModel #name="ngModel">
-            </span>
-          </div>
-          <div class="field">
-
-            <span>
-              <input type="text" placeholder="Enter Lastname" name="lname" id="lname" required ngModel
-                #name="ngModel">
-            </span>
-
-            <span>
-              <input type="text" placeholder="Enter Your Age" name="age" id="age" required ngModel>
-
+              <input type="text" placeholder="Enter Middle name" name="mname" id="mname" [(ngModel)]='visitor.middleName'>
             </span>
           </div>
           <div class="field">
+
             <span>
-              <select>
-                <option value="">Select Gender</option>
+              <input type="text" placeholder="Enter Lastname" name="lname" id="lname" required [(ngModel)]='visitor.lastName'>
+            </span>
+
+            <span>
+              <input type="text" placeholder="Enter your age" name="age" id="age" required [(ngModel)]='visitor.age'>
+
+            </span>
+          </div>
+          <div class="field">
+            <span>
+              <!-- <select>
+                <option [(ngValue)]='visitor.gender'>Select Gender</option>
 
                 <option>Male</option>
                 <option>Female</option>
                 <option>Other</option>
-              </select>
+              </select> -->
+             <input type="text" placeholder="Enter Gender" name="gender" id="gender" required [(ngModel)]='visitor.gender'>
             </span>
             <span>
               <input type="tel" placeholder="Enter Mobile Number"  id="mobile" name="mobile" maxlength="10"
-                minlength="10" required ngModel
-                
-                >
+                minlength="10" required [(ngModel)]='visitor.phoneNumber'>
 
               </span>
           </div>
@@ -82,14 +80,14 @@
           <div class="field">
             <span>
               <input type="tel" placeholder="Enter Aadhar Number" id="Aadhar" name="Aadhar" maxlength="12"
-                minlength="12" required ngModel>
+                minlength="12" required [(ngModel)]='visitor.aadharNo'>
             </span>
 
 
             <span>
-              <input type="email" placeholder="Enter Email Address" name="email" id="email" required ngModel>
+              <input type="email" placeholder="Enter Email Address" name="email" id="email" required [(ngModel)]='visitor.email'>
             </span>
-          </div>
+          </div><br>
           <div class="field nextBtn" style="width: 63%; margin-left: 100px;">
             <button class="firstNext next">Next</button>
           </div>
@@ -100,79 +98,82 @@
           <h3>Residential Address:</h3>
           <div class="field">
             <span>
-              <input type="text" placeholder="Address Line 1" name="Addrress1" id="Addrress1" required ngModel>
+              <input type="text" placeholder="Address Line" name="Addrress1" id="Addrress1" required [(ngModel)]='visitor.localAddress'>
             </span>
 
 
 
             <span>
-              <input type="text" placeholder="Address Line 2" name="Addrress2" id="Addrress2" required ngModel>
+              <input type="text" placeholder="Enter state" name="state" id="state" required [(ngModel)]='visitor.localState'>
+
+              <!-- <select >
+                <option >Choose your State</option>
+                <option *ngFor="let s of State" [(ngValue)]='visitor.localState'>{{s}}</option>
+              </select>             -->
             </span>
 
           </div>
 
           <div class="field">
             <span>
-              <input type="text" placeholder="Enter Landmark" name="Landmark" id="Landmark" ngModel>
+              <input type="text" placeholder="Enter City" name="city" id="city" required [(ngModel)]='visitor.localCity'>
 
+              <!-- <select [(ngModel)]='visitor.localCity'>
+                <option value="city">Choose your City</option>
+                <option *ngFor="let c of City" [ngValue]="city">{{c}}</option>
+              </select>  -->
             </span>
 
 
             <span>
-              <!-- <input type="text" placeholder="Enter State" name="state" id="state" required ngModel> -->
-              <select>
-                <option value="">Choose your State</option>
-                <option *ngFor="let s of State" [ngValue]="state">{{s}}</option>
-              </select>
+              <input type="text" placeholder="Enter Pincode" name="code" id="code" required [(ngModel)]='visitor.localPincode' minlength="6" maxlength="6">
+              <!-- <select [(ngModel)]='visitor.localPincode'>
+                <option value="">select Pincode</option>
+                <option *ngFor="let p of Pincode" [ngValue]="pincode">{{p}}</option>
+              </select> -->
 
             </span>
-          </div>
 
-          <div class="field">
-
-            <input type="text" placeholder="Enter City" name="city" id="city" required ngModel>
           </div>
           <div>
-            <span style="margin-left:10px; margin-right: 10px;"> <input type="checkbox" id="adrs" name="adrs" ngModel
-                value="A1"></span>
+            <span style="margin-left:10px; margin-right: 10px;"> <input type="checkbox" id="adrs" name="adrs" ngModel value="A1"></span>
 
             <label for="adrs"> <b>Permanent Address and Mailing Address are same</b></label>
           </div>
-          <div class="field">
-            <span>
-              <input type="text" placeholder="Address Line 1" name="Addrress1" id="Addrress1" required ngModel>
-            </span>
-
-
-
-            <span>
-              <input type="text" placeholder="Address Line 2" name="Addrress2" id="Addrress2" required ngModel>
-            </span>
-
-          </div>
 
           <div class="field">
-
             <span>
-              <input type="text" placeholder="Enter Landmark" name="Landmark" id="Landmark" ngModel>
-
+              <input type="text" placeholder="Address Line" name="Addrress1" id="Addrress1" required [(ngModel)]='visitor.permanentAddress'>
             </span>
 
 
+
             <span>
-              <!-- <input type="text" placeholder="Enter State" name="state" id="state" required ngModel> -->
-              <select>
+              <input type="text" placeholder="Enter state" name="state" id="state" required [(ngModel)]='visitor.permanentState'>
+
+              <!-- <select [(ngModel)]='visitor.localState'>
                 <option value="">Choose your State</option>
                 <option *ngFor="let s of State" [ngValue]="state">{{s}}</option>
-              </select>
+              </select>             -->
             </span>
-          </div>
 
+          </div>
 
           <div class="field">
+            <span>
+              <input type="text" placeholder="Enter City" name="city" id="city" required [(ngModel)]='visitor.permanentCity'>
 
-            <input type="text" placeholder="Enter City" name="city" id="city" required ngModel>
-          </div>
+            </span>
+
+
+            <span>
+              <input type="text" placeholder="Enter Pincode" name="code" id="code" required [(ngModel)]='visitor.permanentPincode' minlength="6" maxlength="6">
+
+
+            </span>
+
+
+          </div><br>
 
 
           <div class="field btns">
@@ -186,36 +187,45 @@
           <div class="title">Occupation Info</div>
 
           <div class="field">
-            <!-- <input type="text" placeholder="Occupation Type" name="type" id="type" required ngModel> -->
+            <input type="text" placeholder="Occupation Type" name="type" id="type" required [(ngModel)]='visitor.occupationType'>
          
-         <select style="text-align:center">
+         <!-- <select style="text-align:center" name="occupation" [(ngModel)]='visitor.occupationType'>
            <option value="" >Choose occupation type</option>
-           <option *ngFor='let o of Occupation'[ngValue]="occupation">{{o}}</option>
-         </select>
+           <option *ngFor='let o of Occupation' value="occupation">{{o}}</option>
+         </select> -->
           </div>
 
           <div class="field">
-            <input type="text" placeholder="Source of income" name="income" id="income" required ngModel>
+            <input type="text" placeholder="Source of income"  #name='ngModel'  name="income" id="income" required [(ngModel)]='visitor.sourceOfIncome'>
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+              <div *ngIf="name.errors.required">
+                  FirstName is required.
+              </div>
+          </div>
           </div>
 
           <div class="field">
-            <input type="text" placeholder="Source of income" name="salary" id="saalry" required ngModel>
+            <input type="text" placeholder="Gross Annual salary" name="salary" id="saalry" required [(ngModel)]='visitor.grossAnnualIncome'>
           </div>
 
           <div class="title">Account Type</div>
 
           <div class="field">
-            <select>
+            <!-- <select>
               <option value="accountType" style="text-align:center ;">Choose your account type</option>
               <option value="accountType"> Savings</option>
               <option value="accountType">Current</option>
-              <option value="accountType">Salary</option>
-            </select>
+              <option value="accountType">Salaried</option>
+            </select> -->
+          <input type="text" placeholder="Account Type" name="acType" id="acType" required [(ngModel)]='visitor.accountType'>
+            <input type="text" placeholder="debit Card Status" name="debitCardStatus" id="debitCardStatus" required [(ngModel)]='visitor.debitCardStatus'>
+            <input type="text" placeholder="Net Banking Status" name="net" id="net" required [(ngModel)]='visitor.netBankingStatus'>
+     
           </div><br>
 
           <div class="field btns">
             <button class="prev-2 prev"> Previous</button>
-            <button class="submit" [disabled]="!regForm.valid">Submit</button>
+            <button type="submit" [disabled]="!regForm.valid">Submit</button>
           </div>
         </div>
 

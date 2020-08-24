@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ReferenceNo } from '../reference-no';
+import { VisitorServiceService } from "../visitor-service.service";
+import { VisitorStatus } from "./visitor-status";
 
 @Component({
   selector: 'app-visitor-status',
@@ -7,22 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VisitorStatusComponent implements OnInit {
 
-  showStatus:Status[];
-  constructor() { 
-    this.showStatus=[{
-      serialReferenceNumber:687,
-      status:"Pending",
-      verified:"Checked"
-    }]
-  }
+  visitorStatus:VisitorStatus;
+  refNo:ReferenceNo = new ReferenceNo();
+
+  constructor(private visitorService:VisitorServiceService) { }
 
   ngOnInit(): void {
   }
 
+  showStatus()
+  {
+      this.visitorService.checkVisitorStatus(this.refNo).subscribe(visitorStatus=>{
+        this.visitorStatus = new VisitorStatus();
+        this.visitorStatus.serialRefNo = this.refNo.serviceRefNo;
+        this.visitorStatus.status = visitorStatus.status;
+      }
+    )
+  }
 }
 
-export class Status{
-  serialReferenceNumber:number;
-  status:string;
-  verified:string;
-}

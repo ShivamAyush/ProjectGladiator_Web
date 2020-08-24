@@ -1,19 +1,21 @@
 <app-header-nav></app-header-nav>
 <div class="visitor">
 <h1>Status Check</h1>
+<form (ngSubmit)="showStatus()">
 <table class="container-table">
-    <tr><input class="text-box" type="text" name="statusId" placeholder="Enter the reference number"/></tr>
-    <tr><Button type="submit">Find</Button></tr>
+        <tr><input class="text-box" type="text" [(ngModel)]='refNo.serviceRefNo' name="statusId" placeholder="Enter the reference number"/></tr>
+        <tr><Button type="submit">Find</Button></tr>  
 </table>
+</form>
 <table class="status" align="center" style="border:2px solid black;">
 
-    <tbody *ngFor="let s of showStatus">
+    <tbody *ngIf="visitorStatus">
         <tr>
             <th>
                 <span>Service Reference No:</span>
             </th>
             <td>
-                <span>{{s.serialReferenceNumber}}</span>
+                <span>{{visitorStatus.serialRefNo}}</span>
              </td>   
         </tr>
 
@@ -22,18 +24,10 @@
                 <span>Status:</span>
             </th>
             <td>
-                <span>{{s.status}}</span>
+                <span>{{visitorStatus.status}}</span>
              </td>   
         </tr>
 
-        <tr>
-            <th>
-                <span>Verification Status:</span>
-            </th>
-            <td>
-                <span>{{s.verified}}</span>
-             </td>   
-        </tr>
      </tbody>
      
      </table>
