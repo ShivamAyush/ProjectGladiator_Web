@@ -1,7 +1,10 @@
 .info{
     border: 2px black solid;
     background-color:#76aee3;
-    margin-left: 500px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 10px
+
 }
 table,th
 {
@@ -19,4 +22,11 @@ button
     background-color: #165b9c;
     padding:10px;
     color:white;
+}
+
+.profile{
+    background-color: #b2cfeb;
+    width: 100%;
+    /* border: 2px solid black;
+    border-radius: 10px; */
 }

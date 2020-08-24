@@ -81,6 +81,7 @@ input[type=text], input[type=number]{
 </head>
 
 <body>
+<app-header-nav></app-header-nav>
 <h2>Customer Complaint Status</h2>
 
 <table  align ="center" cellpadding = "5" >
@@ -99,8 +100,8 @@ input[type=text], input[type=number]{
             <input type="text" class = "inputform" name="MobileNumber" maxlength="10"/>
         </td>
         </tr>
-    <!------------------------- Captcha ---------------------------------->
-<tr>
+            <!------------------------- Captcha ---------------------------------->
+    <tr>
     <td>Captcha*  <img [src]=imagePath alt="  " ></td>
     <td><input type="text" name="Captcha" class = "inputform"/></td>
     </tr>

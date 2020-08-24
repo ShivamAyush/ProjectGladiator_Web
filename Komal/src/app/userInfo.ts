@@ -1,6 +1,6 @@
 export class UserInfo {
 	firstName:string;
-  middleName:string;
+middleName:string;
 	lastName:string;
 	gender:string;
 	fatherName:string;

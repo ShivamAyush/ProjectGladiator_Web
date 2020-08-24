@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import {LoginService} from '../login.service'
+import {Admin} from './Admin'
+import {Router} from '@angular/router'
 @Component({
   selector: 'app-admin-login',
   templateUrl: './admin-login.component.html',
@@ -7,24 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:LoginService,private router:Router) { }
 
   ngOnInit(): void {
-    var input:HTMLInputElement=document.querySelector('.pswrd');
-    var show:HTMLInputElement=document.querySelector('.show');
-    show.addEventListener('click',active);
-    function active(){
-      if(input.type=== "password"){
-        input.type="text";
-        show.style.color="#1DA1F2";
-        show.textContent= "HIDE";
+
+  }
+  Admin = new Admin();
+  message:string;
+  adminLogin(){
+    this.service.loginAdmin(this.Admin).subscribe(data =>{
+      alert(JSON.stringify("Admin Signing in..."));
+      if(data.status == 'SUCCESS'){
+        let adminId=data.adminId;
+        let adminName=data.adminName;
+        sessionStorage.setItem('adminId',String(adminId));
+        sessionStorage.setItem('adminName',adminName);
+        this.router.navigate(['/adminPortal']);
       }
       else{
-        input.type="password";
-        show.textContent= "SHOW";
-        show.style.color="#111";
+        this.message=data.message;
       }
-    }
+    })
   }
-
 }

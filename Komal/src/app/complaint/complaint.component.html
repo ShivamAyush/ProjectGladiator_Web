@@ -1,10 +1,7 @@
-<html>
-<head>
-<title>Customer Complaint Form</title>
-</head>
-<body>
+
+<app-header-nav></app-header-nav>
 <h2>Customer Complaint Form</h2>
-<button type="button" ><a [routerLink]="['/complainStatusLink']">Click Here to Check Complaint Status</a></button>
+<button type="button" ><a [routerLink]="['/complaintStatus']">Click Here to Check Complaint Status</a></button>
 
 <marquee scrollamount="5">
 Fields marked with (*) are compulsary, Please Provide correct details. 
@@ -12,77 +9,69 @@ You will receive a response shortly by SMS or E-mail.
 &nbsp;To know the status of your request call on our  number 9473303032 with ticket number.
 </marquee>
 
-<form method="POST">
+<form (ngSubmit)="addComplaint()">
 <table  align ="center" cellpadding = "7" >
+    <input type="number" class = "inputform" name="complaintType" maxlength="50" [(ngModel)]=complaint.complaintNo/>
 
 <!--------------------- Customer Type ------------------------------------------>
 <tr>
-<td>Customer Type*</td>
+<td>Account Type* &nbsp; &nbsp; &nbsp; &nbsp; <span style="color:red; font-size: 16px;">{{message1}}</span></td>
 <td>
-    <select name="CustomerType" class = "inputform" id="CustomerType">
-        <option value="-1">Select</option>
-        <option value="1">Retail</option>
-        <option value="2">Corporate</option>
-        </select>
+    <input type="text" class = "inputform" name="complaintType" maxlength="50" [(ngModel)]=complaint.customerType/>
 </td>
 </tr>
 <!------------------------ Account Number --------------------------------------->
 <tr>
 <td>Account Number*</td>
-<td><input type="text" class = "inputform" name="AccountNumber" maxlength="50"/>
+<td><input type="number" class = "inputform" name="AccountNumber" maxlength="50" [(ngModel)]=complaint.accountNumber/>
 </td>
 </tr>
 <!-------------------------- Name Of Complaint ------------------------------------->
 <tr>
-<td>Name of Complaint*</td>
-<td><input type="text" name="nameofcomplaint" class = "inputform" maxlength="50"/></td>
+<td>Name of Complaintant*</td>
+<td><input type="text" name="nameofcomplaint" class = "inputform" maxlength="50" [(ngModel)]=complaint.nameComplaint/></td>
 </tr>
 <!-------------------------- Branch Code ------------------------------------->
 <tr>
 <td>Branch Code(If Other than Home Branch)</td>
 <td>
-<input type="text" name="BranchCode" class = "inputform" maxlength="10"/>
+<input type="text" name="BranchCode" class = "inputform" maxlength="10" [(ngModel)]=complaint.branchCode/>
 </td>
 </tr>
 <!----------------------Mobile Number ------------------------------------->
 <tr>
 <td>Mobile Number*</td>
 <td>
-<input type="text" name="MobileNumber" class = "inputform" maxlength="10" />
+<input type="number" name="MobileNumber" class = "inputform" maxlength="10" [(ngModel)]=complaint.mobileNumber/>
 </tr>
 
 <!----------------------Email ------------------------------------->
 <tr>
     <td>Email*</td>
     <td>
-    <input type="email" name="Email" class = "inputform"/>
+    <input type="email" name="Email" class = "inputform" [(ngModel)]=complaint.email/>
     </tr>
 <!--------------------------Category Of Complaints----------------------------------->
 <tr>
 <td>Category Of Complaints*</td>
 <td>
-<select name="CategoryOfComplaints" class = "inputform" id="CategoryOfComplaints">
-<option value="-1">Select</option>
-<option value="1">ATM Related</option>
-<option value="2">UPI Related</option>
-<option value="3">General Banking</option>
-<option value="4">Deposits</option>
-<option value="5">Govt Schemes</option>
-<option value="6">NRI Services</option>
-</select>
+    <input type="text" class = "inputform" name="categoryOfComplaint" maxlength="50" [(ngModel)]=complaint.categoryOfComplaint/>
 </td>
 </tr>
 <!------------------------- Details ---------------------------------->
 <tr>
 <td>Please Give brief details of your complaint(Max 500 Chars)*<br /><br /><br /></td>
-<td><textarea class = "inputform" name="Details" rows="5" cols="20"></textarea></td>
+<td><textarea class = "inputform" name="Details" rows="5" cols="20" [(ngModel)]=complaint.complaintDesc></textarea></td>
+</tr>
+
+<tr>
+    <td>Captcha* <img [src]=imagePath alt="  " > &nbsp; &nbsp; &nbsp; &nbsp; <span style="color:red; font-size: 20px;">{{message}}</span></td>
+    <td><input type="text" name="Captcha" class = "inputform" [(ngModel)]=complaint.captcha/></td>
+    
 </tr>
 
 <!------------------------- Captcha ---------------------------------->
-<tr>
-    <td>Captcha* <img [src]=imagePath alt="  " ></td>
-    <td><input type="text" name="Captcha" class = "inputform"/></td>
-    </tr>
+
 <!----------------------- Submit and Reset ------------------------------->
 </table>
 <br>
@@ -91,5 +80,3 @@ You will receive a response shortly by SMS or E-mail.
 <input class="swd-button" type="reset" value="Reset">
 </span>
 </form>
-</body>
-</html>

@@ -27,9 +27,6 @@ export class AdminVerificationComponent implements OnInit {
       this.row.splice(x, 1 );
     }   
   }
-
-
-
 }
 
 export class Verification{

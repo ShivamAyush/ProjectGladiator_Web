@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector:'app-forgetpassword',
     template:`
-    
+    <app-header-nav></app-header-nav>
     <div class="row">
   <div class="main">
       <div class="card" style="height: 540px;">
-      <h3 style="text-align:right;">Forgot password? Enter the details</h3>
+      <h3 style="text-align:right;margin-right:23px;">Forgot password? Enter the details</h3>
 
     <form #forgotPasswordForm='ngForm' style="float:right;">
 

@@ -7,23 +7,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div>
-            <ul>
-                <li><a class="active" [routerLink]="['/userProfile']"> <i class="material-icons">account_circle</i><br>My Accounts & Profile</a></li>
-                <li><a [routerLink]="['/AccountBalanceLink']" ><i class="material-icons">account_balance</i><br>Account Balance</a></li>
-                <li><a [routerLink]="['/TransactionLink']"><i class="material-icons">import_export</i><br>Transactions</a></li>
-                <li><a [routerLink]="['/fundTransferLink']"><i class="material-icons">call_made</i><br>Funds Transfer</a></li>
-                <li><a [routerLink]="['/BenificiaryLink']" ><i class="material-icons">person_add</i><br>Add Beneficiary</a></li>
-
-                <li><a [routerLink]="['/loginLink']"><i class="material-icons">power_settings_new</i><br>LogOut</a></li>
-
-                <li style="float:right; font-size:24px; color:white; font-weight: bolder;padding: 30px;">Dashboard</li>
-              </ul>
-              <div class="container-username">
-                  <span class="getDateTime">{{getDatetime}}</span><span class="userName">Hi, {{userName}}</span>
-              </div>
-        </div>
+   <app-header-app></app-header-app>
+     <app-user-nav-bar></app-user-nav-bar>
         <div class="mid-body">
             <div class="left_section">
                 <div class="head_of_left_section">
@@ -31,12 +16,12 @@
                 </div>
             <div class="mid_of_left_section">
                 <ul class="h-ul">
-                    <li class="h-li"><a class="active" [routerLink]="['/AccountSummaryLink']">Account Summary</a></li>
-                    <li class="h-li"><a [routerLink]="['/accountStatement']">Account Statement</a></li>
-                    <li class="h-li"><a [routerLink]="['/changePasswordLink']">Login Password Change</a></li>
-                    <li class="h-li"><a [routerLink]="['/userProfile']">Profile</a></li>
-                    <li class="h-li"><a [routerLink]="['/fundTransferLink']">Funds Transfer</a></li>
-                    <li class="h-li"><a [routerLink]="['/complaintLink']">Customer Service</a></li>
+                    <li class="h-li"><a [routerLink]="['/userDashboard/accountSummary']">Account Summary</a></li>
+                    <li class="h-li"><a [routerLink]="['/userDashboard/accountStatement']">Account Statement</a></li>
+                    <li class="h-li"><a [routerLink]="['/userDashboard/changePassword']">Login Password Change</a></li>
+                    <li class="h-li"><a [routerLink]="['/userDashboard/userProfile']">Profile</a></li>
+                    <li class="h-li"><a href="/userDashboard/fundTransfer">Funds Transfer</a></li>
+                    <li class="h-li"><a [routerLink]="['/CMS']">Customer Service</a></li>
                   </ul>
                 </div>
                 <div class="bottom_of_left_section">
@@ -48,10 +33,10 @@
                     You are in: {{path}}
                 </div>
                 <div class="mid_of_right_section">
-                    <router-outlet></router-outlet>
+                  <router-outlet></router-outlet>
             </div>
           </div>
         </div>
-    </div>
+
 </body>
 </html>

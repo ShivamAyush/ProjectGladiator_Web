@@ -1,25 +1,25 @@
 
 
 .balance {   
-    width: 100%;
+    width: 600px;
     margin: auto;
-    height:500px;
+    height:auto;
     background-color: #a6d3f7;
     margin: auto;
-    width: 78%;
     text-align: center;
     padding: 15px;
-  overflow: hidden;
-
+    overflow: hidden;
+border: 2px solid black;
+border-radius: 10px;
+margin-left: 300px;
   }
 
-  table,td,th{
+table,td,th{
     border: 2px solid black;
     padding: 5px;
     margin-top: 5px;
-    width: 40%;
+    width: 80%;
     margin-bottom: 40px;
-    margin-left: 350px;
     border-radius: 10px;
 
 }

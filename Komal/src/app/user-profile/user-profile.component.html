@@ -1,4 +1,5 @@
-<table class="info">
+<div class="profile">
+    <table class="info">
 
     <tbody *ngFor="let employee of employees">
         <tr>
@@ -87,11 +88,7 @@
                 <span>Net Banking Status:</span><input type="text" [(ngModel)]="employee.netBankingStatus" [disabled]="!employee.isEditable" />
             </th>
         </tr>
-        <tr>
-            <td>
-                <button (click)="employee.isEditable=!employee.isEditable" *ngIf="!employee.isEditable">Edit</button>
-                <button *ngIf="employee.isEditable" (click)="employee.isEditable=!employee.isEditable">Save</button>
-            </td>
-        </tr>
     </tbody>
 </table>
+</div>
+

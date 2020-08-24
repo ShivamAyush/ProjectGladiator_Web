@@ -19,12 +19,6 @@
       box-sizing: border-box;
   }
   
-  body, html {
-      height: 100%;
-      font-family: sans-serif;
-      background-color:#4773ba;
-  }
-  
   /* ------------------------------------ */
   a {
       margin: 0px;
@@ -55,7 +49,7 @@
   
   /* ------------------------------------ */
   input {
-    display: block;
+      display: block;
       outline: none;
       border: none !important;
   }
@@ -84,28 +78,14 @@
       border: none !important;
   }
   
-  
-  
-  
-  /*//////////////////////////////////////////////////////////////////
-  [ Utiliti ]*/
-  
-  
-  
-  
-  
-  
-  /*//////////////////////////////////////////////////////////////////
-  [ Table ]*/
-  
   .limiter {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    margin-left: 100px;
   }
   
   .container-table100 {
     width: 100%;
-    min-height: 100vh;
+    min-height: 50vh;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -118,7 +98,7 @@
   }
   
   .wrap-table100 {
-    width: 1170px;
+    width: 900px;
   }
   
   table {

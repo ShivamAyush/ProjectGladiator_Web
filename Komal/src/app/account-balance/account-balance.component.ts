@@ -15,15 +15,13 @@ export class AccountBalanceComponent implements OnInit {
       Account_Balance:30000
     }]
   }
-
   ngOnInit(): void {
   }
 
 }
-
 export class AccountBalance{
-Name:String;
-  Account_Number:Number;
-  Account_Type:string;
-  Account_Balance:Number;
-}
+  Name:String;
+    Account_Number:Number;
+    Account_Type:string;
+    Account_Balance:Number;
+  }

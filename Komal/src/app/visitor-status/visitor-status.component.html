@@ -1,7 +1,11 @@
-
+<app-header-nav></app-header-nav>
 <div class="visitor">
 <h1>Status Check</h1>
-<table class="status" align="center">
+<table class="container-table">
+    <tr><input class="text-box" type="text" name="statusId" placeholder="Enter the reference number"/></tr>
+    <tr><Button type="submit">Find</Button></tr>
+</table>
+<table class="status" align="center" style="border:2px solid black;">
 
     <tbody *ngFor="let s of showStatus">
         <tr>

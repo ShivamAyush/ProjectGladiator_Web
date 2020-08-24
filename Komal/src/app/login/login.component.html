@@ -1,47 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<app-header-nav></app-header-nav>
+<div class="row">
+    <div class="main">
+        <div class="card" style="height: 540px;">
+            <h2 style="text-align:right;margin-right:40px;">PERSONAL BANKING</h2>
+            <form #loginForm='ngForm' style="float:right;" (ngSubmit)="loginUser()">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+                <div class="container" style="text-align:center; border:2px solid black;
+                border-radius: 10px;">
+                    <label for="uname"><b> <i class="material-icons" style="font-size: 50px; color:#1474a8;">account_box</i></b></label><br>
+                    <!-- <form (ngSubmit)="loginUser()"> -->
+        
+                        <input type="number" name="customerId" placeholder="Enter Username" id="uname" required [(ngModel)]=Login.customerId><br>
+                    
+                        <input type="password" name="password" placeholder="Enter Password" id="psw" required [(ngModel)]=Login.loginPassword><br>
+    
+                        <button type="submit"><a [routerLink]="['/userDashboard']">Login</a></button><br>
+                    <label>
+                        <input type="checkbox" checked="checked" id="remember" required ngModel> Remember me
+                    </label>
+                    <p>{{message}}</p>
+                    <div class="container" style="background-color:#f1f1f1;height:60px;width:80%">   
+                    <button type="reset" class="cancelbtn">Reset</button>
+                    <span class="reg">New User?<a [routerLink]="['/registerLink']">Register</a></span>
+                    <span class="psw">Forgot <a [routerLink]="['/forgetPasswordLink']">password?</a></span>
+                    <span class="psw">Forgot <a [routerLink]="['/forgetUserId']">password?</a></span>
 
-<body>
-    <div class="row">
-        <div class="main">
-            <div class="card" style="height: 540px;">
-                <h2 style="text-align:right;">Login to avail services!!</h2>
-                <form #loginForm='ngForm' style="float:right;">
-
-                    <div class="container" style="text-align:center; border:2px solid black;
-                    border-radius: 10px;">
-                            <label for="uname"><b> <i class="material-icons" style="font-size: 50px; color:#1474a8;">account_box</i></b></label><br>
-                        <input type="text" placeholder="Enter Username" id="uname" required ngModel><br>
-
-                        <label for="psw"><b>Password</b></label><br>
-                        <input class="pswrd" type="password" placeholder="Enter Password" id="psw" required ngModel><span class="show">SHOW</span><br>
-
-                        <button type="submit" [disabled]="!loginForm.valid"><a [routerLink]="['/userDashBoardLink']">Login</a></button><br>
-                        <label>
-                            <input type="checkbox" checked="checked" id="remember" required ngModel> Remember me
-                        </label>
-
-                        <div class="container" style="background-color:#f1f1f1;height:85px;width:80%">
-                            <button type="reset" class="cancelbtn">Reset</button>
-                            <span class="reg">New User?<a [routerLink]="['/registerLink']">Register</a></span>
-                            <span class="psw">Forgot <a [routerLink]="['/forgetpasswordLink']">password?</a></span>
-                            <span class="psw">Forgot <a [routerLink]="['/forgetUserIdLink']">User Id?</a></span>
-
-
-                        </div>
-                    </div>
-                </form>
-
+                    
+                </div>
             </div>
+            </form>
+
         </div>
     </div>
-
-</body>
-
-</html>
+</div>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {  } from "@angular/cli/";
 
 @Component({
   selector: 'app-add-beneficiary',
@@ -68,4 +67,5 @@ export class Beneficiary{
       this.name=name;
       this.accountNumber=accountNumber;
   }
+
 }

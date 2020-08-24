@@ -8,12 +8,12 @@
 </head>
 
 <body>
-
+    <app-header-nav></app-header-nav>   
     <section class="start">
         <div class="banner">
             <h1>Goodbye to the old ways.<br>Say, hello to the new avtar of Banking!</h1>
             <a  class="btn login-btn" [routerLink]="['/loginLink']">Login </a>
-            <a  class="btn register-btn" [routerLink]="['/AccountTypeLink']">Register Now </a>
+            <a class="btn register-btn" [routerLink]="['/accountType']">Register Now </a>
            
         </div>
      </section>   
@@ -23,11 +23,11 @@
             
         <p>
             Internet Banking is a convenient way to do banking from the comfort of your home or office. Avoid the queue or delays and try our simple and secure Internet Banking facility for an unmatched online banking experience.
-           <br> Just <a   [routerLink]="['/loginLink']">login</a> using your <b class="bold">User ID</b> and <b class="bold">Password</b> to experience the benefits of seamless Internet Banking powered by ISB.<br><br>
+           <br> Just <a [routerLink]="['/loginLink']">login</a> using your <b class="bold">User ID</b> and <b class="bold">Password</b> to experience the benefits of seamless Internet Banking powered by ISB.<br><br>
         </p>
         <p style="text-align: center;">
         <b class="bold">Still not a part of the ISB family ?</b><br>
-        <a [routerLink]="['/AccountTypeLink']">Register</a> with us today and avail various benefits and heavy discounts with Internet Banking.
+        <a [routerLink]="['/accountType']">Register</a> with us today and avail various benefits and heavy discounts with Internet Banking.
          </p>   
      </section>
           

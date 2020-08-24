@@ -142,7 +142,5 @@ showSlides();
  "Puducherry"]
 
  Occupation=["Bussiness","Service","Self","Management","Education instruction"]
-
-
-
+ 
 }
