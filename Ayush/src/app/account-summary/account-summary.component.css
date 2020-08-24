@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: OpenSans-Regular;
-    src: url('src\assets\OpenSans-Regular.ttf'); 
+    src: url('/assets/OpenSans-Regular.ttf'); 
   }
   
   
@@ -17,11 +17,6 @@
       margin: 0px; 
       padding: 0px; 
       box-sizing: border-box;
-  }
-  
-  body, html {
-      height: 100%;
-      font-family: sans-serif;
   }
   
   /* ------------------------------------ */
@@ -54,7 +49,7 @@
   
   /* ------------------------------------ */
   input {
-    display: block;
+      display: block;
       outline: none;
       border: none !important;
   }
@@ -83,34 +78,14 @@
       border: none !important;
   }
   
-  
-  
-  
-  /*//////////////////////////////////////////////////////////////////
-  [ Utiliti ]*/
-  
-  
-  
-  
-  
-  
-  /*//////////////////////////////////////////////////////////////////
-  [ Table ]*/
-  
   .limiter {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
   }
   
   .container-table100 {
-    width: 100%;
-    min-height: 100vh;
-    background: #c850c0;
-    background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
-    background: -o-linear-gradient(45deg, #4158d0, #c850c0);
-    background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
-    background: linear-gradient(45deg, #4158d0, #c850c0);
-  
+    width: 80%;
+    min-height: 50vh;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -123,7 +98,7 @@
   }
   
   .wrap-table100 {
-    width: 1170px;
+    width: 900px;
   }
   
   table {

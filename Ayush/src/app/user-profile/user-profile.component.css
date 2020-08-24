@@ -1,0 +1,22 @@
+.info{
+    border: 2px black solid;
+    background-color:#76aee3;
+    margin-left: 500px;
+}
+table,th
+{
+    border:1px solid black;
+}
+td
+{
+    float:right;
+}
+input{
+    float:right;
+}
+button
+{
+    background-color: #165b9c;
+    padding:10px;
+    color:white;
+}
