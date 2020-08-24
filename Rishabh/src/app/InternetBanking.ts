@@ -10,25 +10,10 @@ import { Component, OnInit } from '@angular/core';
           
          <form #regForm='ngForm' style="float:right; border:2px solid black;">
          <div class="container" >
-           <label for="Account"><b>Account Number</b></label><br>
-           <input type="tel" placeholder="Enter Account Number" name="Account" id="Account" required ngModel><br>
-
-           
-          <label for="psw"><b>Set Login Password</b></label><br>
-           <input type="password" placeholder="Enter Password" id="psw"><br>
-
-           <label for="psw1"><b>Confirm Login Password</b></label><br>
-           <input type="password" placeholder="Enter Password" id="psw1"><br>
-
-           <label for="tpsw"><b>Set Transaction Password</b></label><br>
-           <input type="password" placeholder="Enter Password" id="tpsw"><br>
-
-           <label for="tpsw1"><b>Confirm Transaction Password</b></label><br>
-           <input type="password" placeholder="Enter Password" id="tpsw1"><br>
-
-           <label for="otp"><b>Enter Otp</b></label><br>
-            <input type="tel" id="otp"><br>
-
+           <label for="Account"><b>Customer Id</b></label><br>
+           <input type="tel" placeholder="Enter Customer ID" name="customerId" id="Account" required ngModel><br>
+            <button style="border: none;cursor: pointer;width:37%;padding: 8px 0px;margin:10px 7px">send OTP</button><br>
+            <input type="tel" id="otp" placeholder="Enter OTP Here"><br>
             <button type="submit">
             <a [routerLink]="['/loginLink']" class="prcd">Submit</a></button>
             </div>
