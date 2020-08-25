@@ -1,7 +1,7 @@
 export class Complaint
 {
-    complaintNo:number;
-    customerType:string;
+
+    accountType:string;
     accountNumber:number;
     nameComplaint:string;
     branchCode:string;

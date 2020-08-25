@@ -26,7 +26,7 @@ export class AdminDashBoardComponent implements OnInit {
   {
     sessionStorage.removeItem("adminName");
     sessionStorage.removeItem("adminId");
-    this.router.navigate(['/logOut']);
+    this.router.navigate(['/sessionTimeout']);
   }
 
 }

@@ -79,12 +79,12 @@
   }
   
   .limiter {
-    width: 100%;
-    margin-left: 100px;
+    width: 80%;
+    margin: 0 auto;
   }
   
   .container-table100 {
-    width: 100%;
+    width: 80%;
     min-height: 50vh;
     display: -webkit-box;
     display: -webkit-flex;

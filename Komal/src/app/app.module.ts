@@ -34,9 +34,8 @@ import { HeaderAppComponent } from './header-app/header-app.component';
 import { AccountBalanceComponent } from './account-balance/account-balance.component';
 import { AdminVerificationComponent } from './admin-verification/admin-verification.component';
 import { TransactionsComponent } from './transactions/transactions.component';
-import { LogOutComponent } from './log-out/log-out.component';
-import { ForgetUserIdComponent } from "./ForgetUserId";
-
+import { ComplaintApprovalComponent } from './complaint-approval/complaint-approval.component';
+import { ContactRequestComponent } from './contact-request/contact-request.component';
 
 @NgModule({
   declarations: [
@@ -70,8 +69,8 @@ import { ForgetUserIdComponent } from "./ForgetUserId";
     AccountBalanceComponent,
     AdminVerificationComponent,
     TransactionsComponent,
-    LogOutComponent,
-    ForgetUserIdComponent
+    ComplaintApprovalComponent,
+    ContactRequestComponent,
   ],
   imports: [
     BrowserModule,

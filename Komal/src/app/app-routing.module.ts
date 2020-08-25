@@ -27,8 +27,8 @@ import { AccountBalance, AccountBalanceComponent } from './account-balance/accou
 import { componentFactoryName } from '@angular/compiler';
 import { AdminVerificationComponent } from './admin-verification/admin-verification.component';
 import { TransactionsComponent } from './transactions/transactions.component';
-import {  LogOutComponent} from "./log-out/log-out.component";
-import { ForgetUserIdComponent } from "./ForgetUserId";
+import { ComplaintApprovalComponent } from "./complaint-approval/complaint-approval.component";
+import { ContactRequestComponent } from "./contact-request/contact-request.component";
 
 const routes: Routes = [
 {
@@ -48,9 +48,6 @@ const routes: Routes = [
 path:'forgetPasswordLink',component:ForgetPasswordComponent
 },
 {
-path:'forgetUserId',component:ForgetUserIdComponent
-},
-{
   path:'setPaaswordLink',component:SetPasswordComponent
 },
 {
@@ -58,9 +55,6 @@ path:'forgetUserId',component:ForgetUserIdComponent
 },
 {
   path:'sessionTimeout',component:SessionExpiredComponent
-},
-{
-  path:'logOut',component:LogOutComponent
 },
 {
   path:'accountLocked',component:AccountLockedComponent
@@ -107,6 +101,7 @@ path:'forgetUserId',component:ForgetUserIdComponent
     {
       path:'changePassword',component:ChangePasswordComponent
     },
+    
     {
       path:'accountBalance',component:AccountBalanceComponent
     },
@@ -120,7 +115,13 @@ path:'forgetUserId',component:ForgetUserIdComponent
   children:[
     {
       path:'adminVerification',component:AdminVerificationComponent
-    }
+    },
+    {
+      path:'complaintApprove',component:ComplaintApprovalComponent
+    },
+    {
+      path:'contactRequest',component:ContactRequestComponent
+    },
   ]
 }
 ];

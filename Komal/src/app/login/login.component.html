@@ -3,18 +3,18 @@
     <div class="main">
         <div class="card" style="height: 540px;">
             <h2 style="text-align:right;margin-right:40px;">PERSONAL BANKING</h2>
-            <form #loginForm='ngForm' style="float:right;" (ngSubmit)="loginUser()">
+            <form #loginForm='ngForm' style="float:right;">
 
                 <div class="container" style="text-align:center; border:2px solid black;
                 border-radius: 10px;">
                     <label for="uname"><b> <i class="material-icons" style="font-size: 50px; color:#1474a8;">account_box</i></b></label><br>
-                    <!-- <form (ngSubmit)="loginUser()"> -->
-        
+                    <form (ngSubmit)="loginUser()">
                         <input type="number" name="customerId" placeholder="Enter Username" id="uname" required [(ngModel)]=Login.customerId><br>
                     
                         <input type="password" name="password" placeholder="Enter Password" id="psw" required [(ngModel)]=Login.loginPassword><br>
     
-                        <button type="submit"><a [routerLink]="['/userDashboard']">Login</a></button><br>
+                        <button type="submit">Login</button><br>
+                    </form>
                     <label>
                         <input type="checkbox" checked="checked" id="remember" required ngModel> Remember me
                     </label>
@@ -22,10 +22,7 @@
                     <div class="container" style="background-color:#f1f1f1;height:60px;width:80%">   
                     <button type="reset" class="cancelbtn">Reset</button>
                     <span class="reg">New User?<a [routerLink]="['/registerLink']">Register</a></span>
-                    <span class="psw">Forgot <a [routerLink]="['/forgetPasswordLink']">password?</a></span>
-                    <span class="psw">Forgot <a [routerLink]="['/forgetUserId']">password?</a></span>
-
-                    
+                    <span class="psw">Forgot <a [routerLink]="['/forgetPasswordLink']">password?</a></span>    
                 </div>
             </div>
             </form>

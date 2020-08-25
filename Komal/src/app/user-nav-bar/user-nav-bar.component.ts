@@ -19,7 +19,7 @@ export class UserNavBarComponent implements OnInit {
   {
     sessionStorage.removeItem("customerName");
     sessionStorage.removeItem("customerId");
-    this.router.navigate(['/logOut']);
+    this.router.navigate(['/sessionTimeout']);
   }
 
 }

@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
       <div class="card" >
          <h2 style="text-align:right;"> Register for internet banking</h2>
           
-         <form #regForm='ngForm' style="float:right; border:2px solid black;border-radius:10px;">
-         <div class="container">
+         <form #regForm='ngForm' style="float:right; border:2px solid black;">
+         <div class="container" >
            <label for="Account"><b>Customer Id</b></label><br>
            <input type="tel" placeholder="Enter Customer ID" name="customerId" id="Account" required ngModel><br>
             <button style="border: none;cursor: pointer;width:37%;padding: 8px 0px;margin:10px 7px">send OTP</button><br>

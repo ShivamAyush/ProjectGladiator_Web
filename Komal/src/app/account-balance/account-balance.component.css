@@ -1,24 +1,22 @@
 
 
 .balance {   
-    width: 600px;
+    width: 80%;
     margin: auto;
-    height:auto;
+    height:500px;
     background-color: #a6d3f7;
     margin: auto;
     text-align: center;
     padding: 15px;
     overflow: hidden;
-border: 2px solid black;
-border-radius: 10px;
-margin-left: 300px;
+
   }
 
 table,td,th{
     border: 2px solid black;
     padding: 5px;
     margin-top: 5px;
-    width: 80%;
+    width: 60%;
     margin-bottom: 40px;
     border-radius: 10px;
 

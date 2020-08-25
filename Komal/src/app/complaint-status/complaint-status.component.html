@@ -38,7 +38,7 @@ img{
 
 
 button{
- width: 20%;
+ width: 50%;
  padding: 8px 10px;
  margin: 10px 10px;
  box-sizing: border-box;
@@ -69,7 +69,14 @@ border: 1px solid white;
  margin:0px auto;
  display:block;
 }
+.status {
+    width: 30%;
+height: 50px;
+}
 
+tbody{
+    border: none;
+}
 input[type=text], input[type=number]{
  width: 50%;
  padding: 6px 12px;
@@ -84,32 +91,54 @@ input[type=text], input[type=number]{
 <app-header-nav></app-header-nav>
 <h2>Customer Complaint Status</h2>
 
+<form (ngSubmit)="showStatus()">
 <table  align ="center" cellpadding = "5" >
 
 
     <!--------------------- Customer Complaint Number ------------------------------------------>
     <tr>
     <td>Complaint Number*</td>
+    
     <td>
-        <input type="text" class = "inputform" name="ComplaintNumber" maxlength="10"/>
+        <input type="text" class = "inputform"  [(ngModel)]='cNo.complaintNo' name="ComplaintNumber" maxlength="10"/>
     </td>
     </tr>
-    <tr>
-        <td>Mobile Number*</td>
-        <td>
-            <input type="text" class = "inputform" name="MobileNumber" maxlength="10"/>
-        </td>
-        </tr>
             <!------------------------- Captcha ---------------------------------->
     <tr>
     <td>Captcha*  <img [src]=imagePath alt="  " ></td>
     <td><input type="text" name="Captcha" class = "inputform"/></td>
     </tr>
-       
+    <tr><Button type="submit">Find</Button></tr>  
+
        
     </table>
+</form>
     <br/>
-    <input class="swd-button" type="submit" value="Submit"  >
+<table class="status" align="center" style="border:2px solid black;">
 
+         <tbody *ngIf="complaintStatus">
+            
+            <tr>
+                <th>
+                    <span>Complaint Number:</span>
+                </th>
+                <td>
+                    <span>{{complaintStatus.complaintNo}}</span>
+                 </td>   
+            </tr>
+    
+            <tr>
+                <th>
+                    <span>Status:</span>
+                </th>
+                <td>
+                    <span>{{complaintStatus.status}}</span>
+                 </td>   
+            </tr>
+    
+         </tbody>
+         
+         </table>
+    
 </body>
 </html>

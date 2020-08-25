@@ -128,7 +128,6 @@ input[type=text], input[type=password], input[type=email], input[type=tel],input
   border: 1px solid #ccc;
   box-sizing: border-box;
   border-radius:10px;
-  border-radius: 10px;
 
     /* width: 100%; */
 }

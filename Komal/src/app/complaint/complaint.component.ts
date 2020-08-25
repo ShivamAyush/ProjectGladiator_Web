@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Complaint} from './Complaint';
 import {ComplaintService} from '../complaint.service'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-complaint',
   templateUrl: './complaint.component.html',
@@ -8,7 +9,7 @@ import {ComplaintService} from '../complaint.service'
 })
 export class ComplaintComponent implements OnInit {
 
-  constructor(private service : ComplaintService ) { }
+  constructor(private service : ComplaintService,private router:Router ) { }
   images = ["/assets/459CT.png", "/assets/RBSKW.png", "/assets/W93BX.png"]
 
   imagePath=this.images[Math.floor(Math.random() * this.images.length)];
@@ -31,8 +32,7 @@ export class ComplaintComponent implements OnInit {
     console.log(this.complaint.branchCode);
     console.log(this.complaint.categoryOfComplaint);
     console.log(this.complaint.complaintDesc);
-    console.log(this.complaint.complaintNo);
-    console.log(this.complaint.customerType);
+    console.log(this.complaint.accountType);
     console.log(this.complaint.email);
     console.log(this.complaint.mobileNumber);
     console.log(this.complaint.nameComplaint);
@@ -44,11 +44,14 @@ export class ComplaintComponent implements OnInit {
     {
      this.service.addComplaint(this.complaint).subscribe(data=>{
       alert(JSON.stringify(this.complaint));
+      
     })
+    this.router.navigate(['/homeLink']);
   }
   else
   {
     this.message = "Captcha Invalid";
   }
+  
   }
 }
