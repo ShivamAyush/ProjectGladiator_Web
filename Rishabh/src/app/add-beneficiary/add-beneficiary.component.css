@@ -1,7 +1,7 @@
 
 .benificiary{
     background-color: #a6d3f7;
-    margin: auto;
+    margin-left: 200px;
     width: 100%;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,9 +26,9 @@ table{
     border: 2px solid black;
     padding: 5px;
     margin-top: 5px;
-    width: 40%;
+    width: auto;
     margin-bottom: 40px;
-    margin-left: 400px;
+    margin-left: 50px;
     border-radius: 10px;
 
 }
@@ -70,6 +70,7 @@ td{
     justify-content: center;
     padding: 15px;
     background-color:#56a6f0;
+    border-radius: 10px;
 }
 
 input{
@@ -87,4 +88,21 @@ input{
 
 .add span{
     padding: 10px;
+}
+
+input[type=text],input[type=number]{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius:10px;
+}
+
+.add1{
+    width:400px;
+    margin-left: 420px;
+    border: 2px solid black;
+    border-radius: 10px;
 }

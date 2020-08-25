@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationStrategy } from '@angular/common';
 import {Router} from '@angular/router';
+import { ITS_JUST_ANGULAR } from '@angular/core/src/r3_symbols';
 @Component({
   selector: 'app-admin-dash-board',
   templateUrl: './admin-dash-board.component.html',
@@ -21,12 +22,13 @@ export class AdminDashBoardComponent implements OnInit {
   ngOnInit(): void {
     this.adminName = sessionStorage.getItem('adminName');
   }
-
+  
   logout()
   {
     sessionStorage.removeItem("adminName");
     sessionStorage.removeItem("adminId");
-    this.router.navigate(['/sessionTimeout']);
+    this.router.navigate(['/logout']);
+    
   }
 
 }

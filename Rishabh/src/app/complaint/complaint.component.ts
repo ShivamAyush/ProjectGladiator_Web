@@ -46,6 +46,7 @@ export class ComplaintComponent implements OnInit {
       alert(JSON.stringify(this.complaint));
       
     })
+    this.popUp();
     this.router.navigate(['/homeLink']);
   }
   else
@@ -53,5 +54,9 @@ export class ComplaintComponent implements OnInit {
     this.message = "Captcha Invalid";
   }
   
+  }
+  popUp()
+  {
+    alert("Hi "+this.complaint.nameComplaint+"! Please Check your mail for complaint ref. No.")
   }
 }

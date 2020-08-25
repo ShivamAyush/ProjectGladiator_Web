@@ -27,6 +27,7 @@ import { AccountBalance, AccountBalanceComponent } from './account-balance/accou
 import { componentFactoryName } from '@angular/compiler';
 import { AdminVerificationComponent } from './admin-verification/admin-verification.component';
 import { TransactionsComponent } from './transactions/transactions.component';
+import { LogOutComponent } from './log-out/log-out.component';
 
 const routes: Routes = [
 {
@@ -68,6 +69,9 @@ path:'forgetPasswordLink',component:ForgetPasswordComponent
 },
 {
   path:'visitorStatusLink',component:VisitorStatusComponent
+},
+{
+  path:'logout',component:LogOutComponent
 },
 {
   path:'preLogin',component:PreLoginComponent

@@ -11,7 +11,7 @@ import { VisitorStatus } from "./visitor-status";
 export class VisitorStatusComponent implements OnInit {
 
   visitorStatus:VisitorStatus;
-  refNo:ReferenceNo = new ReferenceNo();
+  refNo = new ReferenceNo();
 
   constructor(private visitorService:VisitorServiceService) { }
 
@@ -25,7 +25,7 @@ export class VisitorStatusComponent implements OnInit {
         this.visitorStatus.serialRefNo = this.refNo.serviceRefNo;
         this.visitorStatus.status = visitorStatus.status;
       }
-    )
+      )
   }
 }
 

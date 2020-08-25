@@ -34,6 +34,7 @@ import { HeaderAppComponent } from './header-app/header-app.component';
 import { AccountBalanceComponent } from './account-balance/account-balance.component';
 import { AdminVerificationComponent } from './admin-verification/admin-verification.component';
 import { TransactionsComponent } from './transactions/transactions.component';
+import { LogOutComponent } from './log-out/log-out.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { TransactionsComponent } from './transactions/transactions.component';
     AccountBalanceComponent,
     AdminVerificationComponent,
     TransactionsComponent,
+    LogOutComponent,
   ],
   imports: [
     BrowserModule,

@@ -18,8 +18,8 @@ export class VisitorServiceService {
     return this.http.post<VisitorStatus>("http://localhost:8080/registerVisitor",visitor);
   }
 
-  checkVisitorStatus(ReferenceNumber: ReferenceNo):Observable<VisitorStatus>
+  checkVisitorStatus(refNo: ReferenceNo):Observable<VisitorStatus>
   {
-    return this.http.post<VisitorStatus>("http://localhost:8080/checkVisitorStatus",ReferenceNumber);
+    return this.http.post<VisitorStatus>("http://localhost:8080/checkVisitorStatus",refNo);
   }
 }

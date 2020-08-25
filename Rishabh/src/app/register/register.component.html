@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="form-outer">
-      <form #regForm='ngForm' (ngSubmit)='onSubmit()'>
+      <form #regForm='ngForm' (ngSubmit)='onSubmit()' novalidate>
         <div class="page slidepage">
           <div class="title">Basic Info </div>
           <div class="field">
@@ -98,13 +98,13 @@
           <h3>Residential Address:</h3>
           <div class="field">
             <span>
-              <input type="text" placeholder="Address Line" name="Addrress1" id="Addrress1" required [(ngModel)]='visitor.localAddress'>
+              <input type="text" placeholder="Address Line" name="Addrress1" id="Addrress1" required [(ngModel)]='visitor.localAddress' ng-change="sameAddress && update()">
             </span>
 
 
 
             <span>
-              <input type="text" placeholder="Enter state" name="state" id="state" required [(ngModel)]='visitor.localState'>
+              <input type="text" placeholder="Enter state" name="state" id="state" required [(ngModel)]='visitor.localState' ng-change="sameAddress && update()">
 
               <!-- <select >
                 <option >Choose your State</option>
@@ -116,7 +116,7 @@
 
           <div class="field">
             <span>
-              <input type="text" placeholder="Enter City" name="city" id="city" required [(ngModel)]='visitor.localCity'>
+              <input type="text" placeholder="Enter City" name="city" id="city" required [(ngModel)]='visitor.localCity' ng-change="sameAddress && update()">
 
               <!-- <select [(ngModel)]='visitor.localCity'>
                 <option value="city">Choose your City</option>
@@ -126,7 +126,7 @@
 
 
             <span>
-              <input type="text" placeholder="Enter Pincode" name="code" id="code" required [(ngModel)]='visitor.localPincode' minlength="6" maxlength="6">
+              <input type="text" placeholder="Enter Pincode" name="code" id="code" required [(ngModel)]='visitor.localPincode' ng-change="sameAddress && update()" minlength="6" maxlength="6">
               <!-- <select [(ngModel)]='visitor.localPincode'>
                 <option value="">select Pincode</option>
                 <option *ngFor="let p of Pincode" [ngValue]="pincode">{{p}}</option>
@@ -136,20 +136,20 @@
 
           </div>
           <div>
-            <span style="margin-left:10px; margin-right: 10px;"> <input type="checkbox" id="adrs" name="adrs" ngModel value="A1"></span>
+            <span style="margin-left:10px; margin-right: 10px;"> <input type="checkbox" id="adrs" name="adrs" ng-model="sameAddress" ng-change="sameAddress && update()" value="A1" (click)="update()"></span>
 
             <label for="adrs"> <b>Permanent Address and Mailing Address are same</b></label>
           </div>
 
           <div class="field">
             <span>
-              <input type="text" placeholder="Address Line" name="Addrress1" id="Addrress1" required [(ngModel)]='visitor.permanentAddress'>
+              <input type="text" placeholder="Address Line" name="Addrress1" id="Addrress1" required [(ngModel)]='visitor.permanentAddress' ng-disabled="sameAddress">
             </span>
 
 
 
             <span>
-              <input type="text" placeholder="Enter state" name="state" id="state" required [(ngModel)]='visitor.permanentState'>
+              <input type="text" placeholder="Enter state" name="state" id="state" required [(ngModel)]='visitor.permanentState'  ng-disabled="sameAddress">
 
               <!-- <select [(ngModel)]='visitor.localState'>
                 <option value="">Choose your State</option>
@@ -161,13 +161,13 @@
 
           <div class="field">
             <span>
-              <input type="text" placeholder="Enter City" name="city" id="city" required [(ngModel)]='visitor.permanentCity'>
+              <input type="text" placeholder="Enter City" name="city" id="city" required [(ngModel)]='visitor.permanentCity'  ng-disabled="sameAddress">
 
             </span>
 
 
             <span>
-              <input type="text" placeholder="Enter Pincode" name="code" id="code" required [(ngModel)]='visitor.permanentPincode' minlength="6" maxlength="6">
+              <input type="text" placeholder="Enter Pincode" name="code" id="code" required [(ngModel)]='visitor.permanentPincode'  ng-disabled="sameAddress" minlength="6" maxlength="6">
 
 
             </span>
@@ -197,11 +197,7 @@
 
           <div class="field">
             <input type="text" placeholder="Source of income"  #name='ngModel'  name="income" id="income" required [(ngModel)]='visitor.sourceOfIncome'>
-            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-              <div *ngIf="name.errors.required">
-                  FirstName is required.
-              </div>
-          </div>
+        
           </div>
 
           <div class="field">
@@ -228,9 +224,10 @@
             <button type="submit" [disabled]="!regForm.valid">Submit</button>
           </div>
         </div>
-
+        <p>{{text}}</p>
 
       </form>
+
 
     </div>
   </div>

@@ -1,11 +1,12 @@
 .info{
     border: 2px black solid;
     background-color:#76aee3;
-    margin-left: 500px;
+    margin-left: 300px;
 }
 table,th
 {
     border:1px solid black;
+    width:
 }
 td
 {
@@ -19,4 +20,8 @@ button
     background-color: #165b9c;
     padding:10px;
     color:white;
+}
+.material-icons
+{
+   margin-left: 450px;
 }
