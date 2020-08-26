@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 
 import { VisitorRegister } from "./register/visitor-register";
 import { ReferenceNo } from "./reference-no";
+import { ServiceReference } from "./reference-no";
 import { Observable } from 'rxjs';
 import { VisitorStatus } from './visitor-status/visitor-status';
 
@@ -18,7 +19,7 @@ export class VisitorServiceService {
     return this.http.post<VisitorStatus>("http://localhost:8080/registerVisitor",visitor);
   }
 
-  checkVisitorStatus(ReferenceNumber: ReferenceNo):Observable<VisitorStatus>
+  checkVisitorStatus(ReferenceNumber: ServiceReference):Observable<VisitorStatus>
   {
     return this.http.post<VisitorStatus>("http://localhost:8080/checkVisitorStatus",ReferenceNumber);
   }

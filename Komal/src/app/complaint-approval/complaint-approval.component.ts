@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ComplaintService} from '../complaint.service'
-import { ComplaintNo } from "../ComplaintNo";
+import { ComplaintNo1 } from "./ComplaintNo1";
 
 @Component({
   selector: 'app-complaint-approval',
@@ -11,7 +11,7 @@ export class ComplaintApprovalComponent implements OnInit {
 
   constructor(private service:ComplaintService) { }
   data:any;
-  complaintNo =new ComplaintNo();
+  complaintNo =new ComplaintNo1();
   viewComplaints(){
     this.service.getComplaints().subscribe(data=>{
       this.data=data;

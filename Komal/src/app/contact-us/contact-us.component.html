@@ -91,20 +91,16 @@ input[type=submit]:hover {
     </div>
     </div>
     <div class="column">
-      <form action="/action_page.php">
+      <form #regForm='ngForm' (ngSubmit)="onSubmitContact()">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." [(ngModel)]='contact.firstName' required>
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." [(ngModel)]='contact.lastName' required>
         <label for="place">Place</label>
-        <select id="place" name="Place">
-          <option value="Delhi">Delhi</option>
-          <option value="mumbai">Mumbai</option>
-          <option value="chennai">Chennai</option>
-        </select>
+        <input type="text" id="place" name="place" placeholder="Your City" [(ngModel)]='contact.place' required>
         <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <input type="submit" value="Submit" (click)="popUp()">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px" [(ngModel)]='contact.subject' required></textarea>
+        <input class="swd-button"  [disabled]='!regForm.valid' type="submit" value="Submit">
       </form>
     </div>
   </div>

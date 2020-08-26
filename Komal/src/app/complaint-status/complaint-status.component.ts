@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ComplaintStatus  } from "./ComplaintStatus";
 import { ComplaintService } from "../complaint.service";
-import { ComplaintNo } from "../ComplaintNo";
+import { ComplaintNo } from "./ComplaintNo";
 
 @Component({
   selector: 'app-complaint-status',

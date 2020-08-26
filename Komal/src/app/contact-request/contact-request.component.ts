@@ -27,9 +27,7 @@ export class ContactRequestComponent implements OnInit {
         
         this.contactId=this.data[x].contactId;
         alert(this.contactId);
-        this.service.updateStatus(this.contactId).subscribe(data=>{  
-              alert(JSON.stringify(data));     
-               })
+        this.service.updateStatus(this.contactId)
       }
   ngOnInit(): void {
   }

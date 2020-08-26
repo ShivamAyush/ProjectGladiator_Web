@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReferenceNo } from '../reference-no';
+import {ServiceReference } from '../reference-no';
 import { VisitorServiceService } from "../visitor-service.service";
 import { VisitorStatus } from "./visitor-status";
 
@@ -11,7 +11,7 @@ import { VisitorStatus } from "./visitor-status";
 export class VisitorStatusComponent implements OnInit {
 
   visitorStatus:VisitorStatus;
-  refNo:ReferenceNo = new ReferenceNo();
+  refNo:ServiceReference = new ServiceReference();
 
   constructor(private visitorService:VisitorServiceService) { }
 

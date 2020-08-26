@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Contact} from './ContactUs'
+import { ContactRequestServiceService} from '../contact-request-service.service'
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
@@ -7,12 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private contactService:ContactRequestServiceService,private router:Router) { }
 
   ngOnInit(): void {
   }
+ 
+  contact = new Contact();
+  name:string;
+  onSubmitContact()
+  {
+    console.log(this.contact.firstName);
+    console.log(this.contact.lastName);
+    console.log(this.contact.place);
+    console.log(this.contact.subject);
+    this.contactService.addContact(this.contact).subscribe(data=>{
+      alert(JSON.stringify(data));
+    
+    })
+    this.popUp();
+  }
+
   popUp()
   {
-    alert("Form Submitted,We will contact you. Thank you!")
+    alert("Hi "+this.contact.firstName+" We will contact you. Thank you!");
+    this.router.navigate(['/homeLink']);
   }
 }
