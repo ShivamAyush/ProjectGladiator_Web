@@ -29,101 +29,108 @@ import { AdminVerificationComponent } from './admin-verification/admin-verificat
 import { TransactionsComponent } from './transactions/transactions.component';
 import { ComplaintApprovalComponent } from "./complaint-approval/complaint-approval.component";
 import { ContactRequestComponent } from "./contact-request/contact-request.component";
+import { TransactionInvoiceComponent } from "./transaction-invoice/transaction-invoice.component";
 
 const routes: Routes = [
-{
-  path:'',component:HomeComponent
-},
-{
-  path:'homeLink',component:HomeComponent
-  
-},
-{
-  path:'loginLink',component:LoginComponent
-},
-{
-  path: 'registerLink',component:RegisterComponent
-},
-{
-path:'forgetPasswordLink',component:ForgetPasswordComponent
-},
-{
-  path:'setPaaswordLink',component:SetPasswordComponent
-},
-{
-  path:'internetBankingLink',component:InternetBankingComponent
-},
-{
-  path:'sessionTimeout',component:SessionExpiredComponent
-},
-{
-  path:'accountLocked',component:AccountLockedComponent
-},
-{
-  path:'adminLogin',component:AdminLoginComponent
-},
-{
-  path:'CMS',component:ComplaintComponent
-},
-{
-  path:'complaintStatus',component:ComplaintStatusComponent
-},
-{
-  path:'visitorStatusLink',component:VisitorStatusComponent
-},
-{
-  path:'preLogin',component:PreLoginComponent
-},
-{
-  path:'accountType',component:AccountTypeComponent
-},
-{
-  path:'contactUs',component:ContactUsComponent
-},
-{
-  path:'userDashboard',component:UserDashboardComponent,
-  children:[
-    {
-      path: 'accountSummary', component:AccountSummaryComponent
-    },
-    {
-      path: 'accountStatement',component:AccountStatementComponent
-    },
-    {
-      path:'userProfile',component:UserProfileComponent
-    },
-    {
-      path:'fundTransfer',component:FundTransferComponent
-    },
-    {
-      path:'addBeneficiary',component:AddBeneficiaryComponent
-    },
-    {
-      path:'changePassword',component:ChangePasswordComponent
-    },
-    
-    {
-      path:'accountBalance',component:AccountBalanceComponent
-    },
-    {
-      path:'transactions',component:TransactionsComponent
-    }
-  ]
-},
-{
-  path:'adminPortal',component:AdminDashBoardComponent,
-  children:[
-    {
-      path:'adminVerification',component:AdminVerificationComponent
-    },
-    {
-      path:'complaintApprove',component:ComplaintApprovalComponent
-    },
-    {
-      path:'contactRequest',component:ContactRequestComponent
-    },
-  ]
-}
+  {
+    path: '', component: HomeComponent
+  },
+  {
+    path: 'homeLink', component: HomeComponent
+
+  },
+  {
+    path: 'loginLink', component: LoginComponent
+  },
+  {
+    path: 'registerLink', component: RegisterComponent
+  },
+  {
+    path: 'forgetPasswordLink', component: ForgetPasswordComponent
+  },
+  {
+    path: 'setPaaswordLink', component: SetPasswordComponent
+  },
+  {
+    path: 'internetBankingLink', component: InternetBankingComponent
+  },
+  {
+    path: 'sessionTimeout', component: SessionExpiredComponent
+  },
+  {
+    path: 'accountLocked', component: AccountLockedComponent
+  },
+  {
+    path: 'adminLogin', component: AdminLoginComponent
+  },
+  {
+    path: 'CMS', component: ComplaintComponent
+  },
+  {
+    path: 'complaintStatus', component: ComplaintStatusComponent
+  },
+  {
+    path: 'visitorStatusLink', component: VisitorStatusComponent
+  },
+  {
+    path: 'preLogin', component: PreLoginComponent
+  },
+  {
+    path: 'accountType', component: AccountTypeComponent
+  },
+  {
+    path: 'contactUs', component: ContactUsComponent
+  },
+ 
+  {
+    path: 'userDashboard', component: UserDashboardComponent,
+    children: [
+      {
+        path: 'accountSummary', component: AccountSummaryComponent
+      },
+      {
+        path: 'accountStatement', component: AccountStatementComponent
+      },
+      {
+        path: 'userProfile', component: UserProfileComponent
+      },
+      {
+        path: 'fundTransfer', component: FundTransferComponent
+      },
+      {
+        path: 'addBeneficiary', component: AddBeneficiaryComponent
+      },
+      {
+        path: 'changePassword', component: ChangePasswordComponent
+      },
+
+      {
+        path: 'accountBalance', component: AccountBalanceComponent
+      },
+      {
+        path: 'transactions', component: TransactionsComponent
+      },
+      {
+        path:'invoice',component:TransactionInvoiceComponent
+      },
+      
+    ]
+  },
+  {
+    path: 'adminPortal', component: AdminDashBoardComponent,
+    children: [
+      {
+        path: 'adminVerification', component: AdminVerificationComponent
+      },
+      {
+        path: 'complaintApprove', component: ComplaintApprovalComponent
+      },
+      {
+        path: 'contactRequest', component: ContactRequestComponent
+      },
+     
+    ]
+  }
 ];
 
 @NgModule({
