@@ -34,6 +34,7 @@ const routes: Routes = [
 },
 {
   path:'homeLink',component:HomeComponent
+  
 },
 {
   path:'loginLink',component:LoginComponent

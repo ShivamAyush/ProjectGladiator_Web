@@ -25,7 +25,7 @@ export class VisitorStatusComponent implements OnInit {
         this.visitorStatus.serialRefNo = this.refNo.serviceRefNo;
         this.visitorStatus.status = visitorStatus.status;
       }
-      )
+    )
   }
 }
 

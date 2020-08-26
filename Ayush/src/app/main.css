@@ -16,8 +16,7 @@ body {
   text-align: center;
   background: white;
   width: 100%;
-  margin: auto;
-  
+  margin: auto; 
 }
 
 /* Style the top navigation bar */
@@ -93,8 +92,7 @@ display: list-item;
   display: table;
   clear: both;
 }
-
- .main {   
+.main {   
   width: 100%;
   margin: auto;
 }
@@ -122,7 +120,7 @@ img {
 
 
 /* Full-width inputs */
-input[type=text], input[type=password], input[type=email], input[type=tel]{
+input[type=text], input[type=password], input[type=email], input[type=tel],input[type=number]{
   width: 80%;
   padding: 12px 20px;
   margin: 8px 0;

@@ -50,7 +50,6 @@ export class AdminVerificationComponent implements OnInit {
     this.r=this.r=this.data[x].serviceRefNo;
     alert(this.r);
     this.service.addCustomer(this.r).subscribe(data=>{
-      this.data1=data;
       alert(JSON.stringify(data));
     })
     

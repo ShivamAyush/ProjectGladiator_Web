@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-user-nav-bar',
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserNavBarComponent implements OnInit {
   getDatetime = new Date();
-  userName = "Rishabh";
-  constructor() { }
+  customerName:string;
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+    this.customerName = sessionStorage.getItem('customerName');
+  }
+
+  logout()
+  {
+    sessionStorage.removeItem("customerName");
+    sessionStorage.removeItem("customerId");
+    this.router.navigate(['/sessionTimeout']);
   }
 
 }

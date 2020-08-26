@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ResetPass } from "./dto-classes/ResetPass";
+import { ForgetPasswordService } from "./Customer.service";
+import { Router } from "@angular/router";
+
 @Component({
 selector:'app-setPassword',
 template:`
@@ -15,17 +19,17 @@ template:`
       <div class="container" style="text-align:center;border:2px solid black;
       border-radius: 10px;">
       <label for="psw"><b>Login Password</b></label><br>
-      <input class="pswrd" type="password" placeholder="Enter Password" id="psw" required ngModel><span class="show">SHOW</span><br>
+      <input class="pswrd" type="password" name="pswrd" placeholder="Enter Password" id="psw" required [(ngModel)]=resetPass.password><span class="show">SHOW</span><br>
 
       <label for="psw"><b>Confirm Password</b></label><br>
-      <input class="pswrd1" type="password" placeholder="Re-enter password" id="psw" required ngModel><span class="view">SHOW</span><br>
+      <input class="pswrd1" type="password" name="pswrd" placeholder="Re-enter password" id="psw" required ><span class="view">SHOW</span><br>
 
           <div class="container" style="background-color:#f1f1f1;height:60px;width:80%;margin-left:3px;">
           <button type="reset" class="cancelbtn">Reset</button>
-          <button type="submit" class="proceed1" >Submit</button>
-          <button class="proceed1" >
+          <button type="submit" class="proceed1" (click)='setPass()' >Submit</button>
+          <!-- <button class="proceed1" >
           <a [routerLink]="['/loginLink']" class="prcd">Login</a>
-          </button>
+          </button> -->
           </div>
           </div> 
          
@@ -41,7 +45,7 @@ styleUrls:['./main.css']
 
 export class SetPasswordComponent implements OnInit {
 
-    constructor() { }
+  constructor(private service:ForgetPasswordService,private router:Router) { }
   
     ngOnInit(): void {
       var input:HTMLInputElement=document.querySelector('.pswrd');
@@ -79,5 +83,19 @@ export class SetPasswordComponent implements OnInit {
   }
   
   }
+
+  resetPass= new ResetPass;
+  setPass(){
+    console.log(this.resetPass);
+    this.service.setPass(this.resetPass).subscribe(
+      data=>{
+        alert(JSON.stringify(data));
+        if(data.status == 'Success'){
+          this.router.navigate(['/loginLink']);
+        }
+      }
+    )
+  }
+
     }
   
