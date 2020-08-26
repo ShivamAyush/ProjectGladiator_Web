@@ -1,97 +1,85 @@
 <i class="large material-icons" style="font-size: 60px;">account_circle</i>
 <table class="info">
-    <tbody *ngFor="let employee of employees">
         <tr>
             <th>
-                <span>Customer ID:</span><input type="text" [(ngModel)]="employee.customerId" [disabled]="!employee.isEditable" />
+                <span>Customer ID:</span>
+            </th>
+            <th>
+                <span>{{userProfile.customerId}}</span>
             </th>
         </tr>
 
         <tr>
             <th>
-                <span>First Name:</span><input type="text" [(ngModel)]="employee.name" [disabled]="!employee.isEditable" placeholder="Name" />
+                <span>First Name:</span>
+            </th>
+            <th>
+                <span>{{userProfile.firstName}}</span>
             </th>
         </tr>
         <tr>    
             <th>
-                <span>Last Name:</span><input type="text" [(ngModel)]="employee.lastName" [disabled]="!employee.isEditable" />
+                <span>Last Name:</span>
+            </th>
+            <th>
+                <span>{{userProfile.lastName}}</span>
+            </th>
+        </tr>
+        
+        <tr>
+            <th>
+                <span>Mobile Number:</span>
+            </th>
+            <th>
+                <span>{{userProfile.phoneNumber}}</span>
             </th>
         </tr>
         <tr>   
             <th>
-                <span>Middle Name:</span><input type="text" [(ngModel)]="employee.middleName" [disabled]="!employee.isEditable" />
+                <span>Email ID:</span>
+            </th>
+            <th>
+                <span>{{userProfile.email}}</span>
             </th>
         </tr>
         <tr>
             <th>
-                <span>Father's Name:</span><input type="text" [(ngModel)]="employee.fatherName" [disabled]="!employee.isEditable" />
+                <span>Aadhar Number:</span>
+            </th>
+            <th>
+                <span>{{userProfile.aadharNo}}</span>
             </th>
         </tr>
         <tr>
             <th>
-                <span>Mobile Number</span><input type="text" [(ngModel)]="employee.mobileNumber" [disabled]="!employee.isEditable" />
+                <span>Local Address:</span>
             </th>
-        </tr>
-        <tr>   
             <th>
-                <span>Email ID:</span><input type="text" [(ngModel)]="employee.email" [disabled]="!employee.isEditable" />
+                <span>{{userProfile.localAddress}}</span>
             </th>
         </tr>
         <tr>
             <th>
-                <span>Aadhar Number:</span><input type="text" [(ngModel)]="employee.aadharNo" [disabled]="!employee.isEditable" />
+                <span>Permanent Address:</span>
             </th>
-        </tr>
-        <tr>   
             <th>
-                <span>Date Of Birth:</span><input type="text" [(ngModel)]="employee.dateOfBirth" [disabled]="!employee.isEditable" />
+                <span>{{userProfile.permanentAddress}}</span>
             </th>
         </tr>
         <tr>
             <th>
-                <span>Local Address:</span><input type="text" [(ngModel)]="employee.localAddressResi" [disabled]="!employee.isEditable" />
+                <span>Debit Card Status:</span>
             </th>
-        </tr>
-        <tr>    
             <th>
-                <span>Region ID:</span><input type="text" [(ngModel)]="employee.regionIdResi" [disabled]="!employee.isEditable" />
+                <span>{{userProfile.debitCardStatus}}</span>
             </th>
         </tr>
         <tr>
             <th>
-                <span>Permanent Address:</span><input type="text" [(ngModel)]="employee.addressPerm" [disabled]="!employee.isEditable" />
+                <span>Net Banking Status:</span>
             </th>
-        </tr>
-        <tr>    
             <th>
-                <span>RegionID Permanent Address:</span><input type="text" [(ngModel)]="employee.regionIdPerm" [disabled]="!employee.isEditable" />
+                <span>{{userProfile.netBankingStatus}}</span>
             </th>
         </tr>
-        <tr>
-            <th>
-                <span>Occupation:</span><input type="text" [(ngModel)]="employee.occupation" [disabled]="!employee.isEditable" />
-            </th>
-        </tr>
-        <tr>    
-            <th>
-                <span>Annual Income:</span><input type="text" [(ngModel)]="employee.annualIncome" [disabled]="!employee.isEditable" />
-            </th>
-        </tr>
-        <tr>
-            <th>
-                <span>Debit Card Status:</span><input type="text" [(ngModel)]="employee.debitCardStatus" [disabled]="!employee.isEditable" />
-            </th>
-        </tr>
-        <tr>
-            <th>
-                <span>Net Banking Status:</span><input type="text" [(ngModel)]="employee.netBankingStatus" [disabled]="!employee.isEditable" />
-            </th>
-        </tr>
-        <tr>
-            <td>
-                <button (click)="employee.isEditable=!employee.isEditable" *ngIf="!employee.isEditable">Edit</button>
-                <button *ngIf="employee.isEditable" (click)="employee.isEditable=!employee.isEditable">Save</button>
-            </td>
-        </tr>
-    </tbody>
 </table>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import {CustomerId} from '../transactions/CustomerId';
+import {AccountSummaryService} from '../account-summary.service'
+import { TransactionDetailService } from '../transaction-detail.service';
 @Component({
   selector: 'app-account-summary',
   templateUrl: './account-summary.component.html',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountSummaryComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private service:AccountSummaryService,private service1:TransactionDetailService) { }
+  customerId = new CustomerId();
+  user:any;
+  value:any;
   ngOnInit(): void {
-  }
+    this.customerId.customerId = Number(sessionStorage.getItem("customerId"));
+    this.service1.getTransactionDetails(this.customerId).subscribe(data=>{
+      this.value=data;
+      alert(JSON.stringify(this.value));
 
+      this.customerId.customerId = Number(sessionStorage.getItem("customerId"));
+    this.service.getAccountSummary(this.customerId).subscribe(data=>{
+      this.user=data;
+      alert(JSON.stringify(this.user));
+    })
+    })
+
+  }
 }

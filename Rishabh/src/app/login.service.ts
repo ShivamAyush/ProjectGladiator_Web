@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http';
 import {Login} from './login/Login'
 import {LoginStatus} from './login/LoginStatus'
 import { LoginComponent } from './login/login.component';

@@ -23,7 +23,7 @@ import { AccountTypeComponent } from './account-type/account-type.component';
 import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { AccountBalance, AccountBalanceComponent } from './account-balance/account-balance.component';
+import { AccountBalanceComponent } from './account-balance/account-balance.component';
 import { componentFactoryName } from '@angular/compiler';
 import { AdminVerificationComponent } from './admin-verification/admin-verification.component';
 import { TransactionsComponent } from './transactions/transactions.component';
