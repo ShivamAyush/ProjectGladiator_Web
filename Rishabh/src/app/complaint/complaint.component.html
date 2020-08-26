@@ -3,11 +3,9 @@
 <h2>Customer Complaint Form</h2>
 <button type="button" ><a [routerLink]="['/complaintStatus']">Click Here to Check Complaint Status</a></button>
 
-<marquee scrollamount="5">
-Fields marked with (*) are compulsary, Please Provide correct details. 
-You will receive a response shortly by SMS or E-mail. 
-&nbsp;To know the status of your request call on our  number 9473303032 with ticket number.
-</marquee>
+<div class="blink-text">Fields marked with (*) are compulsary, Please Provide correct details. 
+  You will receive a response shortly by SMS or E-mail.</div>
+
 
 <form #regForm='ngForm' (ngSubmit)="addComplaint()">
 <table  align ="center" cellpadding = "7" >
@@ -16,7 +14,7 @@ You will receive a response shortly by SMS or E-mail.
 <tr>
 <td>Account Type* &nbsp; &nbsp; &nbsp; &nbsp; <span style="color:red; font-size: 16px;">{{message1}}</span></td>
 <td>
-    <input type="text" class = "inputform" #accountType="ngModel" name="accountType" maxlength="50" [(ngModel)]=complaint.customerType   required/>
+    <input type="text" class = "inputform" #accountType="ngModel" name="accountType" maxlength="50" [(ngModel)]=complaint.accountType   required/>
     <div *ngIf="accountType.touched">
         <p *ngIf="accountType.errors?.required">Account Type is a required field!</p>
       </div>

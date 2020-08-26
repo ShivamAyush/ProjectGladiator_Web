@@ -32,7 +32,7 @@ export class ComplaintComponent implements OnInit {
     console.log(this.complaint.branchCode);
     console.log(this.complaint.categoryOfComplaint);
     console.log(this.complaint.complaintDesc);
-    console.log(this.complaint.customerType);
+    console.log(this.complaint.accountType);
     console.log(this.complaint.email);
     console.log(this.complaint.mobileNumber);
     console.log(this.complaint.nameComplaint);

@@ -28,6 +28,8 @@ import { componentFactoryName } from '@angular/compiler';
 import { AdminVerificationComponent } from './admin-verification/admin-verification.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { LogOutComponent } from './log-out/log-out.component';
+import {ComplaintApprovalComponent} from './complaint-approval/complaint-approval.component';
+import {ContactRequestComponent} from './contact-request/contact-request.component';
 
 const routes: Routes = [
 {
@@ -83,6 +85,9 @@ path:'forgetPasswordLink',component:ForgetPasswordComponent
   path:'contactUs',component:ContactUsComponent
 },
 {
+  path:'complaintStatus',component:ComplaintStatusComponent
+},
+{
   path:'userDashboard',component:UserDashboardComponent,
   children:[
     {
@@ -116,6 +121,12 @@ path:'forgetPasswordLink',component:ForgetPasswordComponent
   children:[
     {
       path:'adminVerification',component:AdminVerificationComponent
+    },
+    {
+      path:'complaintApprove',component:ComplaintApprovalComponent
+    },
+    {
+      path:'contactRequest',component:ContactRequestComponent
     }
   ]
 }

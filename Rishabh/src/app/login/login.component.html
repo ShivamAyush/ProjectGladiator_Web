@@ -22,9 +22,9 @@
                         <button type="submit">Login</button><br>
                     </form>
                     <label>
-                        <input type="checkbox" checked="checked" id="remember" required ngModel> Remember me
+                        <input type="checkbox" unchecked id="remember" (click)="cookiesStorage()"> Remember me
                     </label>
-                    <p>{{message}}</p>
+                    <div><p style="color:red; font-weight: bold;">{{message}}</p></div>
                     <div class="container" style="background-color:#f1f1f1;height:60px;width:80%">   
                     <button type="reset" class="cancelbtn">Reset</button>
                     <span class="reg">New User?<a [routerLink]="['/registerLink']">Register</a></span>

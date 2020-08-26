@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact} from './ContactUs'
-import { ContactusService} from '../contactus.service'
+import {ContactRequestServiceService} from '../contact-request.service';
 import {Router} from '@angular/router';
 @Component({
   selector: 'app-contact-us',
@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class ContactUsComponent implements OnInit {
 
-  constructor(private contactService:ContactusService,private router:Router) { }
+  constructor(private contactService:ContactRequestServiceService,private router:Router) { }
 
   ngOnInit(): void {
   }
