@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminVerificationService } from "../admin-verification.service";
+import { ReferenceNo } from "../reference-no";
 
 @Component({
   selector: 'app-admin-verification',
@@ -6,48 +8,54 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-verification.component.css']
 })
 export class AdminVerificationComponent implements OnInit {
+  
+  constructor(private service:AdminVerificationService) { }
+  data:any;
+  data1:any;
+  r:ReferenceNo;
+  viewVisitors(){
+    this.service.getVisitors().subscribe(data=>{
+      this.data=data;
+        })
+     
+  }
 
-  constructor() { }
+//   deleteVisitor(r){
+//     this.service.deleteVisitor(r).subscribe(data1=>{
+//       this.data1=data1;
+//       alert(JSON.stringify(data1));
+//     })
+//  }
 
   ngOnInit(): void {
   }
-
-  d1=new Verification("John","8447711059","12542","456","abc@xyx","savings","1500","Service");
-  d2=new Verification("Marc","9941920645","12542","4753","refc@xyx","savings","1500","Service");
-  d3=new Verification("Jill","9999444420","12542","95145","acdgb@xyx","current","1500","Business");
-  d4=new Verification("Pepe","9945530581","12542","478855","abcaas@xyx","corporate","1500","Self");
-  row:Verification[] = [this.d1,this.d2,this.d3,this.d4];
-
- 
+  
   deleteRow(x){
     var delBtn = confirm(" Do you want to delete ?");
+     this.r=this.r=this.data[x].serviceRefNo;
+      alert(this.r);
+    this.service.deleteVisitor(this.r).subscribe(data=>{
+      this.data1=data;
+      alert(JSON.stringify(data));
+    })
+
     if ( delBtn == true ) {
-      this.row.splice(x, 1 );
-    }   
-  }
-
-
-
-}
-
-export class Verification{
-  name:string;
-  serialReferenceNumber:number;
-  aadharNumber:number;
-  mobileNumber:number;
-  email:string;
-  accountType:string;
-  annualIncome:number;
-  occupation:string;
-  constructor(name,serialReferenceNumber,aadharNumber,mobileNumber,email,accountType,annualIncome,occupation){
-      this.name=name;
-      this.serialReferenceNumber=serialReferenceNumber;
-      this.aadharNumber=aadharNumber;
-      this.mobileNumber=mobileNumber;
-      this.email=email;
-      this.accountType=accountType;
-      this.annualIncome=annualIncome;
-      this.occupation=occupation;
+    this.data.splice(x,1);
     }
+  }  
 
+  addCustomer(x)
+  {
+    var delBtn = confirm(" Do you want to create account ?");
+    this.r=this.r=this.data[x].serviceRefNo;
+    alert(this.r);
+    this.service.addCustomer(this.r).subscribe(data=>{
+      this.data1=data;
+      alert(JSON.stringify(data));
+    })
+    
+    if ( delBtn == true ) {
+      this.data.splice(x,1);
+    }
+  }
 }

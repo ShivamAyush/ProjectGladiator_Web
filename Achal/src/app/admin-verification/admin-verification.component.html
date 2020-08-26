@@ -1,11 +1,12 @@
-<body>
+
     <div class="admin">
        
         <div>
+            
             <h1>Admin Verification Portal</h1>
         
         </div>
-           
+        <button (click)="viewVisitors()" style="margin-bottom: 20px;">check Visitor Request</button>
         
         <div>
             <table>
@@ -20,17 +21,17 @@
                     <th><span>Occupation</span></th>
                     <th><span>Actions</span></th>
                 </thead>    
-                <tbody *ngFor="let item of row; let i = index">
+                <tbody *ngFor="let v of data; let i = index">
                 <tr>
-                    <td>{{item.name}} </td>
-                    <td>{{item.serialReferenceNumber}}</td>            
-                    <td>{{item.aadharNumber}}</td>
-                    <td>{{item.mobileNumber}}</td>
-                    <td>{{item.email}}</td>
-                    <td>{{item.accountType}}</td>
-                    <td>{{item.annualIncome}}</td>
-                    <td>{{item.occupation}}</td>
-                    <td> <button class="accept"><span>Accept</span></button> </td>
+                    <td>{{v.firstName}} </td>
+                    <td>{{v.serviceRefNo}}</td>            
+                    <td>{{v.aadharNo}}</td>
+                    <td>{{v.phoneNumber}}</td>
+                    <td>{{v.email}}</td>
+                    <td>{{v.accountType}}</td>
+                    <td>{{v.grossAnnualIncome}}</td>
+                    <td>{{v.occupationType}}</td>
+                    <td> <button class="accept" (click)="addCustomer(i)"><span>Accept</span></button> </td>
                     <td> <button class="rej" (click)="deleteRow(i)"><i class="fa fa-trash"><span>Reject</span></i></button></td>
                    
                  </tr>   
@@ -39,5 +40,5 @@
         </div>
         
         </div>
-</body>
+
 

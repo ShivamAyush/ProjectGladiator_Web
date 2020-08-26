@@ -1,0 +1,108 @@
+
+.benificiary{
+    background-color: #a6d3f7;
+    margin-left: 200px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding: 15px;
+    border: inset;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 40px;
+    color: black;
+    font-size: 140%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+table{
+    border: 2px solid black;
+    padding: 5px;
+    margin-top: 5px;
+    width: auto;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    border-radius: 10px;
+
+}
+
+tr{
+    height: 25px;
+    
+}
+
+td{
+    width: 50%;
+    padding: 20px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.del span{
+    padding: 10px;
+
+}
+
+
+.del{
+    font-weight: 700;
+    border-radius: 200px;
+    padding: 10px;
+}
+
+.del:hover{
+    background-color: red;
+    color: white;
+    transition: 5sec;
+    font-size: large;
+}
+
+.add{
+    margin: 25px;
+    margin-left:0px ;
+    justify-content: center;
+    padding: 15px;
+    background-color:#56a6f0;
+    border-radius: 10px;
+}
+
+input{
+    width: 40%;
+    padding: 5px;
+
+}
+
+.add:hover{
+    background-color:#0e6bc2;
+    transition: ease-in;
+    font-size: large;
+    color:white
+}
+
+.add span{
+    padding: 10px;
+}
+
+input[type=text],input[type=number]{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius:10px;
+}
+
+.add1{
+    width:400px;
+    margin-left: 420px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
