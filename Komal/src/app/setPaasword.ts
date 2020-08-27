@@ -22,8 +22,9 @@ template:`
       <input class="pswrd" type="password" name="pswrd" placeholder="Enter Password" id="psw" required [(ngModel)]=resetPass.password><span class="show">SHOW</span><br>
 
       <label for="psw"><b>Confirm Password</b></label><br>
-      <input class="pswrd1" type="password" name="pswrd" placeholder="Re-enter password" id="psw" required ><span class="view">SHOW</span><br>
-
+      <input class="pswrd1" type="password" name="pswrd" placeholder="Re-enter password" id="psw1" required ><span class="view">SHOW</span><br>
+      <span *ngIf='!confirmPassword()' style="color: red;font-weight:bold"> Oops!! Password mismatch </span>
+         
           <div class="container" style="background-color:#f1f1f1;height:60px;width:80%;margin-left:3px;">
           <button type="reset" class="cancelbtn">Reset</button>
           <button type="submit" class="proceed1" (click)='setPass()' >Submit</button>
@@ -82,6 +83,14 @@ export class SetPasswordComponent implements OnInit {
       
   }
   
+  }
+
+  confirmPassword():boolean{
+    var pass=(<HTMLInputElement>document.getElementById('psw1'));
+    if(this.resetPass.password==pass.value){
+    return true;
+    }
+    return false;
   }
 
   resetPass= new ResetPass;

@@ -142,6 +142,14 @@ showSlides();
   }
   
   
+  isNumber(event,id,l){
+    var mobile=(<HTMLInputElement>document.getElementById(id));
+    var data=mobile.value;
+    var key=event.key;
+    if(isNaN(key) || data.length>l)
+    event.preventDefault();
+  }
+
   State= [ "Andhra Pradesh",
  "Arunachal Pradesh",
  "Assam",
