@@ -7,30 +7,35 @@
 
                 <div class="container" style="text-align:center; border:2px solid black;
                 border-radius: 10px;">
-                    <label for="uname"><b> <i class="material-icons" style="font-size: 50px; color:#1474a8;">account_box</i></b></label><br>
+                    <label for="uname"><b> <i class="material-icons"
+                                style="font-size: 50px; color:#1474a8;">account_box</i></b></label><br>
                     <form (ngSubmit)="loginUser()">
-                        <input type="number" name="customerId" #customerId="ngModel" placeholder="Enter Username" id="uname" required [(ngModel)]=Login.customerId><br>
+                        <input type="number" name="customerId" #customerId="ngModel" placeholder="Enter CustomerId"
+                            id="uname" required [(ngModel)]=Login.customerId><br>
                         <div *ngIf="customerId.touched">
                             <p *ngIf="customerId.errors?.required">Please Enter customerId*</p>
-                          </div>
-                        <input type="password" name="password" #password="ngModel" placeholder="Enter Password" id="psw" required minlength="6" [(ngModel)]=Login.loginPassword>
-                        
+                        </div>
+                        <input type="password" name="password" #password="ngModel" placeholder="Enter Password" id="psw"
+                            required minlength="6" [(ngModel)]=Login.loginPassword>
+
                         <div *ngIf="password.Invalid || password.touched">
                             <p *ngIf="password.errors?.minlength">Invalid Password!</p>
                             <p *ngIf="password.errors?.required">Please Enter Login Password*</p>
-                          </div>
+                        </div>
                         <button type="submit">Login</button><br>
                     </form>
                     <label>
                         <input type="checkbox" unchecked id="remember" (click)="cookiesStorage()"> Remember me
                     </label>
-                    <div><p style="color:red; font-weight: bold;">{{message}}</p></div>
-                    <div class="container" style="background-color:#f1f1f1;height:60px;width:80%">   
-                    <button type="reset" class="cancelbtn">Reset</button>
-                    <span class="reg">New User?<a [routerLink]="['/registerLink']">Register</a></span>
-                    <span class="psw">Forgot <a [routerLink]="['/forgetPasswordLink']">password?</a></span>    
+                    <div>
+                        <p style="color:red; font-weight: bold;">{{message}}</p>
+                    </div>
+                    <div class="container" style="background-color:#f1f1f1;height:60px;width:80%">
+                        <button type="reset" class="cancelbtn">Reset</button>
+                        <span class="reg">New User?<a [routerLink]="['/registerLink']">Register</a></span>
+                        <span class="psw">Forgot <a [routerLink]="['/forgetPasswordLink']">password?</a></span>
+                    </div>
                 </div>
-            </div>
             </form>
 
         </div>

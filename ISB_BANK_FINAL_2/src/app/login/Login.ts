@@ -1,5 +1,4 @@
-export class Login
-{
-    customerId:number;
-    loginPassword:string;
+export class Login {
+    customerId: number;
+    loginPassword: string;
 }
