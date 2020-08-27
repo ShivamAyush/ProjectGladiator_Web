@@ -32,9 +32,11 @@ export class FundTransferComponent implements OnInit {
       this.accountValue = data;
     })
 
+    console.log(this.transaction.methodtype);
+
   }
   ngOnInit(): void {
-    this.transaction.methodtype = "NEFT";
+    
     console.log(this.values.beneficiaryAccountNo);
 
   }

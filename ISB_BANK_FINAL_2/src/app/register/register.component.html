@@ -80,13 +80,13 @@
             </div>
             </span>
             <span>
-              <input type="tel" placeholder="Enter Mobile Number"  id="mobile" name="mobile" #mobile="ngModel" maxlength="10"
+              <input type="tel" placeholder="Enter Mobile Number"  id="mobile" name="mobile" #mobile="ngModel" 
                 minlength="10" required [(ngModel)]='visitor.phoneNumber'>
 
                 <div *ngIf="mobile.touched" style="color: red;">
                   <p *ngIf="mobile.errors?.required" style="color: red;"> Mobile number required</p>
                   <p *ngIf="mobile.errors.minlength" style="color: red;">Invalid Mobile  Number</p>
-                  <p *ngIf="mobile.errors.maxlength" style="color: red;">Invalid Mobile  Number</p>
+                  
                 </div>
 
               </span>

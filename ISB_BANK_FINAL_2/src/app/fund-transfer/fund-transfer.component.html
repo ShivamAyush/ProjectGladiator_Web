@@ -17,11 +17,11 @@
         <span class="transfertype">Transfer Type*</span>
         <table>
             <tr>
-                <th><input type="radio" name="IMPS" value="IMPS" (click)="setMethod()"
+                <th><input type="radio" name="IMPS" value="IMPS"
                         [(ngModel)]="transaction.methodtype">IMPS</th>
-                <th><input type="radio" name="NEFT" value="NEFT" (click)="setMethod()"
+                <th><input type="radio" name="NEFT" value="NEFT" 
                         [(ngModel)]="transaction.methodtype">NEFT</th>
-                <th><input type="radio" name="RTGS" value="RTGS" (click)="setMethod()"
+                <th><input type="radio" name="RTGS" value="RTGS"
                         [(ngModel)]="transaction.methodtype">RTGS</th>
             </tr>
         </table>
@@ -75,7 +75,7 @@
     <form>
         <table>
             <tr>
-                <input type="number" name="otp" [(ngModel)]=otp.otp />
+                <input type="text" name="otp" [(ngModel)]=otp.otp />
             </tr>
             <tr>
                 <P>{{message}}</P>
