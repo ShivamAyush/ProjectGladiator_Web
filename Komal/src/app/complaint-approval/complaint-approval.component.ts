@@ -24,9 +24,6 @@ export class ComplaintApprovalComponent implements OnInit {
         this.service.updateStatus(this.complaintNo).subscribe(data=>{  
               alert(JSON.stringify(data));     
                })
-               
-                this.data.splice(x,1);
-                
       }
 
   ngOnInit(): void {

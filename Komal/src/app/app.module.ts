@@ -36,7 +36,6 @@ import { AdminVerificationComponent } from './admin-verification/admin-verificat
 import { TransactionsComponent } from './transactions/transactions.component';
 import { ComplaintApprovalComponent } from './complaint-approval/complaint-approval.component';
 import { ContactRequestComponent } from './contact-request/contact-request.component';
-import { TransactionInvoiceComponent } from './transaction-invoice/transaction-invoice.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +71,6 @@ import { TransactionInvoiceComponent } from './transaction-invoice/transaction-i
     TransactionsComponent,
     ComplaintApprovalComponent,
     ContactRequestComponent,
-    TransactionInvoiceComponent,
   ],
   imports: [
     BrowserModule,
