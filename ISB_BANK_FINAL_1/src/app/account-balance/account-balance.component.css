@@ -1,0 +1,48 @@
+
+.balance {   
+    width: 100%;
+    margin-left: 300px;
+    height:500px;
+    background-color: #a6d3f7;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    overflow: hidden;
+
+  }
+  .status
+  {
+      margin-left: 200px;
+  }
+
+table,td,th{
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: 5px;
+    width: 60%;
+    margin-bottom: 40px;
+    border-radius: 10px;
+
+}
+h1{
+    margin-bottom: 20px;
+    margin-left: 200px;
+    color: black;
+    font-size: 20px;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+table span th{
+    font-weight: bold;
+}
+
+table th,td{
+    padding: 10px;
+    height: 20px;
+    font-size: 20px;
+}
