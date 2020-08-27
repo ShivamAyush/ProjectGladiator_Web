@@ -7,7 +7,7 @@ import {Router,ActivatedRoute,ParamMap} from '@angular/router'
 })
 export class AccountLockedComponent implements OnInit {
 
-  timeLeft: number = 60;
+  timeLeft: number = 5;
   interval;
   route:ActivatedRoute;
     
@@ -23,7 +23,7 @@ export class AccountLockedComponent implements OnInit {
     this.interval = setInterval(()=>{
       if(this.timeLeft == 0)
       {
-        this.router.navigate(['/loginLink']);
+        this.router.navigate(['/forgetPasswordLink']);
       }
       else if(this.timeLeft > 0){
         this.timeLeft--;

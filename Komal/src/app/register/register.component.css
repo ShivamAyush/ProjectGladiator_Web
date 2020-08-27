@@ -1,85 +1,3 @@
-/*
-.form-outer form .page{
-    width: 25%;
-}
-
-.form-outer form .page .title{
-text-align: left;
-font-size: 25px;
-font-weight: 500;
-}
-
-.form-outer form .page .field{
-    height: 45px;
-    width: 330px;
-    margin: 30px 0;
-}
-
-.form-outer form .page  .field label{
-    position: absolute;
-    top:-30px;
-}
-
-form .page  .field select{
-    width: 80%;
-    height: 80%;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-}
-.form-outer form .page  .field input{
-    height: 80%;
-    width: 80%;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-}
-
-
-.form-outer form .page  .field button{
-    width: 80%;
-    height: calc(80% + 5px);
-    margin-top: -20px;
-    border: none;
-    background-color: black;
-    color: white;
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.form-outer form .page  .field button:hover{
-    opacity: 0.5;
-}
-
-.form-outer form .page  .btns button{
-margin-top: -20px!important;
-}
-
-form .page  .btns button.prev{
-    margin-right: 3px;
-    font-size: 17px;
-    float: left;
-}
-
-form .page  .btns button.next{
-    width: 10px;
-    margin-left: 3px;
-    font-size: 17px;
-    float: left;
-    
-}
-
-.container .progress-bar{
-    display: flex;
-    margin: 40px 0;
-}
-
-.container .progress-bar .step{
-    text-align: center;
-    width: 100%;
-} */
-
 .header {
   padding: 10px;
   text-align: center;
@@ -108,12 +26,14 @@ body{
   background:darkgrey;
 }
 .main1 {   
+    padding-top:10px;
+    padding-bottom: 10px;;
     width: 100%;
     margin: auto;
-    background-image: url('/assets/img.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('/assets/img.png');
     background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
 
   }
 /*   

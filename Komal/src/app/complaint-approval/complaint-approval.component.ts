@@ -19,11 +19,15 @@ export class ComplaintApprovalComponent implements OnInit {
       }
 
       Approve(x){
+        
         this.complaintNo=this.data[x].complaintNo;
         alert(this.complaintNo);
+        
         this.service.updateStatus(this.complaintNo).subscribe(data=>{  
-              alert(JSON.stringify(data));     
+              alert(JSON.stringify(data));    
+               
                })
+               this.data.splice(x,1);
       }
 
   ngOnInit(): void {

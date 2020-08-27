@@ -23,12 +23,14 @@ import { AccountTypeComponent } from './account-type/account-type.component';
 import { AddBeneficiaryComponent } from './add-beneficiary/add-beneficiary.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { AccountBalance, AccountBalanceComponent } from './account-balance/account-balance.component';
+import { AccountBalanceComponent } from './account-balance/account-balance.component';
 import { componentFactoryName } from '@angular/compiler';
 import { AdminVerificationComponent } from './admin-verification/admin-verification.component';
 import { TransactionsComponent } from './transactions/transactions.component';
-import { ComplaintApprovalComponent } from "./complaint-approval/complaint-approval.component";
-import { ContactRequestComponent } from "./contact-request/contact-request.component";
+import { LogOutComponent } from './log-out/log-out.component';
+import {ComplaintApprovalComponent} from './complaint-approval/complaint-approval.component';
+import {ContactRequestComponent} from './contact-request/contact-request.component';
+import {TransactionInvoiceComponent} from './transaction-invoice/transaction-invoice.component';
 
 const routes: Routes = [
 {
@@ -72,6 +74,9 @@ path:'forgetPasswordLink',component:ForgetPasswordComponent
   path:'visitorStatusLink',component:VisitorStatusComponent
 },
 {
+  path:'logout',component:LogOutComponent
+},
+{
   path:'preLogin',component:PreLoginComponent
 },
 {
@@ -79,6 +84,9 @@ path:'forgetPasswordLink',component:ForgetPasswordComponent
 },
 {
   path:'contactUs',component:ContactUsComponent
+},
+{
+  path:'complaintStatus',component:ComplaintStatusComponent
 },
 {
   path:'userDashboard',component:UserDashboardComponent,
@@ -101,12 +109,14 @@ path:'forgetPasswordLink',component:ForgetPasswordComponent
     {
       path:'changePassword',component:ChangePasswordComponent
     },
-    
     {
       path:'accountBalance',component:AccountBalanceComponent
     },
     {
       path:'transactions',component:TransactionsComponent
+    },
+    {
+      path:'invoice',component:TransactionInvoiceComponent
     }
   ]
 },
@@ -121,7 +131,7 @@ path:'forgetPasswordLink',component:ForgetPasswordComponent
     },
     {
       path:'contactRequest',component:ContactRequestComponent
-    },
+    }
   ]
 }
 ];

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -34,8 +33,11 @@ import { HeaderAppComponent } from './header-app/header-app.component';
 import { AccountBalanceComponent } from './account-balance/account-balance.component';
 import { AdminVerificationComponent } from './admin-verification/admin-verification.component';
 import { TransactionsComponent } from './transactions/transactions.component';
+import { LogOutComponent } from './log-out/log-out.component';
 import { ComplaintApprovalComponent } from './complaint-approval/complaint-approval.component';
 import { ContactRequestComponent } from './contact-request/contact-request.component';
+import { TransactionInvoiceComponent } from './transaction-invoice/transaction-invoice.component';
+
 
 @NgModule({
   declarations: [
@@ -69,8 +71,10 @@ import { ContactRequestComponent } from './contact-request/contact-request.compo
     AccountBalanceComponent,
     AdminVerificationComponent,
     TransactionsComponent,
+    LogOutComponent,
     ComplaintApprovalComponent,
     ContactRequestComponent,
+    TransactionInvoiceComponent,
   ],
   imports: [
     BrowserModule,

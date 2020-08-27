@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { VisitorRegister } from "./visitor-register";
 import { VisitorServiceService } from "../visitor-service.service";
 import * as _ from 'lodash';
-
+import {VisitorStatus} from "../visitor-status/visitor-status";
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: `./register.component.html`,
@@ -13,9 +14,20 @@ export class RegisterComponent implements OnInit {
   visitor = new VisitorRegister();
   genderId:number;
   genderName:string;
+  visitorStatus = new VisitorStatus();
+  constructor(private VisitorService:VisitorServiceService,private router:Router) { 
+    
+  }  
+  text:string;
 
-  constructor(private VisitorService:VisitorServiceService) { }  
-
+  update()
+  {
+    this.visitor.permanentAddress = this.visitor.localAddress;
+    this.visitor.permanentCity = this.visitor.localCity;
+    this.visitor.permanentPincode = this.visitor.localPincode;
+    this.visitor.permanentState = this.visitor.localState;
+    console.log(this.visitor.permanentPincode);
+  }
   onSubmit()
   {
     console.log(this.visitor.aadharNo);
@@ -25,7 +37,15 @@ export class RegisterComponent implements OnInit {
     console.log(this.visitor.sourceOfIncome);
     this.VisitorService.addVisitor(this.visitor).subscribe(data=>{
       alert(JSON.stringify(data));
+      this.text ="Registered! Please Check your registered email."
+      
     })
+  }
+
+  redirect()
+  {
+    alert("Hi "+this.visitor.firstName+"!, Thanks for registering. Please Check your email.");
+    this.router.navigate(['/homeLink']);
   }
 
   ngOnInit(): void {

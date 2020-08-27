@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact} from './ContactUs'
-import { ContactRequestServiceService} from '../contact-request-service.service'
+import {ContactRequestServiceService} from '../contact-request.service';
 import {Router} from '@angular/router';
 @Component({
   selector: 'app-contact-us',
@@ -22,6 +22,7 @@ export class ContactUsComponent implements OnInit {
     console.log(this.contact.lastName);
     console.log(this.contact.place);
     console.log(this.contact.subject);
+    console.log(this.contact.status);
     this.contactService.addContact(this.contact).subscribe(data=>{
       alert(JSON.stringify(data));
     

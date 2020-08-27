@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AddBeneficiary } from '../dto-classes/AddBeneficiary';
+import {AddBeneficiaryService} from '../add-beneficiary.service';
+import { CustomerIdGet } from './CustomerIdGet';
+import { GetBeneficiary } from '../dto-classes/getBeneficiaryDetails';
 
 @Component({
   selector: 'app-add-beneficiary',
@@ -6,36 +10,51 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-beneficiary.component.css']
 })
 export class AddBeneficiaryComponent implements OnInit {
-
-  constructor() { }
+  
+  setCustomerId = new CustomerIdGet();
+  getBeneficiaryDetails = new GetBeneficiary();
+  values:any;
+  constructor(private service:AddBeneficiaryService) { 
+    this.service.getBeneficiaryList(this.setCustomerId).subscribe(data=>{
+      this.values = data;
+      console.log(data);
+    })
+  }
 
   ngOnInit(): void {
   }
 
-  d1=new Beneficiary("John","8447711059");
-  d2=new Beneficiary("Marc","9941920645");
-  d3=new Beneficiary("Jill","9999444420");
-  d4=new Beneficiary("Pepe","9945530581");
-  row:Beneficiary[] = [this.d1,this.d2,this.d3,this.d4];
-
- 
-  addName:string;
-  addAccountNumber:string;
+  customerId:number = Number(sessionStorage.getItem("customerId"));
+  beneficiaryName:string;
+  beneficiaryNickName:string;
+  beneficiaryAccountNo:string;
+  beneficiary = new AddBeneficiary(this.customerId,this.beneficiaryAccountNo,this.beneficiaryName,this.beneficiaryNickName);
+  row:AddBeneficiary[] = [this.beneficiary];
+  message:string;
   addTable() {
-  
+
+    this.service.addBeneficiary(this.beneficiary).subscribe(data=>{
+      console.log(data.message);
+      this.message = data.message;
+      console.log(this.message);
+      alert(this.message);
+      
+    }
+    )
     var addBtn = confirm("Do you want to add a contact?");
     if (addBtn == true)
     {
       this.isShow=false;
-    const obj = {
-      name: this.addName,
-      accountNumber: this.addAccountNumber
-    }
+      const obj = {
+      customerId:this.beneficiary.customerId,
+      beneficiaryName:this.beneficiary.beneficiaryName,
+      beneficiaryNickName:this.beneficiary.beneficiaryNickName,
+      beneficiaryAccountNo:this.beneficiary.beneficiaryAccountNo
+     }
     this.row.push(obj);
+    }
   }
-    this.addName=null;
-    this.addAccountNumber=null;
-  }
+
 
   deleteRow(x){
     var delBtn = confirm(" Do you want to delete ?");
@@ -43,8 +62,6 @@ export class AddBeneficiaryComponent implements OnInit {
       this.row.splice(x, 1 );
     }   
   }
-
-  
 
   isShow:boolean=false;
   show(){
@@ -54,18 +71,4 @@ export class AddBeneficiaryComponent implements OnInit {
   hide(){
     this.isShow=false;
   }
-  
- 
-
-}
-
-export class Beneficiary{
-  name:string;
-  accountNumber:string;
-
-  constructor(name,accountNumber ){
-      this.name=name;
-      this.accountNumber=accountNumber;
-  }
-
 }

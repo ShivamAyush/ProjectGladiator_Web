@@ -1,7 +1,6 @@
 .container
 {
     box-shadow: 5px 10px #888888;
-    background-color: #a6d3f7;
     margin: auto;
     width: 78%;
     text-align: center;
@@ -10,6 +9,10 @@
     font-weight: bold;
     padding: 15px;
     border: inset;
+    box-shadow: 10px 10px 10px 10px #2898d4;
+    border-radius: 30px;
+    margin-top: 30px;
+
 }
 .container-1
 {

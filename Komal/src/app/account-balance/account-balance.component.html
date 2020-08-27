@@ -1,15 +1,16 @@
-
-<div class="balance">
+<div class="balance" >
+    <img src="/assets/account-Balance.png" alt="img" width="150px" height="150px">
+ 
     <h1>Account Balance</h1>
     <table class="status" align="center">
     
-        <tbody *ngFor="let a of accountBalance">
+        <tbody>
             <tr>
                 <th>
                     <span>Name:</span>
                 </th>
                 <td>
-                    <span>{{a.Name}}</span>
+                    <span>{{customerName}}</span>
                  </td>   
             </tr>
     
@@ -18,7 +19,7 @@
                     <span>Account Number:</span>
                 </th>
                 <td>
-                    <span>{{a.Account_Number}}</span>
+                    <span>{{user.accountNo}}</span>
                  </td>   
             </tr>
     
@@ -27,7 +28,7 @@
                     <span>Account Type:</span>
                 </th>
                 <td>
-                    <span>{{a.Account_Type}}</span>
+                    <span>{{user.accountType}}</span>
                  </td>   
             </tr>
             <tr>
@@ -35,7 +36,15 @@
                     <span>Account Balance:</span>
                 </th>
                 <td>
-                    <span>{{a.Account_Balance}}</span>
+                    <span>{{user.accountBalance}}</span>
+                 </td>   
+            </tr>
+            <tr>
+                <th>
+                    <span>Account Status:</span>
+                </th>
+                <td>
+                    <span>{{user.accountStatus}}</span>
                  </td>   
             </tr>
          </tbody>

@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Complaint } from './complaint/Complaint';
-import {ComplaintStatus  } from "./complaint-status/ComplaintStatus";
-import { ComplaintNo } from "./complaint-status/ComplaintNo";
-import { ComplaintNo1 } from "./complaint-approval/ComplaintNo1";
+import {ComplaintStatus  } from './complaint-status/ComplaintStatus';
+import { ComplaintNo } from './complaint-status/ComplaintNo';
+import { ComplaintNo1 } from './complaint-approval/ComplaintNo1';
 @Injectable({
   providedIn: 'root'
 })

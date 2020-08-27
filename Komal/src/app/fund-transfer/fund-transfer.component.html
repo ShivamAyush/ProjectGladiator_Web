@@ -1,70 +1,65 @@
 
 <h2>Fund Transfer [IMPS/NEFT/RTGS]</h2>
 <div class="container">
-<p>Select Account from which you want to transfer</p>
-
 <table  align ="center" cellpadding = "7" >
     <tr>
-     <td>Account No.</td>
-     <td>Account Type</td>
-     <td>Balance</td>   
+     <th>Account No.</th>
+     <th>Account Type</th>
+     <th>Balance</th>   
     </tr>
     <tr>
-        <td id="i1"><input type="radio" name="accountNo"> &nbsp; 1023568969646</td>
-        <td id="i3">Savings Account</td>
-        <td id="i4">500000</td>
+        <td id="i1">{{accountValue.accountNo}}</td>
+        <td id="i3">{{accountValue.accountType}}</td>
+        <td id="i4">{{accountValue.accountBalance}}</td>
     </tr>
 </table>
-<br/><br/>
-
-
-<label>
-Selected Account No :  
-</label>           
 <br/>
-<br/>
-<span class="transfertype">Transfer Type*</span>&nbsp;
-        <select name="details" id="">
-            <option value="all">Select</option>
-            <option value="IMPS">IMPS</option>
-            <option  value="NEFT">NEFT</option>
-            <option value="RTGS">RTGS</option>
-          </select>
-
-          <br/> 
-          <br/>
+<form  (ngSubmit)="fundTransfer()">
+<span class="transfertype">Transfer Type*</span>
+<table>
+    <tr>
+        <th><input type="radio" name="IMPS" value="IMPS" [(ngModel)]="transaction.methodtype">IMPS</th>
+        <th><input type="radio" name="NEFT" value="NEFT"  [(ngModel)]="transaction.methodtype">NEFT</th>
+        <th><input type="radio" name="RTGS" value="RTGS"  [(ngModel)]="transaction.methodtype">RTGS</th>
+    </tr>
+</table>
+<br>
 <label> Amount*</label> 
-<label><input type="text" name="amount"></label>
+<label><input type="text" name="amount" [(ngModel)]="transaction.amount"></label>
 <br/><br/>
 
-<a href=" ">Click Here to add new Benificiary</a>
+<a [routerLink]="['/userDashboard/addBeneficiary']">Click Here to add new Benificiary</a>
 
 <p>Select the Beneficiary Account</p>
 
-<table  align ="center" cellpadding = "7" >
+<table  align ="center" cellpadding = "7"  *ngIf="values">
     <tr>
-     <td>Account No.</td>
-     <td>Beneficiary Name</td>
-     <td>Beneficiary Account Type</td>
-     <td>Bank</td>   
+     <th>Account No.</th>
+     <th>Beneficiary Name</th>
+     <th>Beneficiary Nickname</th> 
     </tr>
-    <tr>
-        <td id="i1"><input type="radio" name="beneficiary"> &nbsp; 1645637828</td>
-        <td id="i3">Ayush</td>
-        <td id="i4">Current</td>
-        <td id="i4">ISB</td>
-    </tr>
-    <tr>
-        <td id="i1"><input type="radio" name="beneficiary"> &nbsp; 1234567890</td>
-        <td id="i3">Srijan</td>
-        <td id="i4">Savings</td>
-        <td id="i4">ISB</td>
+    <tr *ngFor="let v of values">
+        <td id="i1"><input type="radio" name="beneficiary" [value]="v.beneficiaryAccountNo" [(ngModel)]="transaction.toAccount">{{v.beneficiaryAccountNo}}</td>
+        <td id="i3">{{v.beneficiaryName}}</td>
+        <td id="i4">{{v.beneficiaryNickName}}</td>
     </tr>
 </table>
-
-<input type="checkbox" id="termsandcondition" name="termsandcondition" value="accept">
-<label for="termsandcondition"> I accept the terms and condition</label><br>
-
+<div align ="center" cellpadding = "7" >
+    <tr>
+        <th>Enter Transaction Password</th>
+        <th><input type="password" name="transactionPass" [(ngModel)]="transaction.password"/></th>
+    </tr>
+    <!-- <tr>
+        <th>Enter OTP:</th>
+        <th><input type="number" name="Otp"></th>
+        <th><button name="sendOpt">Send otp</button></th>
+    </tr> -->
+    
+</div>
+<br>
+<label for="termsandcondition"><a href="/assets/terms.pdf"  target="_blank"> I accept the terms and condition</a></label><br>
+<br>
 <button class="button go">Go</button> &nbsp;
 <button class="button cancel">Cancel</button>
+</form>
 </div>

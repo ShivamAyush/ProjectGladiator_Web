@@ -1,7 +1,6 @@
 
 .benificiary{
-    background-color: #a6d3f7;
-    margin: auto;
+    margin-left: 100px;
     width: 100%;
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,9 +8,13 @@
     padding: 15px;
     border: inset;
     text-align: center;
+    box-shadow: 10px 10px 10px 10px #2898d4;
+    border-radius: 30px;
+    margin-top: 30px;
+
 }
 
-h1{
+h3{
     margin-bottom: 40px;
     color: black;
     font-size: 140%;
@@ -19,6 +22,7 @@ h1{
     letter-spacing: 1px;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
 
@@ -26,21 +30,25 @@ table{
     border: 2px solid black;
     padding: 5px;
     margin-top: 5px;
-    width: 40%;
-    margin-bottom: 40px;
-    margin-left: 400px;
+    width: auto;
+    margin-bottom: 20px;
     border-radius: 10px;
+    margin-left:80px
 
+}
+th{
+    padding:10px
 }
 
 tr{
     height: 25px;
+    color:black
     
 }
 
 td{
     width: 50%;
-    padding: 20px;
+    padding:10px;
     border: 1px solid black;
     font-weight: bold;
 }
@@ -70,6 +78,7 @@ td{
     justify-content: center;
     padding: 15px;
     background-color:#56a6f0;
+    border-radius: 10px;
 }
 
 input{
@@ -87,4 +96,23 @@ input{
 
 .add span{
     padding: 10px;
+}
+
+input{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius:30px;
+    box-shadow: 5px 5px #2898d4;
+
+}
+
+.add1{
+    width:400px;
+    margin-left: 420px;
+    border: 2px solid black;
+    border-radius: 10px;
 }

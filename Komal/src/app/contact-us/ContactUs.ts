@@ -4,4 +4,5 @@ export class Contact
     lastName:string;
     place:string;
     subject:string;
+    status:string ="not-contacted";
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ContactRequestServiceService } from "../contact-request-service.service";
+import {ContactRequestServiceService} from '../contact-request.service'
 import { ContactId } from "../contact-request/ContactId";
 
 
