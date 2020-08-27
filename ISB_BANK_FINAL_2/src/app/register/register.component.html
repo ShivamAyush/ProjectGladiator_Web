@@ -1,0 +1,292 @@
+<app-header-nav></app-header-nav>
+<div class="main1">
+
+  <div class="container" style="margin-left: 550px;">
+    <header>Register Form</header>
+    <div class="progress-bar">
+      <div class="step">
+        <p>
+          Name</p>
+        <div class="bullet">
+          <span>1</span>
+        </div>
+        <div class="check fas fa-check">
+        </div>
+      </div>
+      <div class="step">
+        <p>
+          Address</p>
+        <div class="bullet">
+          <span>2</span>
+        </div>
+        <div class="check fas fa-check">
+        </div>
+      </div>
+      <div class="step">
+        <p>
+          Occupation</p>
+        <div class="bullet">
+          <span>3</span>
+        </div>
+        <div class="check fas fa-check">
+        </div>
+      </div>
+    </div>
+    <div class="form-outer">
+      <form #regForm='ngForm' (ngSubmit)='onSubmit()'>
+        <div class="page slidepage">
+          <div class="title">Basic Info </div>
+          <div class="field">
+            <span>
+              <input type="text" class = "inputform" placeholder="Enter First name" id="fname" required [(ngModel)]='visitor.firstName' name="fname"  #fname="ngModel" minlength="3">
+              <div *ngIf="fname.touched">
+                <p *ngIf="fname.errors?.required" style="color: red;"> First Name is required</p>
+              </div>
+            </span>
+            <span>
+              <input type="text" placeholder="Enter Middle name" name="mname" id="mname" [(ngModel)]='visitor.middleName'>
+            </span>
+          </div>
+          <div class="field">
+
+            <span>
+              <input type="text" placeholder="Enter Lastname" name="lname" #lname="ngModel" id="lname" required [(ngModel)]='visitor.lastName'>
+              <div *ngIf="lname.touched">
+                <p *ngIf="lname.errors?.required" style="color: red;"> Last Name is required </p>
+              </div>
+            </span>
+            
+            <span>
+              <input type="number" placeholder="Enter your age" name="age"  #age="ngModel" id="age" required [(ngModel)]='visitor.age' min="0" max="100">
+              <div *ngIf="age.touched" style="color: red;">
+                <p *ngIf="age.errors?.required" style="color: red;"> Enter yor age </p>
+                <p *ngIf="age.errors.max" style="color: red;">Invalid age</p>
+
+              </div>
+            </span>
+          </div>
+          <div class="field">
+            <span>
+              <!-- <select>
+                <option [(ngValue)]='visitor.gender'>Select Gender</option>
+
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select> -->
+             <input type="text" placeholder="Enter Gender" name="gender" #gender="ngModel" id="gender" required [(ngModel)]='visitor.gender'>
+             <div *ngIf="gender.touched" style="color: red;">
+              <p *ngIf="gender.errors?.required" style="color: red;"> Gender is required </p>
+            </div>
+            </span>
+            <span>
+              <input type="tel" placeholder="Enter Mobile Number"  id="mobile" name="mobile" #mobile="ngModel" maxlength="10"
+                minlength="10" required [(ngModel)]='visitor.phoneNumber'>
+
+                <div *ngIf="mobile.touched" style="color: red;">
+                  <p *ngIf="mobile.errors?.required" style="color: red;"> Mobile number required</p>
+                  <p *ngIf="mobile.errors.minlength" style="color: red;">Invalid Mobile  Number</p>
+                  <p *ngIf="mobile.errors.maxlength" style="color: red;">Invalid Mobile  Number</p>
+                </div>
+
+              </span>
+          </div>
+
+
+
+          <div class="field">
+            <span>
+              <input type="tel" placeholder="Enter Aadhar Number" id="Aadhar" name="Aadhar" #Aadhar="ngModel"  maxlength="12"
+                minlength="12" required [(ngModel)]='visitor.aadharNo'>
+                <div *ngIf="Aadhar.touched" style="color: red;">
+                  <p *ngIf="Aadhar.errors?.required" style="color: red;"> Aadhar number required</p>
+                  <p *ngIf="Aadhar.errors.minlength" style="color: red;">Invalid Aadhar  Number</p>
+                  <p *ngIf="Aadhar.errors.maxlength" style="color: red;">Invalid Aadhar Number</p>
+                </div>
+            
+              </span>
+
+
+            <span>
+              <input type="email" placeholder="Enter Email Address" name="email" #email="ngModel" id="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required [(ngModel)]='visitor.email'>
+              <p *ngIf="email.errors?.pattern" style="color: red;">This is not a valid Email!!!</p>
+              <div *ngIf="email.touched" style="color: red;">
+                  <p *ngIf="email.errors?.required" style="color: red;">Email is a required field!</p>
+                  <p *ngIf="email.errors?.pattern" style="color: red;">This is not a valid Email!!!</p>
+                </div>
+            </span>
+          </div><br>
+          <div class="field nextBtn" style="width: 63%; margin-left: 100px;">
+            <button class="firstNext next">Next</button>
+          </div>
+        </div>
+
+        <div class="page">
+          <div class="title">Address Info</div>
+          <h3>Residential Address:</h3>
+          <div class="field">
+            <span>
+              <input type="text" placeholder="Address Line" name="Addrress" #Address="ngModel" id="Addrress" required [(ngModel)]='visitor.localAddress' ng-change="sameAddress && update()">
+              <div *ngIf="Address.touched" style="color: red;">
+                <p *ngIf="Address.errors?.required" style="color: red;"> Address is required </p>
+              </div>
+            </span>
+
+
+
+            <span>
+              <input type="text" placeholder="Enter state" name="state" id="state" #state="ngModel" required [(ngModel)]='visitor.localState' ng-change="sameAddress && update()">
+              <div *ngIf="state.touched" style="color: red;">
+                <p *ngIf="state.errors?.required" style="color: red;"> State is required </p>
+              </div>
+              <!-- <select >
+                <option >Choose your State</option>
+                <option *ngFor="let s of State" [(ngValue)]='visitor.localState'>{{s}}</option>
+              </select>             -->
+            </span>
+
+          </div>
+
+          <div class="field">
+            <span>
+              <input type="text" placeholder="Enter City" name="city"  #city="ngModel" id="city" required [(ngModel)]='visitor.localCity' ng-change="sameAddress && update()">
+              <div *ngIf="city.touched" style="color: red;">
+                <p *ngIf="city.errors?.required" style="color: red;"> city is required </p>
+              </div>
+              <!-- <select [(ngModel)]='visitor.localCity'>
+                <option value="city">Choose your City</option>
+                <option *ngFor="let c of City" [ngValue]="city">{{c}}</option>
+              </select>  -->
+            </span>
+
+
+            <span>
+              <input type="text" placeholder="Enter Pincode" name="code" #code="ngModel" id="code"   required [(ngModel)]='visitor.localPincode' ng-change="sameAddress && update()" minlength="6" maxlength="6">
+              <div *ngIf="code.touched" style="color: red;">
+                <p *ngIf="code.errors?.required" style="color: red;"> Pincode  required</p>
+                <p *ngIf="code.errors.minlength" style="color: red;">Invalid Pincode</p>
+                <p *ngIf="code.errors.maxlength" style="color: red;">Invalid Pincode</p>
+              </div>
+              <!-- <select [(ngModel)]='visitor.localPincode'>
+                <option value="">select Pincode</option>
+                <option *ngFor="let p of Pincode" [ngValue]="pincode">{{p}}</option>
+              </select> -->
+
+            </span>
+
+          </div>
+          <div>
+            <span style="margin-left:10px; margin-right: 10px;"> <input type="checkbox" id="adrs" name="adrs" ng-model="sameAddress" ng-change="sameAddress && update()" value="A1" (click)="update()"></span>
+
+            <label for="adrs"> <b>Permanent Address and Mailing Address are same</b></label>
+          </div>
+
+          <div class="field">
+            <span>
+              <input type="text" placeholder="Address Line" name="Addrress1"  #Address1="ngModel" id="Addrress1" required [(ngModel)]='visitor.permanentAddress' ng-disabled="sameAddress">
+              <div *ngIf="Address1.touched" style="color: red;">
+                <p *ngIf="Address1.errors?.required" style="color: red;"> Address is required </p>
+              </div>
+            </span>
+
+
+
+            <span>
+              <input type="text" placeholder="Enter state" name="state1"  #state1="ngModel" id="state1" required [(ngModel)]='visitor.permanentState'  ng-disabled="sameAddress">
+              <div *ngIf="state1.touched" style="color: red;">
+                <p *ngIf="state1.errors?.required" style="color: red;"> State is required </p>
+              </div>
+              <!-- <select [(ngModel)]='visitor.localState'>
+                <option value="">Choose your State</option>
+                <option *ngFor="let s of State" [ngValue]="state">{{s}}</option>
+              </select>             -->
+            </span>
+
+          </div>
+
+          <div class="field">
+            <span>
+              <input type="text" placeholder="Enter City" name="city1" id="city1" #city1="ngModel" required [(ngModel)]='visitor.permanentCity'  ng-disabled="sameAddress">
+              <div *ngIf="city1.touched" style="color: red;">
+                <p *ngIf="city1.errors?.required" style="color: red;"> City is required </p>
+              </div>
+            </span>
+
+
+            <span>
+              <input type="text" placeholder="Enter Pincode" name="code1" id="code1" #code1="ngModel"  required [(ngModel)]='visitor.permanentPincode'  ng-disabled="sameAddress" minlength="6" maxlength="6">
+              <div *ngIf="code1.touched" style="color: red;">
+                <p *ngIf="code1.errors?.required" style="color: red;"> Pincode  required</p>
+                <p *ngIf="code1.errors.minlength" style="color: red;">Invalid Pincode</p>
+                <p *ngIf="code1.errors.maxlength" style="color: red;">Invalid Pincode</p>
+              </div>
+
+            </span>
+
+
+          </div><br>
+
+
+          <div class="field btns">
+            <button class="prev-1 prev"> Previous</button>
+            <button class="next-1 next"> Next</button>
+          </div>
+        </div>
+
+
+        <div class="page">
+          <div class="title">Occupation Info</div>
+
+          <div class="field">
+            <input type="text" placeholder="Occupation Type" name="type" id="type"  #type="ngModel" required [(ngModel)]='visitor.occupationType'>
+             </div>
+             <div *ngIf="type.touched" style="color: red;">
+              <p *ngIf="type.errors?.required" style="color: red;"> Occupation type required</p>
+         <!-- <select style="text-align:center" name="occupation" [(ngModel)]='visitor.occupationType'>
+           <option value="" >Choose occupation type</option>
+           <option *ngFor='let o of Occupation' value="occupation">{{o}}</option>
+         </select> -->
+          </div>
+
+          <div class="field">
+            <input type="text" placeholder="Source of income"  #income='ngModel'  name="income" id="income" required [(ngModel)]='visitor.sourceOfIncome'>
+            </div>
+            <div *ngIf="income.touched" style="color: red;">
+              <p *ngIf="income.errors?.required" style="color: red;"> please provide source of income</p>
+            </div>  
+
+          <div class="field">
+            <input type="text" placeholder="Gross Annual salary" name="salary"  #salary="ngModel" id="saalry" required [(ngModel)]='visitor.grossAnnualIncome'>
+          </div>
+          <div *ngIf="salary.touched" style="color: red;">
+            <p *ngIf="salary.errors?.required" style="color: red;"> Enter Annual Income</p>
+          </div>  
+
+          <div class="title">Account Type</div>
+
+          <div class="field">
+            <!-- <select>
+              <option value="accountType" style="text-align:center ;">Choose your account type</option>
+              <option value="accountType"> Savings</option>
+              <option value="accountType">Current</option>
+              <option value="accountType">Salaried</option>
+            </select> -->
+          <input type="text" placeholder="Account Type" name="acType" id="acType" required [(ngModel)]='visitor.accountType'>
+            <input type="text" placeholder="debit Card Status" name="debitCardStatus" id="debitCardStatus" required [(ngModel)]='visitor.debitCardStatus'>
+            <input type="text" placeholder="Net Banking Status" name="net" id="net" required [(ngModel)]='visitor.netBankingStatus'>
+     
+          </div><br>
+
+          <div class="field btns">
+            <button class="prev-2 prev"> Previous</button>
+            <button type="submit" [disabled]="!regForm.valid" (click)="redirect()">Submit</button>
+          </div>
+        </div>
+        <p>{{text}}</p>
+
+      </form>
+
+
+    </div>
+  </div>
+</div>
